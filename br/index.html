@@ -600,26 +600,30 @@ Blessings and wealth to you.<br><br>
 <!-- BACK REDIRECT (Utmify) — back redirect 1 sends to back redirect 2 ($1 page) -->
     <script>
       // CHANGE THE LINK TO THE PAGE YOU WANT TO SHOW WHEN THE USER TRIES TO LEAVE
-      const link = '/br/br2/';
+     const link = '/br/br2/';
 
-      function setBackRedirect(url) {
-        let urlBackRedirect = url;
-        urlBackRedirect = urlBackRedirect =
-          urlBackRedirect.trim() +
-          (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-          document.location.search.replace('?', '').toString();
+function setBackRedirect(url) {
+  let urlBackRedirect = url;
 
-        history.pushState({}, '', location.href);
-        history.pushState({}, '', location.href);
-        history.pushState({}, '', location.href);
+  urlBackRedirect =
+    urlBackRedirect.trim() +
+    (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+    document.location.search.replace('?', '').toString();
 
-        window.addEventListener('popstate', () => {
-          console.log('onpopstate', urlBackRedirect);
-          setTimeout(() => {
-            location.href = urlBackRedirect;
-          }, 1);
-        });
-      }
+  history.pushState({}, '', location.href);
+  history.pushState({}, '', location.href);
+  history.pushState({}, '', location.href);
+
+  window.addEventListener('popstate', () => {
+    console.log('onpopstate', urlBackRedirect);
+
+    setTimeout(() => {
+      location.href = urlBackRedirect;
+    }, 1);
+  });
+}
+
+setBackRedirect(link);
 
       setBackRedirect(link);
     </script>

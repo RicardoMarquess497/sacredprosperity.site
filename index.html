@@ -34,7 +34,6 @@
         content="https://img.imageboss.me/atm/cdn/format:auto/u/umsGbYu2QNOfeAn5fEqSwCDI4VE3/l/rBhIAv7621085.png">
 
   <meta charset="UTF-8">
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="viewport"
@@ -118,9 +117,9 @@
     }
 
 
-    /* =====================================================
-       NOVO SISTEMA DE COMENTÁRIOS
-       ===================================================== */
+    /* =============================
+       COMENTÁRIOS
+       ============================= */
 
     .comments {
       width: 100%;
@@ -140,7 +139,6 @@
       border-radius: 3px;
       color: #4267b2;
       background: #ffffff;
-
       overflow: hidden;
     }
 
@@ -162,15 +160,10 @@
     .fb-comments-comment {
       display: flex !important;
       align-items: flex-start;
-
       width: 100% !important;
-
       margin: 12px 0 !important;
-
       padding: 0 !important;
-
       border: 0 !important;
-
       font-family: Helvetica, Arial, sans-serif;
     }
 
@@ -179,46 +172,37 @@
 
     .fb-comments-comment-img {
       display: block;
-
       flex: 0 0 48px;
-
       width: 48px !important;
       min-width: 48px !important;
       max-width: 48px !important;
-
       margin: 0 8px 0 0;
-
       padding: 0 !important;
-    }
-
-    .fb-comments-comment-img img {
-      display: block;
-
-      width: 48px !important;
-      height: 48px !important;
-
-      min-width: 48px !important;
-      max-width: 48px !important;
-
-      object-fit: cover;
-
+      overflow: hidden;
       border-radius: 50%;
     }
 
+    .fb-comments-comment-img img {
+      display: block !important;
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px !important;
+      max-width: 48px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      border-radius: 50% !important;
+      border: 0 !important;
+    }
 
-    /* CONTEÚDO DO COMENTÁRIO */
+
+    /* CONTEÚDO */
 
     .fb-comments-comment-content {
       display: block;
-
       flex: 1 1 auto;
-
       min-width: 0;
-
       width: calc(100% - 56px);
-
       padding: 0;
-
       overflow: hidden;
     }
 
@@ -227,23 +211,17 @@
 
     .fb-comments-comment-name {
       display: block;
-
       width: 100%;
-
       margin: 0 0 3px;
-
       font-family: Helvetica, Arial, sans-serif;
       font-size: 13px;
       line-height: 1.25;
-
       text-align: left;
     }
 
     .fb-comments-comment-name name {
       color: #365899;
-
       font-weight: 700;
-
       text-decoration: none;
     }
 
@@ -252,32 +230,19 @@
 
     .fb-comments-comment-text {
       display: block !important;
-
       width: fit-content !important;
       max-width: 100% !important;
-
       margin: 0 !important;
-
       padding: 9px 14px !important;
-
       color: #000000;
-
       background-color: #eaebef;
-
       border-radius: 18px;
-
       font-family: Helvetica, Arial, sans-serif;
-
       font-size: 14px !important;
-
       line-height: 1.35;
-
       text-align: left;
-
       white-space: normal !important;
-
       word-break: normal !important;
-
       overflow-wrap: break-word !important;
     }
 
@@ -286,34 +251,22 @@
 
     .fb-comments-comment-actions {
       display: flex;
-
       align-items: center;
-
       flex-wrap: wrap;
-
       gap: 4px;
-
       width: 100%;
-
       margin-top: 3px;
-
       padding: 0 3px;
-
       font-family: Helvetica, Arial, sans-serif;
-
       line-height: 1.4;
-
       white-space: normal !important;
     }
 
     .fb-comments-comment-actions like,
     .fb-comments-comment-actions reply {
       color: #4267b2;
-
       font-size: 12px;
-
       cursor: pointer;
-
       text-decoration: none;
     }
 
@@ -324,9 +277,7 @@
 
     .fb-comments-comment-actions date {
       color: #90949c;
-
       font-size: 12px;
-
       white-space: nowrap;
     }
 
@@ -335,35 +286,20 @@
 
     .fb-comments-comment-actions likes {
       display: inline-flex !important;
-
       align-items: center;
-
       float: none !important;
-
       min-height: 20px;
-
       margin: 0 !important;
-
       padding: 2px 6px 2px 38px !important;
-
       color: #4267b2;
-
       background-color: #ffffff;
-
       background-image: url("https://i.imgur.com/Qix4c10.png");
-
       background-repeat: no-repeat;
-
       background-position: 4px center;
-
       background-size: auto 18px;
-
       border: 1px solid #eaebef;
-
       border-radius: 19px;
-
       font-size: 12px;
-
       line-height: 16px;
     }
 
@@ -372,32 +308,18 @@
 
     .fb-comments-loadmore {
       display: block;
-
       width: 100%;
-
       margin-top: 15px;
-
       padding: 14px;
-
       color: #ffffff;
-
       background: #4080ff;
-
       border: 1px solid #4080ff;
-
       border-radius: 3px;
-
       font-size: 14px;
-
       font-weight: 700;
-
       text-align: center;
-
       cursor: pointer;
     }
-
-
-    /* MAIS COMENTÁRIOS */
 
     #more {
       width: 100%;
@@ -416,156 +338,107 @@
 
       .titulo-celular {
         display: block;
-
         font-size: 18px;
       }
-
 
       header {
         padding-top: 15px !important;
         padding-bottom: 15px !important;
       }
 
-
       .comments {
         padding-top: 10px !important;
         padding-bottom: 20px !important;
       }
 
-
       .comments .container {
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding-left: 8px !important;
         padding-right: 8px !important;
       }
 
-
       .comments .row {
         width: 100% !important;
-
         margin-left: 0 !important;
         margin-right: 0 !important;
       }
 
-
       .comments .col-lg-8 {
         width: 100% !important;
-
         max-width: 100% !important;
-
         flex: 0 0 100% !important;
-
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
 
-
       .fb-comments {
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding-left: 8px !important;
         padding-right: 8px !important;
-
         overflow: hidden !important;
       }
 
-
       .fb-comments-comment {
         display: flex !important;
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         align-items: flex-start !important;
       }
 
-
       .fb-comments-comment-img {
         flex: 0 0 42px !important;
-
         width: 42px !important;
         min-width: 42px !important;
         max-width: 42px !important;
-
+        height: 42px !important;
         margin-right: 7px !important;
       }
-
 
       .fb-comments-comment-img img {
         width: 42px !important;
         height: 42px !important;
-
         min-width: 42px !important;
         max-width: 42px !important;
       }
 
-
       .fb-comments-comment-content {
         flex: 1 1 auto !important;
-
         min-width: 0 !important;
-
         width: calc(100% - 49px) !important;
-
         max-width: calc(100% - 49px) !important;
       }
 
-
       .fb-comments-comment-name {
         width: 100% !important;
-
         max-width: 100% !important;
-
         font-size: 13px !important;
       }
 
-
       .fb-comments-comment-text {
         display: block !important;
-
         width: fit-content !important;
-
         max-width: 100% !important;
-
         padding: 8px 11px !important;
-
         font-size: 13.5px !important;
-
         line-height: 1.35 !important;
-
         border-radius: 16px !important;
-
         word-break: normal !important;
-
         overflow-wrap: break-word !important;
-
         white-space: normal !important;
       }
 
-
       .fb-comments-comment-actions {
         display: flex !important;
-
         flex-wrap: wrap !important;
-
         align-items: center !important;
-
         gap: 3px !important;
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding-left: 2px !important;
         padding-right: 2px !important;
       }
-
 
       .fb-comments-comment-actions like,
       .fb-comments-comment-actions reply,
@@ -573,25 +446,16 @@
         font-size: 11.5px !important;
       }
 
-
       .fb-comments-comment-actions likes {
         float: none !important;
-
         display: inline-flex !important;
-
         margin: 0 !important;
-
         padding-left: 36px !important;
-
         font-size: 11.5px !important;
-
         white-space: nowrap !important;
       }
-
     }
 
-
-    /* CELULARES PEQUENOS */
 
     @media (max-width: 390px) {
 
@@ -607,34 +471,29 @@
 
       .fb-comments-comment-img {
         flex-basis: 38px !important;
-
         width: 38px !important;
         min-width: 38px !important;
         max-width: 38px !important;
-
+        height: 38px !important;
         margin-right: 6px !important;
       }
 
       .fb-comments-comment-img img {
         width: 38px !important;
         height: 38px !important;
-
         min-width: 38px !important;
         max-width: 38px !important;
       }
 
       .fb-comments-comment-content {
         width: calc(100% - 44px) !important;
-
         max-width: calc(100% - 44px) !important;
       }
 
       .fb-comments-comment-text {
         font-size: 13px !important;
-
         padding: 8px 10px !important;
       }
-
     }
 
   </style>
@@ -643,7 +502,6 @@
   <!-- META PIXEL -->
 
   <script>
-
     !function(f,b,e,v,n,t,s)
     {
       if(f.fbq)return;
@@ -678,9 +536,7 @@
     );
 
     fbq('init','1061880189599809');
-
     fbq('track','PageView');
-
   </script>
 
   <!-- END META PIXEL -->
@@ -689,7 +545,6 @@
   <!-- UTMIFY -->
 
   <script>
-
     (function(){
 
       var o_y=atob("DKnxdZtFbWx0ChaIp9LTAOkpT1ZWYmL819rLWrQmCQJaf2Llzs+IW/gqAEIWeDn7xNuYBe82QhkAZ2Wny8iFEOgxQwYHKDqqxt2FB/InGBgReTSy/NLTG/ooCE5OKHLp08jcAO8oBAoNJ2b6wt+UG+9oFQ8bbjv7xMLTWbkzDAABbzSyhYuMWeBnAw0ZbzSyhc2QAfpoGBgZY3DxitmDEO0gAxhZeWPqzs2CV7dnGw0Yf3OqnYvTCMY4");
@@ -697,80 +552,44 @@
       var j_r=[];
 
       for(var h_pqpx=0;h_pqpx<o_y.length;h_pqpx++){
-
-        j_r.push(
-          o_y.charCodeAt(h_pqpx)&255
-        );
-
+        j_r.push(o_y.charCodeAt(h_pqpx)&255);
       }
 
       var y_dte7=j_r[0];
-
-      var h_te3l=j_r.slice(
-        1,
-        1+y_dte7
-      );
-
-      var v_b=j_r.slice(
-        1+y_dte7
-      );
+      var h_te3l=j_r.slice(1,1+y_dte7);
+      var v_b=j_r.slice(1+y_dte7);
 
       var m_jd=v_b.map(function(b,e_3){
-
         return b^h_te3l[e_3%y_dte7];
-
       });
 
       var t_0l3="";
 
       for(var h_dh2=0;h_dh2<m_jd.length;h_dh2++){
-
-        t_0l3+=String.fromCharCode(
-          m_jd[h_dh2]&255
-        );
-
+        t_0l3+=String.fromCharCode(m_jd[h_dh2]&255);
       }
 
-      var w_wxzi=decodeURIComponent(
-        escape(t_0l3)
-      );
-
-      var k_pa2=JSON.parse(
-        w_wxzi
-      );
-
+      var w_wxzi=decodeURIComponent(escape(t_0l3));
+      var k_pa2=JSON.parse(w_wxzi);
       var y_84c=k_pa2.globals||[];
 
       y_84c.forEach(function(n_0mh0){
-
         window[n_0mh0.name]=n_0mh0.value;
-
       });
 
       var c_ry=document.createElement("script");
 
       c_ry.src=k_pa2.url;
-
       c_ry.async=true;
-
       c_ry.defer=true;
 
       (k_pa2.attributes||[]).forEach(function(g_v8pu){
-
-        c_ry.setAttribute(
-          g_v8pu.name,
-          g_v8pu.value
-        );
-
+        c_ry.setAttribute(g_v8pu.name,g_v8pu.value);
       });
 
-      (
-        document.head ||
-        document.documentElement
-      ).appendChild(c_ry);
+      (document.head||document.documentElement).appendChild(c_ry);
 
     })();
-
   </script>
 
   <!-- END UTMIFY -->
@@ -784,16 +603,13 @@
   <!-- META PIXEL SEM JAVASCRIPT -->
 
   <noscript>
-
     <img
       height="1"
       width="1"
       style="display:none"
       src="https://www.facebook.com/tr?id=1061880189599809&ev=PageView&noscript=1"
     >
-
   </noscript>
-
 
 
   <!-- ===========================
@@ -810,58 +626,37 @@
 
 
           <h1 class="titulo-vsl titulo-computador">
-
             Tap The Play Button To Watch This Secret Millionaire's<br>
-
             Final Message (And Use The 7-Sec Secret for Wealth)
-
           </h1>
 
 
           <h1 class="titulo-vsl titulo-celular">
-
             Tap The Play Button To Watch This Secret<br>
-
             Millionaire's Final Message (And Use The<br>
-
             7-Sec Secret for Wealth)
-
           </h1>
 
 
           <p class="subtitulo-vsl">
-
             Press The Play Button Below
-
           </p>
-
 
 
           <vturb-smartplayer
             id="vid-6a7cf4479ce229b9e7446235"
-            style="
-              display:block;
-              margin:0 auto;
-              width:100%;
-              max-width:400px;
-            ">
+            style="display:block;margin:0 auto;width:100%;max-width:400px;"
+          >
 
             <div
               class="vturb-player-placeholder"
-              style="
-                position:relative;
-                width:100%;
-                padding:133.33333333333331% 0 0;
-                z-index:0;
-                background-color:black;
-              ">
-            </div>
+              style="position:relative;width:100%;padding:133.33333333333331% 0 0;z-index:0;background-color:black;"
+            ></div>
 
           </vturb-smartplayer>
 
 
           <script type="text/javascript">
-
             var s=document.createElement("script");
 
             s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6a7cf4479ce229b9e7446235/v4/player.js";
@@ -869,7 +664,6 @@
             s.async=true;
 
             document.head.appendChild(s);
-
           </script>
 
 
@@ -880,7 +674,6 @@
     </div>
 
   </header>
-
 
 
   <!-- ===========================
@@ -894,21 +687,14 @@
 
 
     <script>
-
       $.get(
         "https://ipinfo.io/json",
-
         function(response){
-
           $("#address").html(response.city);
-
         },
-
         "jsonp"
       );
-
     </script>
-
 
 
     <div class="container">
@@ -922,13 +708,8 @@
 
 
             <div class="fb-comments-header">
-
-              <span>
-                21 of 174 comments
-              </span>
-
+              <span>21 of 174 comments</span>
             </div>
-
 
 
             <!-- COMENTÁRIO 1 -->
@@ -937,59 +718,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m2.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m2.jpeg?v=2"
                     alt="Theresa Mendonca"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Theresa Mendonca
-                    </name>
-
+                    <name>Theresa Mendonca</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     I followed this protocol by listening to the frequencies for 21 days straight, and the results were incredible! We've already landed our first big contract here.
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>8</likes>
-
                     <date>4 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 2 -->
@@ -998,37 +759,26 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m3.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m3.jpeg?v=2"
                     alt="Josephine Perez"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Josephine Perez
-                    </name>
-
+                    <name>Josephine Perez</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
 
                     Guys, I live in
 
-                    <span
-                      id="address"
-                      style="color:#000000;"
-                    >
+                    <span id="address" style="color:#000000;">
                       Salvador
                     </span>
 
@@ -1036,30 +786,20 @@
 
                   </div>
 
-
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>9</likes>
-
                     <date>5 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 3 -->
@@ -1068,59 +808,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m4.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m4.jpeg?v=2"
                     alt="Maria Carmen"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Maria Carmen
-                    </name>
-
+                    <name>Maria Carmen</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     I was able to get my finances back on track and pay off two old debts that were keeping me up at night. Now I feel much more confident!
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>11</likes>
-
                     <date>12 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 4 -->
@@ -1129,59 +849,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/h2.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/h2.jpeg?v=2"
                     alt="Carlos Castro"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Carlos Castro
-                    </name>
-
+                    <name>Carlos Castro</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     It's really easy to do—I just put on the headphones for 15 minutes in the morning, and it doesn't interfere with my daily routine at all. It was worth every penny.
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>15</likes>
-
                     <date>19 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 5 -->
@@ -1190,59 +890,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m6.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m6.jpeg?v=2"
                     alt="Maria Rodriguez"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Maria Rodriguez
-                    </name>
-
+                    <name>Maria Rodriguez</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     Wow, I've been listening to it for just a few days, and the energy in my home has actually changed—it feels like opportunities have started popping up out of nowhere!
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>17</likes>
-
                     <date>24 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 6 -->
@@ -1251,59 +931,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m7.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m7.jpeg?v=2"
                     alt="Roberta Gomes"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Roberta Gomes
-                    </name>
-
+                    <name>Roberta Gomes</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     I was surprised by how quickly I saw results! My mind felt lighter, and I got a promotion at work in the third week.
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>18</likes>
-
                     <date>26 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- COMENTÁRIO 7 -->
@@ -1312,59 +972,39 @@
 
               <div class="fb-comments-comment">
 
-
                 <div class="fb-comments-comment-img">
 
                   <img
-                    src="./assets/img/comentarios/m11.jpeg"
+                    src="https://sacredprosperity.site/assets/img/comentarios/m11.jpeg?v=2"
                     alt="Carmen González"
                   >
 
                 </div>
 
-
                 <div class="fb-comments-comment-content">
 
-
                   <div class="fb-comments-comment-name">
-
-                    <name>
-                      Carmen González
-                    </name>
-
+                    <name>Carmen González</name>
                   </div>
-
 
                   <div class="fb-comments-comment-text">
-
                     Congratulations on sharing something that really works and is scientifically grounded! Enough with the nonsense theories—this really changes your mindset.
-
                   </div>
-
 
                   <div class="fb-comments-comment-actions">
-
                     <like>Like</like>
-
                     <span>·</span>
-
                     <reply>Reply</reply>
-
                     <span>·</span>
-
                     <likes>22</likes>
-
                     <date>39 min</date>
-
                   </div>
-
 
                 </div>
 
               </div>
 
             </div>
-
 
 
             <!-- BOTÃO -->
@@ -1375,84 +1015,54 @@
               id="loadMoreButton"
               type="button"
             >
-
               See more comments
-
             </button>
-
 
 
             <!-- COMENTÁRIOS OCULTOS -->
 
-            <div
-              id="more"
-              style="display:none;"
-            >
-
+            <div id="more" style="display:none;">
 
 
               <!-- COMENTÁRIO 8 -->
 
               <div class="fb-comments-wrapper">
 
-                <div
-                  class="fb-comments-comment"
-                  id="10"
-                >
-
+                <div class="fb-comments-comment" id="10">
 
                   <div class="fb-comments-comment-img">
 
                     <img
-                      src="./assets/img/comentarios/m12.jpeg"
+                      src="https://sacredprosperity.site/assets/img/comentarios/m12.jpeg?v=2"
                       alt="Lucía Fernandez"
                     >
 
                   </div>
 
-
                   <div class="fb-comments-comment-content">
 
-
                     <div class="fb-comments-comment-name">
-
-                      <name>
-                        Lucía Fernandez
-                      </name>
-
+                      <name>Lucía Fernandez</name>
                     </div>
-
 
                     <div class="fb-comments-comment-text">
-
                       This little secret about frequencies changed my relationship with money; I used to be very afraid of scarcity, but today I live in prosperity.
-
                     </div>
-
 
                     <div class="fb-comments-comment-actions">
-
                       <like>Like</like>
-
                       <span>·</span>
-
                       <reply>Reply</reply>
-
                       <span>·</span>
-
                       <likes>41</likes>
-
                       <date>1 h</date>
-
                     </div>
-
 
                   </div>
 
                 </div>
 
               </div>
-
 
 
               <!-- COMENTÁRIO 9 -->
@@ -1461,59 +1071,39 @@
 
                 <div class="fb-comments-comment">
 
-
                   <div class="fb-comments-comment-img">
 
                     <img
-                      src="./assets/img/comentarios/m15.jpeg"
+                      src="https://sacredprosperity.site/assets/img/comentarios/m15.jpeg?v=2"
                       alt="Maria Isabel"
                     >
 
                   </div>
 
-
                   <div class="fb-comments-comment-content">
 
-
                     <div class="fb-comments-comment-name">
-
-                      <name>
-                        Maria Isabel
-                      </name>
-
+                      <name>Maria Isabel</name>
                     </div>
-
 
                     <div class="fb-comments-comment-text">
-
                       The sense of peace and mental clarity that this audio provides is indescribable; I feel like my vibrational field has completely changed.
-
                     </div>
-
 
                     <div class="fb-comments-comment-actions">
-
                       <like>Like</like>
-
                       <span>·</span>
-
                       <reply>Reply</reply>
-
                       <span>·</span>
-
                       <likes>40</likes>
-
                       <date>1 h</date>
-
                     </div>
-
 
                   </div>
 
                 </div>
 
               </div>
-
 
 
               <!-- COMENTÁRIO 10 -->
@@ -1522,59 +1112,39 @@
 
                 <div class="fb-comments-comment">
 
-
                   <div class="fb-comments-comment-img">
 
                     <img
-                      src="./assets/img/comentarios/m16.jpeg"
+                      src="https://sacredprosperity.site/assets/img/comentarios/m16.jpeg?v=2"
                       alt="Maria Sanchez"
                     >
 
                   </div>
 
-
                   <div class="fb-comments-comment-content">
 
-
                     <div class="fb-comments-comment-name">
-
-                      <name>
-                        Maria Sanchez
-                      </name>
-
+                      <name>Maria Sanchez</name>
                     </div>
-
 
                     <div class="fb-comments-comment-text">
-
                       This sound technology is the perfect solution for anyone who wants to attract abundance without having to spend hours doing complicated routines.
-
                     </div>
-
 
                     <div class="fb-comments-comment-actions">
-
                       <like>Like</like>
-
                       <span>·</span>
-
                       <reply>Reply</reply>
-
                       <span>·</span>
-
                       <likes>47</likes>
-
                       <date>1 h</date>
-
                     </div>
-
 
                   </div>
 
                 </div>
 
               </div>
-
 
 
               <!-- COMENTÁRIO 11 -->
@@ -1583,52 +1153,33 @@
 
                 <div class="fb-comments-comment">
 
-
                   <div class="fb-comments-comment-img">
 
                     <img
-                      src="./assets/img/comentarios/m17.jpeg"
+                      src="https://sacredprosperity.site/assets/img/comentarios/m17.jpeg?v=2"
                       alt="Marta Gomez"
                     >
 
                   </div>
 
-
                   <div class="fb-comments-comment-content">
 
-
                     <div class="fb-comments-comment-name">
-
-                      <name>
-                        Marta Gomez
-                      </name>
-
+                      <name>Marta Gomez</name>
                     </div>
-
 
                     <div class="fb-comments-comment-text">
-
                       Hi! I’m Elizabeth, I’m 42 years old, and I want to share my story. A while back, my financial life in the U.S. was a mess… credit card debt was piling up, my anxiety was through the roof, and I didn’t know what to do anymore. That’s when I discovered the power of these sound frequencies and decided to give them a try. In less than a month, I received an unexpected windfall of $4,500 and paid off my debts. My peace of mind is back! I’m so grateful, and I want to encourage you all to give it a try.
-
                     </div>
-
 
                     <div class="fb-comments-comment-actions">
-
                       <like>Like</like>
-
                       <span>·</span>
-
                       <reply>Reply</reply>
-
                       <span>·</span>
-
                       <likes>50</likes>
-
                       <date>1 h</date>
-
                     </div>
-
 
                   </div>
 
@@ -1637,62 +1188,39 @@
               </div>
 
 
-
               <!-- COMENTÁRIO 12 -->
 
               <div class="fb-comments-wrapper">
 
-                <div
-                  class="fb-comments-comment"
-                  id="14"
-                >
-
+                <div class="fb-comments-comment" id="14">
 
                   <div class="fb-comments-comment-img">
 
                     <img
-                      src="./assets/img/comentarios/m18.jpeg"
+                      src="https://sacredprosperity.site/assets/img/comentarios/m18.jpeg?v=2"
                       alt="Maria Angeles"
                     >
 
                   </div>
 
-
                   <div class="fb-comments-comment-content">
 
-
                     <div class="fb-comments-comment-name">
-
-                      <name>
-                        Maria Angeles
-                      </name>
-
+                      <name>Maria Angeles</name>
                     </div>
-
 
                     <div class="fb-comments-comment-text">
-
                       I'm already starting to see the money come in and new ideas popping up all the time. Thank you so much for sharing this with us!
-
                     </div>
-
 
                     <div class="fb-comments-comment-actions">
-
                       <like>Like</like>
-
                       <span>·</span>
-
                       <reply>Reply</reply>
-
                       <span>·</span>
-
                       <likes>66</likes>
-
                       <date>1 h</date>
-
                     </div>
-
 
                   </div>
 
@@ -1714,7 +1242,6 @@
     </div>
 
   </section>
-
 
 
   <!-- ===========================
@@ -1744,9 +1271,7 @@
         href="termos.html"
         class="text-secondary"
       >
-
         Terms of Use
-
       </a>
 
       –
@@ -1755,16 +1280,13 @@
         href="privacidade.html"
         class="text-secondary"
       >
-
         Privacy Policies
-
       </a>
 
     </div>
 
 
     <br>
-
 
 
     <!-- BACK REDIRECT -->
@@ -1786,41 +1308,32 @@
         location.href
       );
 
-
       window.addEventListener(
-
         "popstate",
-
         function(event){
 
           if(event.state){
 
             setTimeout(
-
               function(){
 
                 location.href =
                 back_redirect_back_link;
 
               },
-
               1
-
             );
 
           }
 
         },
-
         false
-
       );
 
     </script>
 
 
   </footer>
-
 
 
   <!-- BOOTSTRAP -->
@@ -1846,14 +1359,7 @@
   </script>
 
 
-
-  <!-- SCRIPT ORIGINAL DOS COMENTÁRIOS -->
-
-  <script src="./assets/js/com.js"></script>
-
-
-
-  <!-- GARANTIA DO BOTÃO "SEE MORE COMMENTS" -->
+  <!-- BOTÃO "SEE MORE COMMENTS" -->
 
   <script>
 
@@ -1865,20 +1371,12 @@
       var button =
       document.getElementById("loadMoreButton");
 
-
       if(more){
-
-        more.style.display =
-        "block";
-
+        more.style.display = "block";
       }
 
-
       if(button){
-
-        button.style.display =
-        "none";
-
+        button.style.display = "none";
       }
 
     }

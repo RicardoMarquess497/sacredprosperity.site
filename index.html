@@ -64,16 +64,102 @@
     margin: 0 0 16px;
   }
 
-  @media (max-width: 768px) {
-    .titulo-computador {
-      display: none;
-    }
+@media (max-width: 768px) {
 
-    .titulo-celular {
-      display: block;
-      font-size: 18px;
-    }
+  .titulo-computador {
+    display: none;
   }
+
+  .titulo-celular {
+    display: block;
+    font-size: 18px;
+  }
+
+  /* CORREÇÃO DOS COMENTÁRIOS NO CELULAR */
+
+  .comments .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .comments .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .comments .col-lg-8 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fb-comments {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .fb-comments-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .fb-comments-comment {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed;
+  }
+
+  .fb-comments-comment-img {
+    width: 50px !important;
+    min-width: 50px !important;
+    max-width: 50px !important;
+    vertical-align: top;
+  }
+
+  .fb-comments-comment-img img {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .fb-comments-comment td {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .fb-comments-comment-text {
+    width: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .fb-comments-comment-name {
+    white-space: normal !important;
+  }
+
+  .fb-comments-comment-actions {
+    white-space: normal !important;
+  }
+
+  .fb-comments-comment-actions date {
+    float: none !important;
+    margin-left: 5px;
+  }
+
+  .fb-comments-loadmore {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 </style>
    <!-- Meta Pixel Code -->
 <script>

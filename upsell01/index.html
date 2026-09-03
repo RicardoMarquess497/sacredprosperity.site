@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -726,15 +727,15 @@ This method is <strong class="sub">simple and easy to follow</strong>, and it wa
 <hr class="divisor">
 
 <p>
-Even though this program is worth more than <strong>$297.00</strong>, I chose to make it available at a special price for Divine Prayer students because of how naturally these two systems work together...
+Even though this program is worth more than <strong>$197.00</strong>, I chose to make it available at a special price for Divine Prayer students because of how naturally these two systems work together...
 </p>
 
 <p>
-So you won't have to pay $297.00 to access this program.
+So you won't have to pay $197.00 to access this program.
 </p>
 
 <p>
-Not even $197.00, which would still be a fair price...
+Not even $97.00, which would still be a fair price...
 </p>
 
 <p>
@@ -760,7 +761,7 @@ Special Offer For A Limited Time!
 <div class="discount-badge">
 
 <span class="percentage">
-66%
+71%
 </span>
 
 <span class="off-text">
@@ -773,16 +774,16 @@ OFF
 Your price:
 </div>
 
-<div class="price-old js-price-old">
-$ 0.00
+<div class="price-old">
+$ 197.00
 </div>
 
-<div class="price-new js-price-new">
-$ 0.00
+<div class="price-new">
+$ 57.00
 </div>
 
-<div class="price-subtitle js-price-subtitle">
-$ 0.00 in US dollars
+<div class="price-subtitle" style="display:none;">
+$ 57.00 in US dollars
 </div>
 
 </div>
@@ -823,12 +824,12 @@ $ 0.00 in US dollars
 
 <div class="cta-prices">
 
-<span class="cta-price-old js-price-old">
-$ 0.00
+<span class="cta-price-old">
+$ 197.00
 </span>
 
-<span class="cta-price-new js-price-new">
-$ 0.00
+<span class="cta-price-new">
+$ 57.00
 </span>
 
 </div>
@@ -869,7 +870,7 @@ No, I would like to decline this offer.
 <main class="carta">
 
 <p>
-<strong class="sub">But this is only valid right now!</strong> If you try to get Prosperity Guardian later, you may have to pay the regular price of <em>$297.00</em>...
+<strong class="sub">But this is only valid right now!</strong> If you try to get Prosperity Guardian later, you may have to pay the regular price of <em>$197.00</em>...
 </p>
 
 <p>
@@ -981,7 +982,7 @@ Last chance to add this to your package!
 <div class="discount-badge">
 
 <span class="percentage">
-66%
+71%
 </span>
 
 <span class="off-text">
@@ -994,16 +995,16 @@ OFF
 Your price:
 </div>
 
-<div class="price-old js-price-old">
-$ 0.00
+<div class="price-old">
+$ 197.00
 </div>
 
-<div class="price-new js-price-new">
-$ 0.00
+<div class="price-new">
+$ 57.00
 </div>
 
-<div class="price-subtitle js-price-subtitle">
-$ 0.00 in US dollars
+<div class="price-subtitle" style="display:none;">
+$ 57.00 in US dollars
 </div>
 
 </div>
@@ -1053,12 +1054,12 @@ YES, ADD IT TO MY PACKAGE &gt;&gt;
 
 <div class="cta-prices">
 
-<span class="cta-price-old js-price-old">
-$ 0.00
+<span class="cta-price-old">
+$ 197.00
 </span>
 
-<span class="cta-price-new js-price-new">
-$ 0.00
+<span class="cta-price-new">
+$ 57.00
 </span>
 
 </div>
@@ -1093,284 +1094,6 @@ All rights reserved &copy; Divine Prayer
 </p>
 
 </footer>
-
-<!-- PREÇOS -->
-
-<script>
-
-const MOEDA_FIXA = 'USD';
-const VALOR_FIXO = 67;
-const VALOR_USD = 67;
-const MULTIPLICADOR_RISCADO = 2.9403;
-
-const CURRENCY_CONFIG = {
-
-'BR': {currency:'BRL',symbol:'R$',locale:'pt-BR'},
-'US': {currency:'USD',symbol:'$',locale:'en-US'},
-'GB': {currency:'GBP',symbol:'£',locale:'en-GB'},
-'EU': {currency:'EUR',symbol:'€',locale:'de-DE'},
-'CA': {currency:'CAD',symbol:'C$',locale:'en-CA'},
-'AU': {currency:'AUD',symbol:'A$',locale:'en-AU'},
-'MX': {currency:'MXN',symbol:'$',locale:'es-MX'},
-'AR': {currency:'ARS',symbol:'$',locale:'es-AR'},
-'CL': {currency:'CLP',symbol:'$',locale:'es-CL'},
-'CO': {currency:'COP',symbol:'$',locale:'es-CO'},
-'JP': {currency:'JPY',symbol:'¥',locale:'ja-JP'},
-'CN': {currency:'CNY',symbol:'¥',locale:'zh-CN'},
-'IN': {currency:'INR',symbol:'₹',locale:'en-IN'},
-'ZA': {currency:'ZAR',symbol:'R',locale:'en-ZA'}
-
-};
-
-const DEFAULT_RATES = {
-
-'BRL':5.2965,
-'EUR':0.92,
-'GBP':0.79,
-'CAD':1.36,
-'AUD':1.52,
-'MXN':17.20,
-'ARS':850,
-'CLP':950,
-'COP':4100,
-'JPY':149.50,
-'CNY':7.24,
-'INR':83.20,
-'ZAR':18.50
-
-};
-
-async function detectUserCountry(){
-
-try{
-
-const response =
-await fetch('https://ipapi.co/json/');
-
-const data =
-await response.json();
-
-return data.country_code || 'US';
-
-}catch(error){
-
-console.warn(
-'Could not detect country, using US as default'
-);
-
-return 'US';
-
-}
-
-}
-
-async function fetchExchangeRates(){
-
-try{
-
-const response =
-await fetch(
-'https://api.exchangerate-api.com/v4/latest/USD'
-);
-
-const data =
-await response.json();
-
-return data.rates;
-
-}catch(error){
-
-console.warn(
-'Using offline exchange rates'
-);
-
-return DEFAULT_RATES;
-
-}
-
-}
-
-function formatPrice(
-value,
-countryCode
-){
-
-const config =
-CURRENCY_CONFIG[countryCode] ||
-CURRENCY_CONFIG['US'];
-
-const decimals =
-['JPY','CLP'].includes(
-config.currency
-)
-? 0
-: 2;
-
-return value.toLocaleString(
-config.locale,
-{
-minimumFractionDigits:decimals,
-maximumFractionDigits:decimals
-}
-);
-
-}
-
-async function updateAllPrices(){
-
-let countryCode='US';
-let valorLocal;
-
-if(MOEDA_FIXA){
-
-countryCode =
-Object.keys(
-CURRENCY_CONFIG
-).find(
-k =>
-CURRENCY_CONFIG[k].currency ===
-MOEDA_FIXA
-) || 'US';
-
-valorLocal =
-VALOR_FIXO;
-
-}else{
-
-countryCode =
-await detectUserCountry();
-
-const rates =
-await fetchExchangeRates();
-
-const config =
-CURRENCY_CONFIG[countryCode] ||
-CURRENCY_CONFIG['US'];
-
-if(
-config.currency ===
-'USD'
-){
-
-valorLocal =
-VALOR_USD;
-
-}else{
-
-const rate =
-rates[config.currency] ||
-DEFAULT_RATES[
-config.currency
-] ||
-1;
-
-valorLocal =
-VALOR_USD *
-rate;
-
-}
-
-}
-
-const config =
-CURRENCY_CONFIG[countryCode] ||
-CURRENCY_CONFIG['US'];
-
-const symbol =
-config.symbol;
-
-const valorOriginal =
-valorLocal *
-MULTIPLICADOR_RISCADO;
-
-document
-.querySelectorAll(
-'.js-price-old'
-)
-.forEach(
-el => {
-
-el.textContent =
-symbol +
-' ' +
-formatPrice(
-valorOriginal,
-countryCode
-);
-
-}
-);
-
-document
-.querySelectorAll(
-'.js-price-new'
-)
-.forEach(
-el => {
-
-el.textContent =
-symbol +
-' ' +
-formatPrice(
-valorLocal,
-countryCode
-);
-
-}
-);
-
-document
-.querySelectorAll(
-'.js-price-subtitle'
-)
-.forEach(
-el => {
-
-if(
-config.currency ===
-'USD'
-){
-
-el.style.display =
-'none';
-
-}else{
-
-const usd =
-MOEDA_FIXA
-?
-VALOR_FIXO /
-(
-DEFAULT_RATES[
-config.currency
-] ||
-1
-)
-:
-VALOR_USD;
-
-el.textContent =
-'Equivalent to $ ' +
-usd.toFixed(2) +
-' in US dollars';
-
-}
-
-}
-);
-
-}
-
-window.addEventListener(
-'load',
-function(){
-
-updateAllPrices();
-
-}
-);
-
-</script>
 
 <!-- BACK REDIRECT - UPSELL 1 PARA DOWNSELL 1 -->
 
@@ -1545,3 +1268,5 @@ l_8iub
 
 </body>
 </html>
+```
+

@@ -75,7 +75,7 @@ body{
 
 
 /* ========================================= */
-/* CTA ESCONDIDA ATÉ 03:22 */
+/* CTA ESCONDIDA ATÉ 03:38 */
 /* ========================================= */
 
 .esconder{
@@ -177,11 +177,7 @@ body{
     position:absolute;
     top:-15px;
     right:-15px;
-    background:linear-gradient(
-        135deg,
-        #ff6b6b,
-        #ee5a6f
-    );
+    background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
     color:#FFFFFF;
     width:80px;
     height:80px;
@@ -558,7 +554,7 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 <!-- ========================================= -->
 <!-- DELAY DA CTA -->
-<!-- 03:22 = 202 SEGUNDOS -->
+<!-- 03:38 = 218 SEGUNDOS -->
 <!-- ========================================= -->
 
 <script type="text/javascript">
@@ -569,7 +565,7 @@ about protecting yourself from negativity, envy and unwanted outside influence.
         "vid-6aa7fc2fb33b1fe99d96445e";
 
     const TEMPO_CTA =
-        202;
+        218;
 
     const STORAGE_KEY =
         "upsell2_cta_6aa7fc2fb33b1fe99d96445e";
@@ -588,7 +584,6 @@ about protecting yourself from negativity, envy and unwanted outside influence.
         return;
 
     }
-
 
     let ctaJaExibida =
         false;
@@ -632,14 +627,14 @@ about protecting yourself from negativity, envy and unwanted outside influence.
         }
 
         console.log(
-            "CTA do Upsell 2 liberada."
+            "CTA do Upsell 2 liberada aos 218 segundos."
         );
 
     }
 
 
     /*
-     * Se ele já chegou ao pitch antes,
+     * Se o usuário já chegou ao pitch antes,
      * mantém a oferta liberada.
      */
 
@@ -665,7 +660,8 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 
     /*
-     * Monitora o tempo real do vídeo.
+     * Monitora continuamente
+     * o tempo real do vídeo.
      */
 
     player.addEventListener(
@@ -705,25 +701,47 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 
     /*
-     * Fallback adicional quando
-     * o player fica pronto.
+     * Quando o player ficar pronto,
+     * cria gatilhos adicionais.
      */
 
     player.addEventListener(
         "player:ready",
         function(){
 
+            console.log(
+                "VTurb Upsell 2 pronto."
+            );
+
+
+            /*
+             * Método de delay da VTurb.
+             */
+
             if(
-                typeof player.currentTime === "number" &&
-                player.currentTime >= TEMPO_CTA
+                typeof player.displayHiddenElements
+                === "function"
             ){
 
-                mostrarCTA();
+                player.displayHiddenElements(
+                    TEMPO_CTA,
+                    [".esconder"],
+                    {
+                        display:"block",
+                        persist:true
+                    }
+                );
 
             }
 
+
+            /*
+             * Gatilho redundante onTime.
+             */
+
             if(
-                typeof player.onTime === "function"
+                typeof player.onTime
+                === "function"
             ){
 
                 player.onTime(
@@ -734,6 +752,21 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
                     }
                 );
+
+            }
+
+
+            /*
+             * Caso o player já esteja
+             * além dos 218 segundos.
+             */
+
+            if(
+                Number(player.currentTime)
+                >= TEMPO_CTA
+            ){
+
+                mostrarCTA();
 
             }
 
@@ -780,7 +813,7 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 <!-- ========================================= -->
 <!-- OFERTA -->
-<!-- ESCONDIDA ATÉ 03:22 -->
+<!-- ESCONDIDA ATÉ 03:38 -->
 <!-- ========================================= -->
 
 <div

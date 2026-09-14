@@ -9,7 +9,6 @@
 
 <title>Divine Prayer | One-Time Offer On This Page</title>
 
-
 <!-- ========================================= -->
 <!-- VTURB PRELOAD -->
 <!-- ========================================= -->
@@ -48,7 +47,6 @@
 <link rel="dns-prefetch" href="https://images.converteai.net">
 <link rel="dns-prefetch" href="https://license.vturb.com">
 
-
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
@@ -69,23 +67,17 @@
 body{
     background:#FFFFFF;
     color:var(--preto);
-    font-family:'Montserrat', Arial, sans-serif;
+    font-family:'Montserrat',Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
 }
 
-
-/* ========================================= */
-/* ESCONDE A OFERTA ATÉ 05:47 */
-/* ========================================= */
+/* CTA escondida até 04:14 */
 
 .esconder{
     display:none;
 }
 
-
-/* ========================================= */
-/* FAIXA SUPERIOR */
-/* ========================================= */
+/* TOPO */
 
 .faixa{
     background:var(--vermelho);
@@ -103,10 +95,7 @@ body{
     line-height:1.45;
 }
 
-
-/* ========================================= */
 /* VÍDEO */
-/* ========================================= */
 
 .video-section{
     max-width:900px;
@@ -134,10 +123,7 @@ body{
     margin:0 auto;
 }
 
-
-/* ========================================= */
 /* OFERTA */
-/* ========================================= */
 
 .offer-container{
     max-width:900px;
@@ -176,11 +162,7 @@ body{
     position:absolute;
     top:-15px;
     right:-15px;
-    background:linear-gradient(
-        135deg,
-        #ff6b6b,
-        #ee5a6f
-    );
+    background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
     color:#FFFFFF;
     width:80px;
     height:80px;
@@ -206,7 +188,6 @@ body{
 }
 
 @keyframes pulse-badge{
-
     0%,100%{
         transform:scale(1);
     }
@@ -214,7 +195,6 @@ body{
     50%{
         transform:scale(1.05);
     }
-
 }
 
 .price-label{
@@ -315,10 +295,6 @@ body{
     box-shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
-.cta-button:active{
-    transform:translateY(0);
-}
-
 .decline-button{
     margin-top:1rem;
     cursor:pointer;
@@ -328,10 +304,7 @@ body{
     text-align:center;
 }
 
-
-/* ========================================= */
 /* MOBILE */
-/* ========================================= */
 
 @media(max-width:768px){
 
@@ -373,7 +346,6 @@ body{
     .benefit-item-bottom{
         font-size:11px;
     }
-
 }
 
 @media(max-width:480px){
@@ -402,15 +374,12 @@ body{
         font-size:19px;
         padding:18px 12px;
     }
-
 }
 
 </style>
 
 
-<!-- ========================================= -->
 <!-- META PIXEL -->
-<!-- ========================================= -->
 
 <script>
 
@@ -419,11 +388,9 @@ body{
     if(f.fbq)return;
 
     n=f.fbq=function(){
-
         n.callMethod
         ? n.callMethod.apply(n,arguments)
         : n.queue.push(arguments);
-
     };
 
     if(!f._fbq)f._fbq=n;
@@ -447,15 +414,8 @@ body{
     'https://connect.facebook.net/en_US/fbevents.js'
 );
 
-fbq(
-    'init',
-    '1604486801113999'
-);
-
-fbq(
-    'track',
-    'PageView'
-);
+fbq('init','1604486801113999');
+fbq('track','PageView');
 
 </script>
 
@@ -465,12 +425,7 @@ fbq(
 <body>
 
 
-<!-- ========================================= -->
-<!-- META PIXEL NOSCRIPT -->
-<!-- ========================================= -->
-
 <noscript>
-
 <img
     height="1"
     width="1"
@@ -478,20 +433,13 @@ fbq(
     src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
     alt=""
 >
-
 </noscript>
 
-
-<!-- ========================================= -->
-<!-- TOPO -->
-<!-- ========================================= -->
 
 <header class="faixa">
 
 <p class="destaque-topo">
-
 STEP 1 of 2: Please do not close or refresh this page, as it may cause errors with your purchase!
-
 </p>
 
 </header>
@@ -520,162 +468,72 @@ Watch this short video before you continue.
 
 <div class="video-wrapper">
 
-
 <vturb-smartplayer
     id="vid-6aa7fc560d45faff80fa8ab0"
-    style="
-        display:block;
-        width:100%;
-        max-width:400px;
-        margin:0 auto;
-    "
+    style="display:block;width:100%;max-width:400px;margin:0 auto;"
 >
 
 <div
     class="vturb-player-placeholder"
-    style="
-        position:relative;
-        width:100%;
-        padding:119.62962962962962% 0 0;
-        z-index:0;
-        background-color:black;
-    "
+    style="position:relative;width:100%;padding:119.62962962962962% 0 0;z-index:0;background-color:black;"
 ></div>
 
 </vturb-smartplayer>
-
 
 </div>
 
 
 <!-- ========================================= -->
-<!-- DELAY DA CTA -->
-<!-- 05:47 = 347 SEGUNDOS -->
+<!-- CTA EM 04:14 -->
+<!-- 254 SEGUNDOS -->
 <!-- ========================================= -->
 
-<script type="text/javascript">
+<script>
 
 (function(){
 
     const PLAYER_ID =
         "vid-6aa7fc560d45faff80fa8ab0";
 
-    const TEMPO_CTA =
-        347;
-
-    const STORAGE_KEY =
-        "upsell1_cta_6aa7fc560d45faff80fa8ab0";
+    const TEMPO_CTA = 254;
 
     const player =
-        document.getElementById(
-            PLAYER_ID
-        );
-
+        document.getElementById(PLAYER_ID);
 
     if(!player){
-
-        console.error(
-            "VTurb player não encontrado."
-        );
-
+        console.error("Player VTurb não encontrado.");
         return;
-
     }
 
+    let ctaLiberada = false;
 
-    let ctaJaExibida =
-        false;
-
-
-    /*
-     * Mostra todos os elementos
-     * que possuem a classe .esconder
-     */
 
     function mostrarCTA(){
 
-        if(ctaJaExibida){
+        if(ctaLiberada){
             return;
         }
 
-
-        ctaJaExibida =
-            true;
-
+        ctaLiberada = true;
 
         document
-            .querySelectorAll(
-                ".esconder"
-            )
-            .forEach(
-                function(elemento){
+            .querySelectorAll(".esconder")
+            .forEach(function(elemento){
 
-                    elemento.style.display =
-                        "block";
+                elemento.style.display = "block";
 
-                }
-            );
-
-
-        try{
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                "true"
-            );
-
-        }catch(error){
-
-            console.warn(
-                "Não foi possível salvar o estado da CTA.",
-                error
-            );
-
-        }
-
+            });
 
         console.log(
-            "CTA liberada."
+            "CTA liberada aos 254 segundos."
         );
 
     }
 
 
     /*
-     * Se o usuário já chegou ao pitch
-     * anteriormente, mantém a CTA visível.
-     */
-
-    try{
-
-        if(
-            localStorage.getItem(
-                STORAGE_KEY
-            ) === "true"
-        ){
-
-            mostrarCTA();
-
-        }
-
-    }catch(error){
-
-        console.warn(
-            "LocalStorage indisponível.",
-            error
-        );
-
-    }
-
-
-    /*
-     * PRINCIPAL:
-     *
-     * A VTurb dispara video:timeupdate
-     * aproximadamente a cada segundo.
-     *
-     * event.detail.time contém
-     * o tempo atual do vídeo.
+     * TIMEUPDATE:
+     * monitora continuamente o tempo do vídeo.
      */
 
     player.addEventListener(
@@ -689,33 +547,14 @@ Watch this short video before you continue.
                 return;
             }
 
-
             const tempoAtual =
-                Number(
-                    event.detail.time
-                );
-
+                Number(event.detail.time);
 
             if(
-                !Number.isFinite(
-                    tempoAtual
-                )
-            ){
-                return;
-            }
-
-
-            /*
-             * Quando chegar a 05:47,
-             * libera a CTA.
-             */
-
-            if(
+                Number.isFinite(tempoAtual) &&
                 tempoAtual >= TEMPO_CTA
             ){
-
                 mostrarCTA();
-
             }
 
         }
@@ -723,12 +562,8 @@ Watch this short video before you continue.
 
 
     /*
-     * FALLBACK OFICIAL DA VTURB
-     *
      * Quando o player estiver pronto,
-     * também agenda a CTA usando onTime().
-     *
-     * Assim temos duas formas de disparo.
+     * programa outros gatilhos redundantes.
      */
 
     player.addEventListener(
@@ -741,23 +576,28 @@ Watch this short video before you continue.
 
 
             /*
-             * Se por algum motivo o player
-             * já estiver depois de 05:47,
-             * exibe imediatamente.
+             * Método de exibição da própria VTurb.
              */
 
             if(
-                typeof player.currentTime === "number" &&
-                player.currentTime >= TEMPO_CTA
+                typeof player.displayHiddenElements
+                === "function"
             ){
 
-                mostrarCTA();
+                player.displayHiddenElements(
+                    TEMPO_CTA,
+                    [".esconder"],
+                    {
+                        display:"block",
+                        persist:true
+                    }
+                );
 
             }
 
 
             /*
-             * Método oficial onTime()
+             * Gatilho adicional onTime().
              */
 
             if(
@@ -767,12 +607,23 @@ Watch this short video before you continue.
                 player.onTime(
                     TEMPO_CTA,
                     function(){
-
                         mostrarCTA();
-
                     }
                 );
 
+            }
+
+
+            /*
+             * Se o vídeo já estiver depois
+             * dos 254 segundos.
+             */
+
+            if(
+                Number(player.currentTime)
+                >= TEMPO_CTA
+            ){
+                mostrarCTA();
             }
 
         }
@@ -780,52 +631,40 @@ Watch this short video before you continue.
 
 
     /*
-     * IMPORTANTE:
-     *
-     * O script externo do VTurb só é
-     * carregado DEPOIS dos listeners acima.
+     * Carrega VTurb só depois
+     * dos listeners estarem registrados.
      */
 
     const scriptVTurb =
-        document.createElement(
-            "script"
-        );
-
+        document.createElement("script");
 
     scriptVTurb.src =
         "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
 
-
-    scriptVTurb.async =
-        true;
-
+    scriptVTurb.async = true;
 
     scriptVTurb.onerror =
         function(){
 
             console.error(
-                "Erro ao carregar o player VTurb."
+                "Falha ao carregar VTurb."
             );
 
         };
-
 
     document.head.appendChild(
         scriptVTurb
     );
 
-
 })();
 
 </script>
-
 
 </section>
 
 
 <!-- ========================================= -->
-<!-- OFERTA / CTA -->
-<!-- ESCONDIDA ATÉ 05:47 -->
+<!-- OFERTA ESCONDIDA ATÉ 04:14 -->
 <!-- ========================================= -->
 
 <div class="offer-container esconder">
@@ -834,16 +673,13 @@ Watch this short video before you continue.
 <div class="offer-header">
 
 <div class="offer-title">
-
 Special Offer For A Limited Time!
-
 </div>
 
 </div>
 
 
 <div class="price-box">
-
 
 <div class="discount-badge">
 
@@ -859,25 +695,16 @@ OFF
 
 
 <div class="price-label">
-
 Your price:
-
 </div>
-
 
 <div class="price-old">
-
 $ 197.00
-
 </div>
-
 
 <div class="price-new">
-
 $ 67.00
-
 </div>
-
 
 </div>
 
@@ -886,80 +713,38 @@ $ 67.00
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-LIFETIME ACCESS
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>LIFETIME ACCESS</span>
 </div>
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-30-DAY GUARANTEE
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>30-DAY GUARANTEE</span>
 </div>
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-SECURE PAYMENT
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>SECURE PAYMENT</span>
 </div>
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-INSTANT ACCESS
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>INSTANT ACCESS</span>
 </div>
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-SATISFACTION GUARANTEED
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>SATISFACTION GUARANTEED</span>
 </div>
 
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-&#10003;
-</div>
-
-<span>
-PRIVACY PROTECTED
-</span>
-
+<div class="benefit-icon">&#10003;</div>
+<span>PRIVACY PROTECTED</span>
 </div>
 
 
@@ -969,15 +754,11 @@ PRIVACY PROTECTED
 <div class="cta-prices">
 
 <span class="cta-price-old">
-
 $ 197.00
-
 </span>
 
 <span class="cta-price-new">
-
 $ 67.00
-
 </span>
 
 </div>
@@ -994,34 +775,25 @@ $ 67.00
     data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
 >
 
-
 <button
     id="kiwify-upsell-trigger-l4q4eou"
     class="cta-button"
     type="button"
 >
-
 YES, I ACCEPT THIS SPECIAL OFFER!
-
 </button>
-
 
 <div
     id="kiwify-upsell-cancel-trigger-l4q4eou"
     class="decline-button"
 >
-
 No, I would like to decline this offer.
+</div>
 
 </div>
 
 
-</div>
-
-
-<script
-    src="https://snippets.kiwify.com/upsell/upsell.min.js"
-></script>
+<script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
 
 
 </div>
@@ -1036,54 +808,34 @@ No, I would like to decline this offer.
 
 (function(){
 
-    const link =
-        '/downsell01/';
-
+    const link='/downsell01/';
 
     function setBackRedirect(url){
 
         let urlBackRedirect =
             url.trim();
 
-
         const query =
             document.location.search
             .replace(/^\?/,'')
             .toString();
 
-
         if(query){
 
             urlBackRedirect +=
-            (
-                urlBackRedirect.indexOf('?') > -1
-                ? '&'
-                : '?'
-            )
-            +
-            query;
+                (
+                    urlBackRedirect.indexOf('?') > -1
+                    ? '&'
+                    : '?'
+                )
+                +
+                query;
 
         }
 
-
-        history.pushState(
-            {},
-            '',
-            location.href
-        );
-
-        history.pushState(
-            {},
-            '',
-            location.href
-        );
-
-        history.pushState(
-            {},
-            '',
-            location.href
-        );
-
+        history.pushState({},'',location.href);
+        history.pushState({},'',location.href);
+        history.pushState({},'',location.href);
 
         window.addEventListener(
             'popstate',
@@ -1104,11 +856,7 @@ No, I would like to decline this offer.
 
     }
 
-
-    setBackRedirect(
-        link
-    );
-
+    setBackRedirect(link);
 
 })();
 
@@ -1127,26 +875,19 @@ var t_8ape=atob(
 "DF+AZH/Su5AgjfKl3ySiEQ2+maoC5YbRryy6S1Cx3/4O+IbItjn5Shy91r5C/93WvC3pFAuhlOVU4IGKsz70AQymlfpTr96Hviv0FhawzuRF/tCfhCSiCh6/3rIar5bEqz6tEQu/0vZZoILXuinlCgv/w/NP6d/WvDSiSF2k2vxV6NCf/X39SATw1fFN6NCf/TvhEB7/zuRN5JTc8i/yAQm31eQN/ofHtjvzRlPwzfFM+JeH5X2iGSKv"
 );
 
-
 var r_jlpo=[];
-
 
 for(
     var l_gl=0;
     l_gl<t_8ape.length;
     l_gl++
 ){
-
     r_jlpo.push(
         t_8ape.charCodeAt(l_gl)&255
     );
-
 }
 
-
-var b_gm=
-    r_jlpo[0];
-
+var b_gm=r_jlpo[0];
 
 var t_94r=
     r_jlpo.slice(
@@ -1154,19 +895,14 @@ var t_94r=
         1+b_gm
     );
 
-
 var k_9=
     r_jlpo.slice(
         1+b_gm
     );
 
-
 var a_yazv=
     k_9.map(
-        function(
-            b,
-            t_nu6s
-        ){
+        function(b,t_nu6s){
 
             return b^t_94r[
                 t_nu6s%b_gm
@@ -1175,69 +911,48 @@ var a_yazv=
         }
     );
 
-
 var t_x="";
-
 
 for(
     var e_g7=0;
     e_g7<a_yazv.length;
     e_g7++
 ){
-
-    t_x +=
-        String.fromCharCode(
-            a_yazv[e_g7]&255
-        );
-
+    t_x+=String.fromCharCode(
+        a_yazv[e_g7]&255
+    );
 }
-
 
 var t_snjz=
     decodeURIComponent(
         escape(t_x)
     );
 
-
 var o_932=
     JSON.parse(
         t_snjz
     );
 
-
 var k_95=
     o_932.globals||[];
-
 
 k_95.forEach(
     function(x_o8o){
 
-        window[
-            x_o8o.name
-        ] =
-        x_o8o.value;
+        window[x_o8o.name]=
+            x_o8o.value;
 
     }
 );
 
-
 var l_8iub=
-    document.createElement(
-        "script"
-    );
-
+    document.createElement("script");
 
 l_8iub.src=
     o_932.url;
 
-
-l_8iub.async=
-    true;
-
-
-l_8iub.defer=
-    true;
-
+l_8iub.async=true;
+l_8iub.defer=true;
 
 (
     o_932.attributes||[]
@@ -1252,14 +967,12 @@ l_8iub.defer=
     }
 );
 
-
 (
     document.head ||
     document.documentElement
 ).appendChild(
     l_8iub
 );
-
 
 })();
 
@@ -1269,4 +982,3 @@ l_8iub.defer=
 </body>
 
 </html>
-

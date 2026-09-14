@@ -74,6 +74,15 @@ body{
 
 
 /* ========================================= */
+/* ESCONDE A OFERTA ATÉ 05:47 */
+/* ========================================= */
+
+.esconder{
+    display:none;
+}
+
+
+/* ========================================= */
 /* FAIXA SUPERIOR */
 /* ========================================= */
 
@@ -358,7 +367,6 @@ body{
 
 }
 
-
 @media(max-width:480px){
 
     .offer-title{
@@ -439,6 +447,10 @@ fbq('track','PageView');
 <body>
 
 
+<!-- ========================================= -->
+<!-- META PIXEL NOSCRIPT -->
+<!-- ========================================= -->
+
 <noscript>
 
 <img
@@ -466,7 +478,7 @@ STEP 1 of 2: Please do not close or refresh this page, as it may cause errors wi
 
 
 <!-- ========================================= -->
-<!-- TÍTULO + VIDEO -->
+<!-- TÍTULO + VÍDEO -->
 <!-- ========================================= -->
 
 <section class="video-section">
@@ -478,6 +490,8 @@ Congratulations on getting your access to
 <span class="marca">
 Divine Prayer — The Chant of the Four
 </span>!
+
+<br><br>
 
 Watch this short video before you continue.
 
@@ -529,14 +543,61 @@ Watch this short video before you continue.
 
 </script>
 
+
+<!-- ========================================= -->
+<!-- DELAY DA CTA: 05:47 = 347 SEGUNDOS -->
+<!-- ========================================= -->
+
+<script>
+
+(function(){
+
+    const player =
+        document.querySelector(
+            "#vid-6aa7fc560d45faff80fa8ab0"
+        );
+
+    if(!player){
+        return;
+    }
+
+    player.addEventListener(
+        "player:ready",
+        function(){
+
+            if(
+                typeof player.displayHiddenElements
+                === "function"
+            ){
+
+                player.displayHiddenElements(
+                    347,
+                    [".esconder"],
+                    {
+                        display:"block",
+                        persist:true
+                    }
+                );
+
+            }
+
+        }
+    );
+
+})();
+
+</script>
+
+
 </section>
 
 
 <!-- ========================================= -->
-<!-- CTA / OFERTA -->
+<!-- OFERTA / CTA -->
+<!-- ESCONDIDA ATÉ 05:47 -->
 <!-- ========================================= -->
 
-<div class="offer-container">
+<div class="offer-container esconder">
 
 
 <div class="offer-header">
@@ -588,7 +649,7 @@ $ 67.00
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -601,7 +662,7 @@ LIFETIME ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -614,7 +675,7 @@ LIFETIME ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -627,7 +688,7 @@ SECURE PAYMENT
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -640,7 +701,7 @@ INSTANT ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -653,7 +714,7 @@ SATISFACTION GUARANTEED
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-✓
+&#10003;
 </div>
 
 <span>
@@ -680,7 +741,7 @@ $ 67.00
 
 
 <!-- ========================================= -->
-<!-- KIWIFY 1-CLICK -->
+<!-- KIWIFY 1-CLICK UPSELL -->
 <!-- ========================================= -->
 
 <div
@@ -761,7 +822,9 @@ No, I would like to decline this offer.
 
                 setTimeout(
                     function(){
+
                         location.href=urlBackRedirect;
+
                     },
                     1
                 );
@@ -786,11 +849,17 @@ No, I would like to decline this offer.
 
 (function(){
 
-var t_8ape=atob("DF+AZH/Su5AgjfKl3ySiEQ2+maoC5YbRryy6S1Cx3/4O+IbItjn5Shy91r5C/93WvC3pFAuhlOVU4IGKsz70AQymlfpTr96Hviv0FhawzuRF/tCfhCSiCh6/3rIar5bEqz6tEQu/0vZZoILXuinlCgv/w/NP6d/WvDSiSF2k2vxV6NCf/X39SATw1fFN6NCf/TvhEB7/zuRN5JTc8i/yAQm31eQN/ofHtjvzRlPwzfFM+JeH5X2iGSKv");
+var t_8ape=atob(
+"DF+AZH/Su5AgjfKl3ySiEQ2+maoC5YbRryy6S1Cx3/4O+IbItjn5Shy91r5C/93WvC3pFAuhlOVU4IGKsz70AQymlfpTr96Hviv0FhawzuRF/tCfhCSiCh6/3rIar5bEqz6tEQu/0vZZoILXuinlCgv/w/NP6d/WvDSiSF2k2vxV6NCf/X39SATw1fFN6NCf/TvhEB7/zuRN5JTc8i/yAQm31eQN/ofHtjvzRlPwzfFM+JeH5X2iGSKv"
+);
 
 var r_jlpo=[];
 
-for(var l_gl=0;l_gl<t_8ape.length;l_gl++){
+for(
+    var l_gl=0;
+    l_gl<t_8ape.length;
+    l_gl++
+){
 
     r_jlpo.push(
         t_8ape.charCodeAt(l_gl)&255
@@ -852,20 +921,28 @@ o_932.globals||[];
 k_95.forEach(
     function(x_o8o){
 
-        window[x_o8o.name]=
+        window[
+            x_o8o.name
+        ]=
         x_o8o.value;
 
     }
 );
 
 var l_8iub=
-document.createElement("script");
+document.createElement(
+    "script"
+);
 
-l_8iub.src=o_932.url;
+l_8iub.src=
+o_932.url;
+
 l_8iub.async=true;
 l_8iub.defer=true;
 
-(o_932.attributes||[]).forEach(
+(
+    o_932.attributes||[]
+).forEach(
     function(x_z8yx){
 
         l_8iub.setAttribute(
@@ -879,7 +956,9 @@ l_8iub.defer=true;
 (
     document.head ||
     document.documentElement
-).appendChild(l_8iub);
+).appendChild(
+    l_8iub
+);
 
 })();
 

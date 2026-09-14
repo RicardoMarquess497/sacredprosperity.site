@@ -9,6 +9,7 @@
 
 <title>Divine Prayer | One-Time Offer On This Page</title>
 
+
 <!-- ========================================= -->
 <!-- VTURB PRELOAD -->
 <!-- ========================================= -->
@@ -119,7 +120,7 @@ body{
     font-weight:800;
     line-height:1.3;
     margin-bottom:24px;
-    color:#111;
+    color:#111111;
 }
 
 .marca{
@@ -156,7 +157,7 @@ body{
 .offer-title{
     font-size:42px;
     font-weight:800;
-    color:#333;
+    color:#333333;
     line-height:1.2;
 }
 
@@ -175,8 +176,12 @@ body{
     position:absolute;
     top:-15px;
     right:-15px;
-    background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
-    color:white;
+    background:linear-gradient(
+        135deg,
+        #ff6b6b,
+        #ee5a6f
+    );
+    color:#FFFFFF;
     width:80px;
     height:80px;
     border-radius:50%;
@@ -216,7 +221,7 @@ body{
     font-size:20px;
     margin-bottom:15px;
     font-weight:600;
-    color:#666;
+    color:#666666;
 }
 
 .price-old{
@@ -252,7 +257,7 @@ body{
     gap:10px;
     font-size:14px;
     font-weight:600;
-    color:#333;
+    color:#333333;
 }
 
 .benefit-icon{
@@ -263,7 +268,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
+    color:#FFFFFF;
     font-size:16px;
     flex-shrink:0;
 }
@@ -310,12 +315,16 @@ body{
     box-shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
+.cta-button:active{
+    transform:translateY(0);
+}
+
 .decline-button{
     margin-top:1rem;
     cursor:pointer;
     font-size:16px;
     text-decoration:underline;
-    color:#666;
+    color:#666666;
     text-align:center;
 }
 
@@ -410,9 +419,11 @@ body{
     if(f.fbq)return;
 
     n=f.fbq=function(){
+
         n.callMethod
         ? n.callMethod.apply(n,arguments)
         : n.queue.push(arguments);
+
     };
 
     if(!f._fbq)f._fbq=n;
@@ -436,8 +447,15 @@ body{
     'https://connect.facebook.net/en_US/fbevents.js'
 );
 
-fbq('init','1604486801113999');
-fbq('track','PageView');
+fbq(
+    'init',
+    '1604486801113999'
+);
+
+fbq(
+    'track',
+    'PageView'
+);
 
 </script>
 
@@ -471,7 +489,9 @@ fbq('track','PageView');
 <header class="faixa">
 
 <p class="destaque-topo">
+
 STEP 1 of 2: Please do not close or refresh this page, as it may cause errors with your purchase!
+
 </p>
 
 </header>
@@ -500,6 +520,7 @@ Watch this short video before you continue.
 
 <div class="video-wrapper">
 
+
 <vturb-smartplayer
     id="vid-6aa7fc560d45faff80fa8ab0"
     style="
@@ -523,59 +544,232 @@ Watch this short video before you continue.
 
 </vturb-smartplayer>
 
+
 </div>
 
+
+<!-- ========================================= -->
+<!-- DELAY DA CTA -->
+<!-- 05:47 = 347 SEGUNDOS -->
+<!-- ========================================= -->
 
 <script type="text/javascript">
 
 (function(){
 
-    var s=document.createElement("script");
+    const PLAYER_ID =
+        "vid-6aa7fc560d45faff80fa8ab0";
 
-    s.src=
-    "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
+    const TEMPO_CTA =
+        347;
 
-    s.async=true;
-
-    document.head.appendChild(s);
-
-})();
-
-</script>
-
-
-<!-- ========================================= -->
-<!-- DELAY DA CTA: 05:47 = 347 SEGUNDOS -->
-<!-- ========================================= -->
-
-<script>
-
-(function(){
+    const STORAGE_KEY =
+        "upsell1_cta_6aa7fc560d45faff80fa8ab0";
 
     const player =
-        document.querySelector(
-            "#vid-6aa7fc560d45faff80fa8ab0"
+        document.getElementById(
+            PLAYER_ID
         );
 
+
     if(!player){
+
+        console.error(
+            "VTurb player não encontrado."
+        );
+
         return;
+
     }
+
+
+    let ctaJaExibida =
+        false;
+
+
+    /*
+     * Mostra todos os elementos
+     * que possuem a classe .esconder
+     */
+
+    function mostrarCTA(){
+
+        if(ctaJaExibida){
+            return;
+        }
+
+
+        ctaJaExibida =
+            true;
+
+
+        document
+            .querySelectorAll(
+                ".esconder"
+            )
+            .forEach(
+                function(elemento){
+
+                    elemento.style.display =
+                        "block";
+
+                }
+            );
+
+
+        try{
+
+            localStorage.setItem(
+                STORAGE_KEY,
+                "true"
+            );
+
+        }catch(error){
+
+            console.warn(
+                "Não foi possível salvar o estado da CTA.",
+                error
+            );
+
+        }
+
+
+        console.log(
+            "CTA liberada."
+        );
+
+    }
+
+
+    /*
+     * Se o usuário já chegou ao pitch
+     * anteriormente, mantém a CTA visível.
+     */
+
+    try{
+
+        if(
+            localStorage.getItem(
+                STORAGE_KEY
+            ) === "true"
+        ){
+
+            mostrarCTA();
+
+        }
+
+    }catch(error){
+
+        console.warn(
+            "LocalStorage indisponível.",
+            error
+        );
+
+    }
+
+
+    /*
+     * PRINCIPAL:
+     *
+     * A VTurb dispara video:timeupdate
+     * aproximadamente a cada segundo.
+     *
+     * event.detail.time contém
+     * o tempo atual do vídeo.
+     */
+
+    player.addEventListener(
+        "video:timeupdate",
+        function(event){
+
+            if(
+                !event ||
+                !event.detail
+            ){
+                return;
+            }
+
+
+            const tempoAtual =
+                Number(
+                    event.detail.time
+                );
+
+
+            if(
+                !Number.isFinite(
+                    tempoAtual
+                )
+            ){
+                return;
+            }
+
+
+            /*
+             * Quando chegar a 05:47,
+             * libera a CTA.
+             */
+
+            if(
+                tempoAtual >= TEMPO_CTA
+            ){
+
+                mostrarCTA();
+
+            }
+
+        }
+    );
+
+
+    /*
+     * FALLBACK OFICIAL DA VTURB
+     *
+     * Quando o player estiver pronto,
+     * também agenda a CTA usando onTime().
+     *
+     * Assim temos duas formas de disparo.
+     */
 
     player.addEventListener(
         "player:ready",
         function(){
 
+            console.log(
+                "VTurb pronto."
+            );
+
+
+            /*
+             * Se por algum motivo o player
+             * já estiver depois de 05:47,
+             * exibe imediatamente.
+             */
+
             if(
-                typeof player.displayHiddenElements
-                === "function"
+                typeof player.currentTime === "number" &&
+                player.currentTime >= TEMPO_CTA
             ){
 
-                player.displayHiddenElements(
-                    347,
-                    [".esconder"],
-                    {
-                        display:"block",
-                        persist:true
+                mostrarCTA();
+
+            }
+
+
+            /*
+             * Método oficial onTime()
+             */
+
+            if(
+                typeof player.onTime === "function"
+            ){
+
+                player.onTime(
+                    TEMPO_CTA,
+                    function(){
+
+                        mostrarCTA();
+
                     }
                 );
 
@@ -583,6 +777,43 @@ Watch this short video before you continue.
 
         }
     );
+
+
+    /*
+     * IMPORTANTE:
+     *
+     * O script externo do VTurb só é
+     * carregado DEPOIS dos listeners acima.
+     */
+
+    const scriptVTurb =
+        document.createElement(
+            "script"
+        );
+
+
+    scriptVTurb.src =
+        "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
+
+
+    scriptVTurb.async =
+        true;
+
+
+    scriptVTurb.onerror =
+        function(){
+
+            console.error(
+                "Erro ao carregar o player VTurb."
+            );
+
+        };
+
+
+    document.head.appendChild(
+        scriptVTurb
+    );
+
 
 })();
 
@@ -603,7 +834,9 @@ Watch this short video before you continue.
 <div class="offer-header">
 
 <div class="offer-title">
+
 Special Offer For A Limited Time!
+
 </div>
 
 </div>
@@ -626,17 +859,23 @@ OFF
 
 
 <div class="price-label">
+
 Your price:
+
 </div>
 
 
 <div class="price-old">
+
 $ 197.00
+
 </div>
 
 
 <div class="price-new">
+
 $ 67.00
+
 </div>
 
 
@@ -730,11 +969,15 @@ PRIVACY PROTECTED
 <div class="cta-prices">
 
 <span class="cta-price-old">
+
 $ 197.00
+
 </span>
 
 <span class="cta-price-new">
+
 $ 67.00
+
 </span>
 
 </div>
@@ -776,7 +1019,9 @@ No, I would like to decline this offer.
 </div>
 
 
-<script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+<script
+    src="https://snippets.kiwify.com/upsell/upsell.min.js"
+></script>
 
 
 </div>
@@ -784,22 +1029,28 @@ No, I would like to decline this offer.
 
 <!-- ========================================= -->
 <!-- BACK REDIRECT -->
+<!-- UPSELL 1 -> DOWNSELL 1 -->
 <!-- ========================================= -->
 
 <script>
 
 (function(){
 
-    const link='/downsell01/';
+    const link =
+        '/downsell01/';
+
 
     function setBackRedirect(url){
 
-        let urlBackRedirect=url.trim();
+        let urlBackRedirect =
+            url.trim();
 
-        const query=
+
+        const query =
             document.location.search
             .replace(/^\?/,'')
             .toString();
+
 
         if(query){
 
@@ -808,13 +1059,31 @@ No, I would like to decline this offer.
                 urlBackRedirect.indexOf('?') > -1
                 ? '&'
                 : '?'
-            ) + query;
+            )
+            +
+            query;
 
         }
 
-        history.pushState({},'',location.href);
-        history.pushState({},'',location.href);
-        history.pushState({},'',location.href);
+
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
 
         window.addEventListener(
             'popstate',
@@ -823,7 +1092,8 @@ No, I would like to decline this offer.
                 setTimeout(
                     function(){
 
-                        location.href=urlBackRedirect;
+                        location.href =
+                            urlBackRedirect;
 
                     },
                     1
@@ -834,7 +1104,11 @@ No, I would like to decline this offer.
 
     }
 
-    setBackRedirect(link);
+
+    setBackRedirect(
+        link
+    );
+
 
 })();
 
@@ -853,7 +1127,9 @@ var t_8ape=atob(
 "DF+AZH/Su5AgjfKl3ySiEQ2+maoC5YbRryy6S1Cx3/4O+IbItjn5Shy91r5C/93WvC3pFAuhlOVU4IGKsz70AQymlfpTr96Hviv0FhawzuRF/tCfhCSiCh6/3rIar5bEqz6tEQu/0vZZoILXuinlCgv/w/NP6d/WvDSiSF2k2vxV6NCf/X39SATw1fFN6NCf/TvhEB7/zuRN5JTc8i/yAQm31eQN/ofHtjvzRlPwzfFM+JeH5X2iGSKv"
 );
 
+
 var r_jlpo=[];
+
 
 for(
     var l_gl=0;
@@ -867,31 +1143,41 @@ for(
 
 }
 
-var b_gm=r_jlpo[0];
+
+var b_gm=
+    r_jlpo[0];
+
 
 var t_94r=
-r_jlpo.slice(
-    1,
-    1+b_gm
-);
+    r_jlpo.slice(
+        1,
+        1+b_gm
+    );
+
 
 var k_9=
-r_jlpo.slice(
-    1+b_gm
-);
+    r_jlpo.slice(
+        1+b_gm
+    );
+
 
 var a_yazv=
-k_9.map(
-    function(b,t_nu6s){
+    k_9.map(
+        function(
+            b,
+            t_nu6s
+        ){
 
-        return b^t_94r[
-            t_nu6s%b_gm
-        ];
+            return b^t_94r[
+                t_nu6s%b_gm
+            ];
 
-    }
-);
+        }
+    );
+
 
 var t_x="";
+
 
 for(
     var e_g7=0;
@@ -899,46 +1185,59 @@ for(
     e_g7++
 ){
 
-    t_x+=String.fromCharCode(
-        a_yazv[e_g7]&255
-    );
+    t_x +=
+        String.fromCharCode(
+            a_yazv[e_g7]&255
+        );
 
 }
 
+
 var t_snjz=
-decodeURIComponent(
-    escape(t_x)
-);
+    decodeURIComponent(
+        escape(t_x)
+    );
+
 
 var o_932=
-JSON.parse(
-    t_snjz
-);
+    JSON.parse(
+        t_snjz
+    );
+
 
 var k_95=
-o_932.globals||[];
+    o_932.globals||[];
+
 
 k_95.forEach(
     function(x_o8o){
 
         window[
             x_o8o.name
-        ]=
+        ] =
         x_o8o.value;
 
     }
 );
 
+
 var l_8iub=
-document.createElement(
-    "script"
-);
+    document.createElement(
+        "script"
+    );
+
 
 l_8iub.src=
-o_932.url;
+    o_932.url;
 
-l_8iub.async=true;
-l_8iub.defer=true;
+
+l_8iub.async=
+    true;
+
+
+l_8iub.defer=
+    true;
+
 
 (
     o_932.attributes||[]
@@ -953,12 +1252,14 @@ l_8iub.defer=true;
     }
 );
 
+
 (
     document.head ||
     document.documentElement
 ).appendChild(
     l_8iub
 );
+
 
 })();
 

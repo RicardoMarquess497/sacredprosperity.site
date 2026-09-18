@@ -10,37 +10,27 @@
 <title>Divine Prayer | One-Time Offer On This Page</title>
 
 <!-- ========================================= -->
-<!-- VTURB PRELOAD -->
+<!-- VTURB - OTIMIZAÇÃO DE CARREGAMENTO -->
 <!-- ========================================= -->
 
 <script>
 !function(i,n){
-    i._plt = i._plt || (
-        n && n.timeOrigin
-        ? n.timeOrigin + n.now()
-        : Date.now()
-    );
+    i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
 }(window,performance);
 </script>
 
-<link
-rel="preload"
+<link rel="preload"
 href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js"
-as="script"
->
+as="script">
 
-<link
-rel="preload"
+<link rel="preload"
 href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-as="script"
->
+as="script">
 
-<link
-rel="preload"
+<link rel="preload"
 href="https://cdn.converteai.net/787c5677-903d-425e-8e33-86e900d53780/6aa7fc30e1767f4d626306a8/main.m3u8"
 as="fetch"
-crossorigin
->
+crossorigin>
 
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
@@ -71,7 +61,7 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
-/* CTA escondida até 04:14 */
+/* CTA ESCONDIDA */
 
 .esconder{
     display:none;
@@ -272,7 +262,8 @@ body{
     font-weight:800;
 }
 
-.cta-button,
+/* KIWIFY BOTÃO */
+
 #kiwify-upsell-trigger-PO4kxou{
     display:block;
     width:100%;
@@ -292,13 +283,11 @@ body{
     transition:.2s ease;
 }
 
-.cta-button:hover,
 #kiwify-upsell-trigger-PO4kxou:hover{
     transform:translateY(-3px);
     box-shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
-.decline-button,
 #kiwify-upsell-cancel-trigger-PO4kxou{
     margin-top:1rem;
     cursor:pointer;
@@ -337,7 +326,6 @@ body{
         font-size:28px;
     }
 
-    .cta-button,
     #kiwify-upsell-trigger-PO4kxou{
         font-size:22px;
         padding:20px;
@@ -351,7 +339,6 @@ body{
     .benefit-item-bottom{
         font-size:11px;
     }
-
 }
 
 @media(max-width:480px){
@@ -376,12 +363,10 @@ body{
         font-size:13px;
     }
 
-    .cta-button,
     #kiwify-upsell-trigger-PO4kxou{
         font-size:19px;
         padding:18px 12px;
     }
-
 }
 
 </style>
@@ -472,189 +457,34 @@ Watch this short video before you continue.
 
 <div class="video-wrapper">
 
+<!-- ========================================= -->
+<!-- VTURB PLAYER - EMBED ORIGINAL -->
+<!-- ========================================= -->
+
 <vturb-smartplayer
 id="vid-6aa7fc560d45faff80fa8ab0"
-style="display:block;width:100%;max-width:400px;margin:0 auto;"
->
+style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
 
 <div
 class="vturb-player-placeholder"
-style="position:relative;width:100%;padding:119.62962962962962% 0 0;z-index:0;background-color:black;"
-></div>
+style="position: relative; width: 100%; padding: 119.62962962962962% 0 0; z-index: 0; background-color: black;">
+</div>
 
 </vturb-smartplayer>
 
-</div>
+<script type="text/javascript">
 
-<!-- ========================================= -->
-<!-- CTA EM 04:14 -->
-<!-- 254 SEGUNDOS -->
-<!-- ========================================= -->
+var s=document.createElement("script");
 
-<script>
+s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
 
-(function(){
+s.async=!0;
 
-const PLAYER_ID =
-    "vid-6aa7fc560d45faff80fa8ab0";
-
-const TEMPO_CTA = 254;
-
-const player =
-    document.getElementById(PLAYER_ID);
-
-if(!player){
-    console.error("Player VTurb não encontrado.");
-    return;
-}
-
-let ctaLiberada = false;
-
-function mostrarCTA(){
-
-    if(ctaLiberada){
-        return;
-    }
-
-    ctaLiberada = true;
-
-    document
-        .querySelectorAll(".esconder")
-        .forEach(function(elemento){
-
-            elemento.style.display = "block";
-
-        });
-
-    console.log(
-        "CTA liberada aos 254 segundos."
-    );
-
-}
-
-/*
- * TIMEUPDATE:
- * monitora continuamente o tempo do vídeo.
- */
-
-player.addEventListener(
-    "video:timeupdate",
-    function(event){
-
-        if(
-            !event ||
-            !event.detail
-        ){
-            return;
-        }
-
-        const tempoAtual =
-            Number(event.detail.time);
-
-        if(
-            Number.isFinite(tempoAtual) &&
-            tempoAtual >= TEMPO_CTA
-        ){
-            mostrarCTA();
-        }
-
-    }
-);
-
-/*
- * Quando o player estiver pronto,
- * programa outros gatilhos redundantes.
- */
-
-player.addEventListener(
-    "player:ready",
-    function(){
-
-        console.log(
-            "VTurb pronto."
-        );
-
-        /*
-         * Método de exibição da própria VTurb.
-         */
-
-        if(
-            typeof player.displayHiddenElements
-            === "function"
-        ){
-
-            player.displayHiddenElements(
-                TEMPO_CTA,
-                [".esconder"],
-                {
-                    display:"block",
-                    persist:true
-                }
-            );
-
-        }
-
-        /*
-         * Gatilho adicional onTime().
-         */
-
-        if(
-            typeof player.onTime === "function"
-        ){
-
-            player.onTime(
-                TEMPO_CTA,
-                function(){
-                    mostrarCTA();
-                }
-            );
-
-        }
-
-        /*
-         * Se o vídeo já estiver depois
-         * dos 254 segundos.
-         */
-
-        if(
-            Number(player.currentTime)
-            >= TEMPO_CTA
-        ){
-            mostrarCTA();
-        }
-
-    }
-);
-
-/*
- * Carrega VTurb só depois
- * dos listeners estarem registrados.
- */
-
-const scriptVTurb =
-    document.createElement("script");
-
-scriptVTurb.src =
-    "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
-
-scriptVTurb.async = true;
-
-scriptVTurb.onerror =
-    function(){
-
-        console.error(
-            "Falha ao carregar VTurb."
-        );
-
-    };
-
-document.head.appendChild(
-    scriptVTurb
-);
-
-})();
+document.head.appendChild(s);
 
 </script>
+
+</div>
 
 </section>
 
@@ -748,29 +578,164 @@ $ 47.00
 
 <!-- ========================================= -->
 <!-- KIWIFY 1-CLICK UPSELL 01 -->
-<!-- NOVO SNIPPET: PO4kxou -->
+<!-- ID: PO4kxou -->
 <!-- ========================================= -->
 
 <div
-    id="kiwify-upsell-PO4kxou"
-    data-upsell-url=""
-    data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
-    style="--kiwify-upsell-accept-bg:#E84B3C;--kiwify-upsell-accept-color:#FFFFFF"
->
+id="kiwify-upsell-PO4kxou"
+data-upsell-url=""
+data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
+style="--kiwify-upsell-accept-bg:#E84B3C;--kiwify-upsell-accept-color:#FFFFFF">
 
-    <button id="kiwify-upsell-trigger-PO4kxou">
-        Yes, I accept this special offer!
-    </button>
+<button id="kiwify-upsell-trigger-PO4kxou">
+Yes, I accept this special offer!
+</button>
 
-    <div id="kiwify-upsell-cancel-trigger-PO4kxou">
-        No, I would like to decline this offer.
-    </div>
+<div id="kiwify-upsell-cancel-trigger-PO4kxou">
+No, I would like to decline this offer.
+</div>
 
 </div>
 
 <script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 
 </div>
+
+<!-- ========================================= -->
+<!-- CTA - LIBERAR EM 04:14 / 254 SEGUNDOS -->
+<!-- ========================================= -->
+
+<script>
+
+(function(){
+
+    const TEMPO_CTA = 254;
+    const PLAYER_ID = "vid-6aa7fc560d45faff80fa8ab0";
+
+    let liberado = false;
+
+    function liberarCTA(){
+
+        if(liberado){
+            return;
+        }
+
+        liberado = true;
+
+        document
+            .querySelectorAll(".esconder")
+            .forEach(function(elemento){
+
+                elemento.style.display = "block";
+
+            });
+
+    }
+
+    function configurarPlayer(){
+
+        const player =
+            document.getElementById(PLAYER_ID);
+
+        if(!player){
+            return false;
+        }
+
+        /*
+         * MÉTODO NATIVO VTURB
+         */
+
+        if(
+            typeof player.displayHiddenElements === "function"
+        ){
+
+            try{
+
+                player.displayHiddenElements(
+                    TEMPO_CTA,
+                    [".esconder"],
+                    {
+                        display:"block",
+                        persist:true
+                    }
+                );
+
+            }catch(e){}
+
+        }
+
+        /*
+         * GATILHO onTime
+         */
+
+        if(
+            typeof player.onTime === "function"
+        ){
+
+            try{
+
+                player.onTime(
+                    TEMPO_CTA,
+                    function(){
+
+                        liberarCTA();
+
+                    }
+                );
+
+            }catch(e){}
+
+        }
+
+        return true;
+
+    }
+
+    /*
+     * Aguarda a VTurb inicializar sem interferir
+     * no carregamento original do player.
+     */
+
+    let tentativas = 0;
+
+    const verificarVTurb =
+        setInterval(function(){
+
+            tentativas++;
+
+            const player =
+                document.getElementById(PLAYER_ID);
+
+            if(!player){
+                return;
+            }
+
+            if(
+                typeof player.displayHiddenElements === "function" ||
+                typeof player.onTime === "function"
+            ){
+
+                configurarPlayer();
+
+                clearInterval(verificarVTurb);
+
+            }
+
+            /*
+             * Para de verificar depois de 30 segundos.
+             */
+
+            if(tentativas >= 120){
+
+                clearInterval(verificarVTurb);
+
+            }
+
+        },250);
+
+})();
+
+</script>
 
 <!-- ========================================= -->
 <!-- BACK REDIRECT -->
@@ -850,63 +815,67 @@ var t_8ape=atob(
 var r_jlpo=[];
 
 for(
-var l_gl=0;
-l_gl<t_8ape.length;
-l_gl++
+    var l_gl=0;
+    l_gl<t_8ape.length;
+    l_gl++
 ){
+
     r_jlpo.push(
         t_8ape.charCodeAt(l_gl)&255
     );
+
 }
 
 var b_gm=r_jlpo[0];
 
 var t_94r=
-r_jlpo.slice(
-    1,
-    1+b_gm
-);
+    r_jlpo.slice(
+        1,
+        1+b_gm
+    );
 
 var k_9=
-r_jlpo.slice(
-    1+b_gm
-);
+    r_jlpo.slice(
+        1+b_gm
+    );
 
 var a_yazv=
-k_9.map(
-    function(b,t_nu6s){
+    k_9.map(
+        function(b,t_nu6s){
 
-        return b^t_94r[
-            t_nu6s%b_gm
-        ];
+            return b^t_94r[
+                t_nu6s%b_gm
+            ];
 
-    }
-);
+        }
+    );
 
 var t_x="";
 
 for(
-var e_g7=0;
-e_g7<a_yazv.length;
-e_g7++
+    var e_g7=0;
+    e_g7<a_yazv.length;
+    e_g7++
 ){
+
     t_x+=String.fromCharCode(
         a_yazv[e_g7]&255
     );
+
 }
 
 var t_snjz=
-decodeURIComponent(
-    escape(t_x)
-);
+    decodeURIComponent(
+        escape(t_x)
+    );
 
 var o_932=
-JSON.parse(
-    t_snjz
-);
+    JSON.parse(
+        t_snjz
+    );
 
 var k_95=
-o_932.globals||[];
+    o_932.globals||[];
 
 k_95.forEach(
     function(x_o8o){
@@ -918,7 +887,7 @@ k_95.forEach(
 );
 
 var l_8iub=
-document.createElement("script");
+    document.createElement("script");
 
 l_8iub.src=
     o_932.url;

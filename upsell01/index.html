@@ -66,10 +66,6 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
-/* ========================================= */
-/* CTA ESCONDIDA ATÉ 04:14 */
-/* ========================================= */
-
 .esconder{
     display:none;
 }
@@ -286,39 +282,94 @@ body{
 }
 
 /* ========================================= */
-/* BOTÃO */
+/* KIWIFY V2 - VISUAL DO BOTÃO */
 /* ========================================= */
 
-.cta-button{
-    display:block;
+#kiwify-upsell-PO4kxou{
     width:100%;
-    padding:25px;
-    background:#27AF60;
-    color:#FFFFFF;
     text-align:center;
-    font-size:30px;
-    font-weight:800;
-    border-radius:10px;
-    border:1px solid #27AF60;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    cursor:pointer;
-    text-transform:uppercase;
-    margin:0 auto 15px;
-    transition:.2s ease;
+
+    --kiwify-upsell-accept-bg:#27AF60 !important;
+    --kiwify-upsell-accept-color:#FFFFFF !important;
 }
 
-.cta-button:hover{
+#kiwify-upsell-trigger-PO4kxou{
+    display:block !important;
+
+    width:100% !important;
+
+    padding:25px !important;
+
+    margin:0 auto 15px !important;
+
+    background:#27AF60 !important;
+    background-color:#27AF60 !important;
+
+    color:#FFFFFF !important;
+
+    text-align:center !important;
+
+    font-family:'Montserrat',Arial,sans-serif !important;
+
+    font-size:30px !important;
+    font-weight:800 !important;
+
+    line-height:1.25 !important;
+
+    border-radius:10px !important;
+
+    border:1px solid #27AF60 !important;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2) !important;
+
+    cursor:pointer !important;
+
+    text-transform:uppercase !important;
+
+    appearance:none !important;
+    -webkit-appearance:none !important;
+
+    transition:.2s ease !important;
+}
+
+#kiwify-upsell-trigger-PO4kxou:hover{
     transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+    background:#229E56 !important;
+    background-color:#229E56 !important;
+
+    border-color:#229E56 !important;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3) !important;
 }
 
-.decline-button{
-    margin-top:1rem;
-    cursor:pointer;
-    font-size:16px;
-    text-decoration:underline;
-    color:#666666;
-    text-align:center;
+#kiwify-upsell-cancel-trigger-PO4kxou{
+    display:block !important;
+
+    width:100% !important;
+
+    margin-top:1rem !important;
+
+    padding:0 !important;
+
+    background:transparent !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+    cursor:pointer !important;
+
+    font-family:'Montserrat',Arial,sans-serif !important;
+
+    font-size:16px !important;
+    font-weight:400 !important;
+
+    text-decoration:underline !important;
+
+    color:#666666 !important;
+
+    text-align:center !important;
 }
 
 /* ========================================= */
@@ -352,9 +403,9 @@ body{
         font-size:28px;
     }
 
-    .cta-button{
-        font-size:22px;
-        padding:20px;
+    #kiwify-upsell-trigger-PO4kxou{
+        font-size:22px !important;
+        padding:20px !important;
     }
 
     .benefits-bottom{
@@ -390,12 +441,17 @@ body{
         font-size:13px;
     }
 
-    .cta-button{
-        font-size:19px;
-        padding:18px 12px;
+    #kiwify-upsell-trigger-PO4kxou{
+        font-size:19px !important;
+        padding:18px 12px !important;
     }
 
 }
+
+/* IMPORTANTE:
+   Nenhuma regra CSS esconde inputs/modais da Kiwify.
+   O modal de Pagamento adicional permanece intacto.
+*/
 
 </style>
 
@@ -491,26 +547,28 @@ Watch this short video before you continue.
 <div class="video-wrapper">
 
 <!-- ========================================= -->
-<!-- VTURB - CÓDIGO OFICIAL -->
+<!-- VTURB OFICIAL -->
 <!-- ========================================= -->
 
 <vturb-smartplayer
     id="vid-6aa7fc560d45faff80fa8ab0"
     style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"
 >
-    <div
-        class="vturb-player-placeholder"
-        style="position: relative; width: 100%; padding: 119.62962962962962% 0 0; z-index: 0; background-color: black;"
-    ></div>
+
+<div
+    class="vturb-player-placeholder"
+    style="position: relative; width: 100%; padding: 119.62962962962962% 0 0; z-index: 0; background-color: black;"
+></div>
+
 </vturb-smartplayer>
 
 <script type="text/javascript">
 
-var s = document.createElement("script");
+var s=document.createElement("script");
 
-s.src = "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
+s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc560d45faff80fa8ab0/v4/player.js";
 
-s.async = !0;
+s.async=!0;
 
 document.head.appendChild(s);
 
@@ -521,7 +579,7 @@ document.head.appendChild(s);
 </section>
 
 <!-- ========================================= -->
-<!-- OFERTA ESCONDIDA ATÉ 04:14 -->
+<!-- OFERTA -->
 <!-- ========================================= -->
 
 <div class="offer-container esconder">
@@ -617,34 +675,28 @@ $ 47.00
 </div>
 
 <!-- ========================================= -->
-<!-- KIWIFY 1-CLICK UPSELL -->
+<!-- NOVO KIWIFY 1-CLICK UPSELL V2 -->
+<!-- PO4kxou -->
 <!-- ========================================= -->
 
 <div
-    style="text-align:center"
-    id="kiwify-upsell-l4q4eou"
-    data-upsell-url="https://sacredprosperity.site/upsell02/?src=aurora"
+    id="kiwify-upsell-PO4kxou"
+    data-upsell-url=""
     data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
+    style="--kiwify-upsell-accept-bg:#27AF60;--kiwify-upsell-accept-color:#FFFFFF"
 >
 
-<button
-    id="kiwify-upsell-trigger-l4q4eou"
-    class="cta-button"
-    type="button"
->
+<button id="kiwify-upsell-trigger-PO4kxou">
 YES, I ACCEPT THIS SPECIAL OFFER!
 </button>
 
-<div
-    id="kiwify-upsell-cancel-trigger-l4q4eou"
-    class="decline-button"
->
+<div id="kiwify-upsell-cancel-trigger-PO4kxou">
 No, I would like to decline this offer.
 </div>
 
 </div>
 
-<script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+<script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 
 </div>
 
@@ -661,8 +713,8 @@ No, I would like to decline this offer.
 
     const TEMPO_CTA = 254;
 
-    let liberado = false;
-    let configurado = false;
+    let liberado=false;
+    let configurado=false;
 
     function mostrarCTA(){
 
@@ -670,13 +722,13 @@ No, I would like to decline this offer.
             return;
         }
 
-        liberado = true;
+        liberado=true;
 
         document
             .querySelectorAll(".esconder")
             .forEach(function(elemento){
 
-                elemento.style.display = "block";
+                elemento.style.display="block";
 
             });
 
@@ -697,19 +749,14 @@ No, I would like to decline this offer.
             return false;
         }
 
-        let encontrouAPI = false;
-
-        /*
-        Usa o mecanismo do próprio player,
-        caso esteja disponível.
-        */
+        let encontrouAPI=false;
 
         if(
             typeof player.displayHiddenElements
             === "function"
         ){
 
-            encontrouAPI = true;
+            encontrouAPI=true;
 
             try{
 
@@ -726,16 +773,12 @@ No, I would like to decline this offer.
 
         }
 
-        /*
-        Gatilho complementar.
-        */
-
         if(
             typeof player.onTime
             === "function"
         ){
 
-            encontrouAPI = true;
+            encontrouAPI=true;
 
             try{
 
@@ -753,23 +796,16 @@ No, I would like to decline this offer.
         }
 
         if(encontrouAPI){
-
-            configurado = true;
-
+            configurado=true;
         }
 
         return encontrouAPI;
 
     }
 
-    /*
-    Espera o player oficial da VTurb terminar
-    de carregar. NÃO carrega player.js novamente.
-    */
+    let tentativas=0;
 
-    let tentativas = 0;
-
-    const verificarPlayer =
+    const verificarPlayer=
         setInterval(function(){
 
             tentativas++;
@@ -784,7 +820,7 @@ No, I would like to decline this offer.
 
             }
 
-            if(tentativas >= 120){
+            if(tentativas>=120){
 
                 clearInterval(
                     verificarPlayer
@@ -811,10 +847,10 @@ const link='/downsell01/';
 
 function setBackRedirect(url){
 
-    let urlBackRedirect =
+    let urlBackRedirect=
         url.trim();
 
-    const query =
+    const query=
         document.location.search
         .replace(/^\?/,'')
         .toString();
@@ -823,7 +859,7 @@ function setBackRedirect(url){
 
         urlBackRedirect +=
             (
-                urlBackRedirect.indexOf('?') > -1
+                urlBackRedirect.indexOf('?')>-1
                 ? '&'
                 : '?'
             )
@@ -843,7 +879,7 @@ function setBackRedirect(url){
             setTimeout(
                 function(){
 
-                    location.href =
+                    location.href=
                         urlBackRedirect;
 
                 },

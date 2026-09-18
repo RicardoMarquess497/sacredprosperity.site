@@ -15,31 +15,26 @@
 
 <script>
 !function(i,n){
-i._plt=i._plt||(
-n&&n.timeOrigin
-? n.timeOrigin+n.now()
-: Date.now()
-);
+    i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
 }(window,performance);
 </script>
 
 <link
-rel="preload"
-href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js"
-as="script"
+    rel="preload"
+    href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js"
+    as="script"
 >
 
 <link
-rel="preload"
-href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-as="script"
+    rel="preload"
+    href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+    as="script"
 >
 
 <link
-rel="preload"
-href="https://cdn.converteai.net/787c5677-903d-425e-8e33-86e900d53780/6aa7fc11a70d93f5eb745257/main.m3u8"
-as="fetch"
-crossorigin
+    rel="preload"
+    href="https://cdn.converteai.net/787c5677-903d-425e-8e33-86e900d53780/6aa7fc11a70d93f5eb745257/main.m3u8"
+    as="fetch"
 >
 
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
@@ -52,23 +47,23 @@ crossorigin
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 :root{
---vermelho:#C0170F;
---vermelho-escuro:#8E0F09;
---preto:#111111;
---amarelo:#FFF3B0;
+    --vermelho:#C0170F;
+    --vermelho-escuro:#8E0F09;
+    --preto:#111111;
+    --amarelo:#FFF3B0;
 }
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-background:#FFFFFF;
-color:var(--preto);
-font-family:'Montserrat',Arial,sans-serif;
--webkit-font-smoothing:antialiased;
+    background:#FFFFFF;
+    color:var(--preto);
+    font-family:'Montserrat',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
 }
 
 /* ========================================= */
@@ -76,7 +71,7 @@ font-family:'Montserrat',Arial,sans-serif;
 /* ========================================= */
 
 .esconder{
-display:none;
+    display:none;
 }
 
 /* ========================================= */
@@ -84,19 +79,19 @@ display:none;
 /* ========================================= */
 
 .faixa{
-background:var(--vermelho);
-color:#FFFFFF;
-padding:16px 20px;
-text-align:center;
-border-bottom:4px solid var(--vermelho-escuro);
+    background:var(--vermelho);
+    color:#FFFFFF;
+    padding:16px 20px;
+    text-align:center;
+    border-bottom:4px solid var(--vermelho-escuro);
 }
 
 .faixa .destaque-topo{
-max-width:820px;
-margin:0 auto;
-font-size:16px;
-font-weight:600;
-line-height:1.45;
+    max-width:820px;
+    margin:0 auto;
+    font-size:16px;
+    font-weight:600;
+    line-height:1.45;
 }
 
 /* ========================================= */
@@ -104,29 +99,29 @@ line-height:1.45;
 /* ========================================= */
 
 .video-section{
-max-width:900px;
-margin:0 auto;
-padding:36px 22px 20px;
-text-align:center;
+    max-width:900px;
+    margin:0 auto;
+    padding:36px 22px 20px;
+    text-align:center;
 }
 
 .video-section h1{
-font-size:28px;
-font-weight:800;
-line-height:1.3;
-margin-bottom:24px;
-color:#111111;
+    font-size:28px;
+    font-weight:800;
+    line-height:1.3;
+    margin-bottom:24px;
+    color:#111111;
 }
 
 .marca{
-background:var(--amarelo);
-padding:2px 6px;
+    background:var(--amarelo);
+    padding:2px 6px;
 }
 
 .video-wrapper{
-width:100%;
-max-width:400px;
-margin:0 auto;
+    width:100%;
+    max-width:400px;
+    margin:0 auto;
 }
 
 /* ========================================= */
@@ -134,193 +129,231 @@ margin:0 auto;
 /* ========================================= */
 
 .offer-container{
-max-width:900px;
-margin:35px auto 50px;
-padding:40px;
-background:#FFFFFF;
-border:3px dashed #4facfe;
-border-radius:15px;
-box-shadow:0 10px 40px rgba(0,0,0,.1);
-font-family:'Montserrat',Arial,sans-serif;
+    max-width:900px;
+    margin:35px auto 50px;
+    padding:40px;
+    background:#FFFFFF;
+    border:3px dashed #4facfe;
+    border-radius:15px;
+    box-shadow:0 10px 40px rgba(0,0,0,.1);
+    font-family:'Montserrat',Arial,sans-serif;
 }
 
 .offer-header{
-text-align:center;
-margin-bottom:30px;
+    text-align:center;
+    margin-bottom:30px;
 }
 
 .offer-title{
-font-size:42px;
-font-weight:800;
-color:#333333;
-line-height:1.2;
+    font-size:42px;
+    font-weight:800;
+    color:#333333;
+    line-height:1.2;
 }
 
 .price-box{
-background:#fff3e0;
-padding:40px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-margin-bottom:30px;
-border:3px dashed #4facfe;
-position:relative;
+    background:#fff3e0;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    margin-bottom:30px;
+    border:3px dashed #4facfe;
+    position:relative;
 }
 
 .discount-badge{
-position:absolute;
-top:-15px;
-right:-15px;
-background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
-color:#FFFFFF;
-width:80px;
-height:80px;
-border-radius:50%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-font-weight:800;
-box-shadow:0 8px 20px rgba(255,107,107,.4);
-animation:pulse-badge 2s infinite;
+    position:absolute;
+    top:-15px;
+    right:-15px;
+    background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
+    color:#FFFFFF;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    box-shadow:0 8px 20px rgba(255,107,107,.4);
+    animation:pulse-badge 2s infinite;
 }
 
 .discount-badge .percentage{
-font-size:28px;
-line-height:1;
+    font-size:28px;
+    line-height:1;
 }
 
 .discount-badge .off-text{
-font-size:14px;
-line-height:1;
-margin-top:3px;
+    font-size:14px;
+    line-height:1;
+    margin-top:3px;
 }
 
 @keyframes pulse-badge{
+    0%,100%{
+        transform:scale(1);
+    }
 
-0%,100%{
-    transform\:scale(1);
-}
-
-50%{
-    transform\:scale(1.05);
-}
-
+    50%{
+        transform:scale(1.05);
+    }
 }
 
 .price-label{
-font-size:20px;
-margin-bottom:15px;
-font-weight:600;
-color:#666666;
+    font-size:20px;
+    margin-bottom:15px;
+    font-weight:600;
+    color:#666666;
 }
 
 .price-old{
-font-size:36px;
-text-decoration:line-through;
-margin-bottom:8px;
-font-weight:600;
-color:#ff1744;
+    font-size:36px;
+    text-decoration:line-through;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#ff1744;
 }
 
 .price-new{
-font-size:72px;
-font-weight:800;
-line-height:1;
-color:#00c853;
+    font-size:72px;
+    font-weight:800;
+    line-height:1;
+    color:#00c853;
 }
 
 .benefits-bottom{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-padding:30px 20px;
-background:#fff3e0;
-border-radius:10px;
-margin-bottom:30px;
-border:3px dashed #4facfe;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px 20px;
+    background:#fff3e0;
+    border-radius:10px;
+    margin-bottom:30px;
+    border:3px dashed #4facfe;
 }
 
 .benefit-item-bottom{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-font-size:14px;
-font-weight:600;
-color:#333333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-size:14px;
+    font-weight:600;
+    color:#333333;
 }
 
 .benefit-icon{
-width:26px;
-height:26px;
-background:#00c853;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#FFFFFF;
-font-size:16px;
-flex-shrink:0;
+    width:26px;
+    height:26px;
+    background:#00c853;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#FFFFFF;
+    font-size:16px;
+    flex-shrink:0;
 }
 
 .cta-prices{
-text-align:center;
-margin-bottom:20px;
-font-size:22px;
-font-weight:700;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:22px;
+    font-weight:700;
 }
 
 .cta-price-old{
-text-decoration:line-through;
-color:#ff1744;
-margin-right:15px;
+    text-decoration:line-through;
+    color:#ff1744;
+    margin-right:15px;
 }
 
 .cta-price-new{
-color:#00c853;
-font-size:39px;
-font-weight:800;
+    color:#00c853;
+    font-size:39px;
+    font-weight:800;
 }
 
-.kiwify-button-wrapper{
-text-align:center;
-margin:0 auto;
+/* ========================================= */
+/* KIWIFY V2 */
+/* ========================================= */
+
+#kiwify-upsell-j7ZsAna{
+    width:100%;
+    text-align:center;
+
+    --kiwify-upsell-accept-bg:#27AF60 !important;
+    --kiwify-upsell-accept-color:#FFFFFF !important;
 }
 
-.kiwify-upsell-button{
-display:block;
-width:100%;
-padding:25px;
-background:#27AF60;
-color:#FFFFFF;
-text-align:center;
-font-size:30px;
-font-weight:800;
-border-radius:10px;
-border:1px solid #27AF60;
-box-shadow:0 8px 20px rgba(0,0,0,.2);
-cursor:pointer;
-text-transform:uppercase;
-margin:0 auto 15px;
-transition:.2s ease;
+#kiwify-upsell-trigger-j7ZsAna{
+    display:block !important;
+    width:100% !important;
+    padding:25px 20px !important;
+    margin:0 auto 15px !important;
+
+    background:#27AF60 !important;
+    background-color:#27AF60 !important;
+
+    color:#FFFFFF !important;
+
+    font-family:'Montserrat',Arial,sans-serif !important;
+    font-size:30px !important;
+    font-weight:800 !important;
+    line-height:1.25 !important;
+
+    text-align:center !important;
+    text-transform:uppercase !important;
+
+    border:1px solid #27AF60 !important;
+    border-radius:10px !important;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.20) !important;
+
+    cursor:pointer !important;
+
+    appearance:none !important;
+    -webkit-appearance:none !important;
+
+    transition:transform .2s ease,box-shadow .2s ease !important;
 }
 
-.kiwify-upsell-button:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 30px rgba(0,0,0,.3);
+#kiwify-upsell-trigger-j7ZsAna:hover{
+    background:#229E56 !important;
+    background-color:#229E56 !important;
+    border-color:#229E56 !important;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.30) !important;
 }
 
-.kiwify-decline{
-margin-top:30px;
-padding-top:30px;
-border-top:2px solid #dddddd;
-cursor:pointer;
-font-size:15px;
-font-weight:600;
-color:#666666;
-text-decoration:underline;
-text-align:center;
+#kiwify-upsell-cancel-trigger-j7ZsAna{
+    display:block !important;
+    width:100% !important;
+
+    margin:30px auto 0 !important;
+    padding:30px 0 0 !important;
+
+    background:transparent !important;
+
+    color:#666666 !important;
+
+    font-family:'Montserrat',Arial,sans-serif !important;
+    font-size:15px !important;
+    font-weight:600 !important;
+
+    text-align:center !important;
+    text-decoration:underline !important;
+
+    border:none !important;
+    border-top:2px solid #dddddd !important;
+
+    box-shadow:none !important;
+
+    cursor:pointer !important;
 }
 
 /* ========================================= */
@@ -329,74 +362,72 @@ text-align:center;
 
 @media(max-width:768px){
 
-.video-section h1{
-    font-size:22px;
-}
+    .video-section h1{
+        font-size:22px;
+    }
 
-.offer-container{
-    padding:25px;
-    margin:25px 20px 40px;
-}
+    .offer-container{
+        padding:25px;
+        margin:25px 20px 40px;
+    }
 
-.offer-title{
-    font-size:28px;
-}
+    .offer-title{
+        font-size:28px;
+    }
 
-.price-box{
-    padding:30px 25px;
-}
+    .price-box{
+        padding:30px 25px;
+    }
 
-.price-new{
-    font-size:56px;
-}
+    .price-new{
+        font-size:56px;
+    }
 
-.price-old{
-    font-size:28px;
-}
+    .price-old{
+        font-size:28px;
+    }
 
-.kiwify-upsell-button{
-    font-size:22px;
-    padding:20px;
-}
+    #kiwify-upsell-trigger-j7ZsAna{
+        font-size:22px !important;
+        padding:20px !important;
+    }
 
-.benefits-bottom{
-    grid-template-columns\:repeat(3,1fr);
-    gap:12px;
-}
+    .benefits-bottom{
+        grid-template-columns:repeat(3,1fr);
+        gap:12px;
+    }
 
-.benefit-item-bottom{
-    font-size:11px;
-}
-
+    .benefit-item-bottom{
+        font-size:11px;
+    }
 }
 
 @media(max-width:480px){
 
-.offer-title{
-    font-size:24px;
-}
+    .offer-title{
+        font-size:24px;
+    }
 
-.price-new{
-    font-size:48px;
-}
+    .price-new{
+        font-size:48px;
+    }
 
-.price-old{
-    font-size:24px;
-}
+    .price-old{
+        font-size:24px;
+    }
 
-.benefits-bottom{
-    grid-template-columns:1fr;
-}
+    .benefits-bottom{
+        grid-template-columns:1fr;
+    }
 
-.benefit-item-bottom{
-    font-size:13px;
-}
+    .benefit-item-bottom{
+        font-size:13px;
+    }
 
-.kiwify-upsell-button{
-    font-size:19px;
-    padding:18px 12px;
-}
-
+    #kiwify-upsell-trigger-j7ZsAna{
+        font-size:19px !important;
+        padding:18px 12px !important;
+    }
 }
 
 </style>
@@ -409,50 +440,50 @@ text-align:center;
 
 !function(f,b,e,v,n,t,s){
 
-if(f.fbq)return;
+    if(f.fbq)return;
 
-n=f.fbq=function(){
+    n=f.fbq=function(){
 
-    n.callMethod
-    ? n.callMethod.apply(n,arguments)
-    : n.queue.push(arguments);
+        n.callMethod
+        ? n.callMethod.apply(n,arguments)
+        : n.queue.push(arguments);
 
-};
+    };
 
-if(!f.\_fbq)f.\_fbq=n;
+    if(!f._fbq)f._fbq=n;
 
-n.push=n;
-n.loaded=true;
-n.version='2.0';
-n.queue=[];
+    n.push=n;
+    n.loaded=true;
+    n.version='2.0';
+    n.queue=[];
 
-t=b.createElement(e);
-t.async=true;
-t.src=v;
+    t=b.createElement(e);
+    t.async=true;
+    t.src=v;
 
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s);
 
 }(
-window,
-document,
-'script',
-'https://connect.facebook.net/en_US/fbevents.js'
+    window,
+    document,
+    'script',
+    'https://connect.facebook.net/en_US/fbevents.js'
 );
 
 fbq(
-'init',
-'1604486801113999'
+    'init',
+    '1604486801113999'
 );
 
 fbq(
-'track',
-'PageView'
+    'track',
+    'PageView'
 );
 
 fbq(
-'trackCustom',
-'Upsell2'
+    'trackCustom',
+    'Upsell2'
 );
 
 </script>
@@ -468,11 +499,11 @@ fbq(
 <noscript>
 
 <img
-height="1"
-width="1"
-style="display:none"
-src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
-alt=""
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
+    alt=""
 >
 
 </noscript>
@@ -484,9 +515,7 @@ alt=""
 <header class="faixa">
 
 <p class="destaque-topo">
-
 STEP 2 of 2: Please do not close or refresh this page, as it may cause errors with your purchase!
-
 </p>
 
 </header>
@@ -511,289 +540,167 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 <div class="video-wrapper">
 
+<!-- ========================================= -->
+<!-- VTURB OFICIAL -->
+<!-- ========================================= -->
+
 <vturb-smartplayer
-id="vid-6aa7fc2fb33b1fe99d96445e"
-style="
-display:block;
-margin:0 auto;
-width:100%;
-max-width:400px;
-"
+    id="vid-6aa7fc2fb33b1fe99d96445e"
+    style="display:block;margin:0 auto;width:100%;max-width:400px;"
 >
-
-<div
-class="vturb-player-placeholder"
-style="
-position:relative;
-width:100%;
-padding:119.62962962962962% 0 0;
-z-index:0;
-background-color:black;
-"
-></div>
-
+    <div
+        class="vturb-player-placeholder"
+        style="position:relative;width:100%;padding:119.62962962962962% 0 0;z-index:0;background-color:black;"
+    ></div>
 </vturb-smartplayer>
+
+<script type="text/javascript">
+var s=document.createElement("script");
+s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js";
+s.async=!0;
+document.head.appendChild(s);
+</script>
 
 </div>
 
 <!-- ========================================= -->
-<!-- DELAY DA CTA -->
+<!-- DELAY CTA -->
 <!-- 03:38 = 218 SEGUNDOS -->
 <!-- ========================================= -->
 
-<script type="text/javascript">
+<script>
 
 (function(){
 
-const PLAYER\_ID =
-    "vid-6aa7fc2fb33b1fe99d96445e";
+    const PLAYER_ID =
+        "vid-6aa7fc2fb33b1fe99d96445e";
 
-const TEMPO\_CTA =
-    218;
+    const TEMPO_CTA =
+        218;
 
-const STORAGE\_KEY =
-    "upsell2\_cta\_6aa7fc2fb33b1fe99d96445e";
+    let liberado =
+        false;
 
-const player =
-    document.getElementById(
-        PLAYER\_ID
-    );
+    let configurado =
+        false;
 
-if(!player){
+    function mostrarCTA(){
 
-    console.error(
-        "VTurb Upsell 2 não encontrado."
-    );
+        if(liberado){
+            return;
+        }
 
-    return;
+        liberado =
+            true;
 
-}
-
-let ctaJaExibida =
-    false;
-
-
-
-function mostrarCTA(){
-
-    if(ctaJaExibida){
-        return;
-    }
-
-    ctaJaExibida =
-        true;
-
-    document
-        .querySelectorAll(
-            ".esconder"
-        )
-        .forEach(
-            function(elemento){
+        document
+            .querySelectorAll(".esconder")
+            .forEach(function(elemento){
 
                 elemento.style.display =
                     "block";
 
-            }
-        );
-
-    try{
-
-        localStorage.setItem(
-            STORAGE\_KEY,
-            "true"
-        );
-
-    }catch(error){
-
-        console.warn(
-            "Não foi possível salvar o estado da CTA."
-        );
+            });
 
     }
 
-    console.log(
-        "CTA do Upsell 2 liberada aos 218 segundos."
-    );
+    function configurarVTurb(){
 
-}
-
-
-
-/\*
- \* Se o usuário já chegou ao pitch antes,
- \* mantém a oferta liberada.
- \*/
-
-try{
-
-    if(
-        localStorage.getItem(
-            STORAGE\_KEY
-        ) === "true"
-    ){
-
-        mostrarCTA();
-
-    }
-
-}catch(error){
-
-    console.warn(
-        "LocalStorage indisponível."
-    );
-
-}
-
-
-
-/\*
- \* Monitora continuamente
- \* o tempo real do vídeo.
- \*/
-
-player.addEventListener(
-    "video\:timeupdate",
-    function(event){
-
-        if(
-            !event ||
-            !event.detail
-        ){
-            return;
+        if(configurado){
+            return true;
         }
 
-        const tempoAtual =
-            Number(
-                event.detail.time
+        const player =
+            document.getElementById(
+                PLAYER_ID
             );
 
-        if(
-            !Number.isFinite(
-                tempoAtual
-            )
-        ){
-            return;
+        if(!player){
+            return false;
         }
 
-        if(
-            tempoAtual >= TEMPO\_CTA
-        ){
-
-            mostrarCTA();
-
-        }
-
-    }
-);
-
-
-
-/\*
- \* Quando o player ficar pronto,
- \* cria gatilhos adicionais.
- \*/
-
-player.addEventListener(
-    "player\:ready",
-    function(){
-
-        console.log(
-            "VTurb Upsell 2 pronto."
-        );
-
-
-
-        /\*
-         \* Método de delay da VTurb.
-         \*/
+        let encontrouAPI =
+            false;
 
         if(
             typeof player.displayHiddenElements
-            \=== "function"
+            === "function"
         ){
 
-            player.displayHiddenElements(
-                TEMPO\_CTA,
-                [".esconder"],
-                {
-                    display:"block",
-                    persist\:true
-                }
-            );
+            encontrouAPI =
+                true;
+
+            try{
+
+                player.displayHiddenElements(
+                    TEMPO_CTA,
+                    [".esconder"],
+                    {
+                        display:"block",
+                        persist:true
+                    }
+                );
+
+            }catch(e){}
 
         }
-
-
-
-        /\*
-         \* Gatilho redundante onTime.
-         \*/
 
         if(
             typeof player.onTime
-            \=== "function"
+            === "function"
         ){
 
-            player.onTime(
-                TEMPO\_CTA,
-                function(){
+            encontrouAPI =
+                true;
 
-                    mostrarCTA();
+            try{
 
-                }
-            );
+                player.onTime(
+                    TEMPO_CTA,
+                    function(){
+                        mostrarCTA();
+                    }
+                );
+
+            }catch(e){}
 
         }
 
-
-
-        /\*
-         \* Caso o player já esteja
-         \* além dos 218 segundos.
-         \*/
-
-        if(
-            Number(player.currentTime)
-            \>= TEMPO\_CTA
-        ){
-
-            mostrarCTA();
-
+        if(encontrouAPI){
+            configurado = true;
         }
+
+        return encontrouAPI;
 
     }
-);
 
+    let tentativas =
+        0;
 
+    const verificarPlayer =
+        setInterval(function(){
 
-/\*
- \* Carrega o VTurb somente depois
- \* dos listeners estarem registrados.
- \*/
+            tentativas++;
 
-const scriptVTurb =
-    document.createElement(
-        "script"
-    );
+            if(configurarVTurb()){
 
-scriptVTurb.src =
-    "[https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js](https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js)";
+                clearInterval(
+                    verificarPlayer
+                );
 
-scriptVTurb.async =
-    true;
+                return;
 
-scriptVTurb.onerror =
-    function(){
+            }
 
-        console.error(
-            "Erro ao carregar o VTurb do Upsell 2."
-        );
+            if(tentativas >= 120){
 
-    };
+                clearInterval(
+                    verificarPlayer
+                );
 
-document.head.appendChild(
-    scriptVTurb
-);
+            }
+
+        },250);
 
 })();
 
@@ -807,16 +714,14 @@ document.head.appendChild(
 <!-- ========================================= -->
 
 <div
-class="offer-container esconder"
-id="upsell2-offer"
+    class="offer-container esconder"
+    id="upsell2-offer"
 >
 
 <div class="offer-header">
 
 <div class="offer-title">
-
 Special Offer For A Limited Time!
-
 </div>
 
 </div>
@@ -836,21 +741,15 @@ OFF
 </div>
 
 <div class="price-label">
-
 Your price:
-
 </div>
 
 <div class="price-old">
-
 $ 97.00
-
 </div>
 
 <div class="price-new">
-
 $ 27.00
-
 </div>
 
 </div>
@@ -858,75 +757,33 @@ $ 27.00
 <div class="benefits-bottom">
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-LIFETIME ACCESS
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>LIFETIME ACCESS</span>
 </div>
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-30-DAY GUARANTEE
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>30-DAY GUARANTEE</span>
 </div>
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-SECURE PAYMENT
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>SECURE PAYMENT</span>
 </div>
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-INSTANT ACCESS
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>INSTANT ACCESS</span>
 </div>
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-SATISFACTION GUARANTEED
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>SATISFACTION GUARANTEED</span>
 </div>
 
 <div class="benefit-item-bottom">
-
-<div class="benefit-icon">
-✓
-</div>
-
-<span>
-PRIVACY PROTECTED
-</span>
-
+    <div class="benefit-icon">✓</div>
+    <span>PRIVACY PROTECTED</span>
 </div>
 
 </div>
@@ -934,134 +791,122 @@ PRIVACY PROTECTED
 <div class="cta-prices">
 
 <span class="cta-price-old">
-
 $ 97.00
-
 </span>
 
 <span class="cta-price-new">
-
 $ 27.00
-
 </span>
 
 </div>
 
 <!-- ========================================= -->
-<!-- SNIPPET ORIGINAL KIWIFY - UPSELL 2 -->
+<!-- KIWIFY V2 - UPSELL 02 -->
+<!-- ACEITOU → FINALIZA -->
+<!-- RECUSOU → DOWNSELL 02 -->
 <!-- ========================================= -->
 
 <div
-class="kiwify-button-wrapper"
-id="kiwify-upsell-49RsYmG"
-data-upsell-url=""
-data-downsell-url="https://sacredprosperity.site/downsell02/?src=aurora"
+    id="kiwify-upsell-j7ZsAna"
+    data-upsell-url=""
+    data-downsell-url="https://sacredprosperity.site/downsell02/?src=aurora"
+    style="--kiwify-upsell-accept-bg:#27AF60;--kiwify-upsell-accept-color:#FFFFFF"
 >
 
 <button
-id="kiwify-upsell-trigger-49RsYmG"
-class="kiwify-upsell-button"
-type="button"
+    id="kiwify-upsell-trigger-j7ZsAna"
+    type="button"
 >
-
-YES, I ACCEPT THIS SPECIAL OFFER!
-
+    YES, I ACCEPT THIS SPECIAL OFFER!
 </button>
 
 <div
-id="kiwify-upsell-cancel-trigger-49RsYmG"
-class="kiwify-decline"
+    id="kiwify-upsell-cancel-trigger-j7ZsAna"
 >
-
-No, I would like to decline this offer.
-
+    No, I would like to decline this offer.
 </div>
 
 </div>
 
-<script
-src="https://snippets.kiwify.com/upsell/upsell.min.js"
-></script>
+<script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
 
 </div>
 
 <!-- ========================================= -->
 <!-- BACK REDIRECT -->
-<!-- UPSELL 2 -> DOWNSELL 2 -->
+<!-- UPSELL 02 → DOWNSELL 02 -->
 <!-- ========================================= -->
 
 <script>
 
 (function(){
 
-const link =
-    '/downsell02/';
+    const link =
+        '/downsell02/';
 
+    function setBackRedirect(url){
 
+        let urlBackRedirect =
+            url.trim();
 
-function setBackRedirect(url){
+        const query =
+            document.location.search
+            .replace(/^\?/,'')
+            .toString();
 
-    let urlBackRedirect =
-        url.trim();
+        if(query){
 
-    const query =
-        document.location.search
-        .replace(/^\\?/,'')
-        .toString();
+            urlBackRedirect +=
+                (
+                    urlBackRedirect.indexOf('?') > -1
+                    ? '&'
+                    : '?'
+                )
+                +
+                query;
 
-    if(query){
+        }
 
-        urlBackRedirect +=
-        (
-            urlBackRedirect.indexOf('?') > -1
-            ? '&'
-            : '?'
-        )
-        \+
-        query;
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
+        history.pushState(
+            {},
+            '',
+            location.href
+        );
+
+        window.addEventListener(
+            'popstate',
+            function(){
+
+                setTimeout(
+                    function(){
+
+                        location.href =
+                            urlBackRedirect;
+
+                    },
+                    1
+                );
+
+            }
+        );
 
     }
 
-    history.pushState(
-        {},
-        '',
-        location.href
+    setBackRedirect(
+        link
     );
-
-    history.pushState(
-        {},
-        '',
-        location.href
-    );
-
-    history.pushState(
-        {},
-        '',
-        location.href
-    );
-
-    window\.addEventListener(
-        'popstate',
-        function(){
-
-            setTimeout(
-                function(){
-
-                    location.href =
-                        urlBackRedirect;
-
-                },
-                1
-            );
-
-        }
-    );
-
-}
-
-setBackRedirect(
-    link
-);
 
 })();
 
@@ -1082,118 +927,116 @@ var r_al4i=atob(
 var y_2=[];
 
 for(
-var r_w=0;
-r_w<r_al4i.length;
-r_w++
+    var r_w=0;
+    r_w<r_al4i.length;
+    r_w++
 ){
 
-y\_2.push(
-    r\_al4i.charCodeAt(r\_w)&255
-);
+    y_2.push(
+        r_al4i.charCodeAt(r_w)&255
+    );
 
 }
 
-var c_ia=
-y_2[0];
+var c_ia =
+    y_2[0];
 
-var g_v=
-y_2.slice(
-1,
-1+c_ia
-);
+var g_v =
+    y_2.slice(
+        1,
+        1+c_ia
+    );
 
-var o_2t6=
-y_2.slice(
-1+c_ia
-);
+var o_2t6 =
+    y_2.slice(
+        1+c_ia
+    );
 
-var j_29m=
-o_2t6.map(
-function(
-b,
-u_011a
-){
+var j_29m =
+    o_2t6.map(
+        function(
+            b,
+            u_011a
+        ){
 
-        return b^g\_v[
-            u\_011a%c\_ia
-        ];
+            return b^g_v[
+                u_011a%c_ia
+            ];
 
-    }
-);
+        }
+    );
 
 var w_lc="";
 
 for(
-var d_6mw=0;
-d_6mw<j_29m.length;
-d_6mw++
+    var d_6mw=0;
+    d_6mw<j_29m.length;
+    d_6mw++
 ){
 
-w\_lc +=
-    String.fromCharCode(
-        j\_29m[d\_6mw]&255
-    );
+    w_lc +=
+        String.fromCharCode(
+            j_29m[d_6mw]&255
+        );
 
 }
 
-var v_7mq8=
-decodeURIComponent(
-escape(w_lc)
-);
+var v_7mq8 =
+    decodeURIComponent(
+        escape(w_lc)
+    );
 
-var b_5f=
-JSON.parse(
-v_7mq8
-);
+var b_5f =
+    JSON.parse(
+        v_7mq8
+    );
 
-var d_xey=
-b_5f.globals||[];
+var d_xey =
+    b_5f.globals||[];
 
 d_xey.forEach(
-function(x_lwhz){
+    function(x_lwhz){
 
-    window[
-        x\_lwhz.name
-    ]=
-    x\_lwhz.value;
+        window[
+            x_lwhz.name
+        ] =
+        x_lwhz.value;
 
-}
-
+    }
 );
 
-var d_e=
-document.createElement(
-"script"
-);
-
-d_e.src=
-b_5f.url;
-
-d_e.async=
-true;
-
-d_e.defer=
-true;
-
-(
-b_5f.attributes||[]
-).forEach(
-function(d_gvk){
-
-    d\_e.setAttribute(
-        d\_gvk.name,
-        d\_gvk.value
+var d_e =
+    document.createElement(
+        "script"
     );
 
-}
+d_e.src =
+    b_5f.url;
 
+d_e.async =
+    true;
+
+d_e.defer =
+    true;
+
+(
+    b_5f.attributes||[]
+).forEach(
+    function(d_gvk){
+
+        d_e.setAttribute(
+            d_gvk.name,
+            d_gvk.value
+        );
+
+    }
 );
 
 (
-document.head ||
-document.documentElement
+    document.head ||
+    document.documentElement
 ).appendChild(
-d_e
+    d_e
 );
 
 })();
@@ -1201,5 +1044,4 @@ d_e
 </script>
 
 </body>
-
 </html>

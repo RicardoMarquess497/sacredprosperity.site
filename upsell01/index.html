@@ -187,7 +187,6 @@ body{
 }
 
 @keyframes pulse-badge{
-
     0%,100%{
         transform:scale(1);
     }
@@ -195,7 +194,6 @@ body{
     50%{
         transform:scale(1.05);
     }
-
 }
 
 .price-label{
@@ -259,7 +257,7 @@ body{
 }
 
 /* ========================================= */
-/* PREÇO ACIMA DO BOTÃO */
+/* PREÇO ACIMA DO CTA */
 /* ========================================= */
 
 .cta-prices{
@@ -297,25 +295,6 @@ body{
     --kiwify-upsell-accept-color:#FFFFFF !important;
 }
 
-/*
-=================================================
-ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
-=================================================
-*/
-
-#kiwify-upsell-PO4kxou input{
-    position:absolute !important;
-    width:1px !important;
-    height:1px !important;
-    opacity:0 !important;
-    pointer-events:none !important;
-    overflow:hidden !important;
-    clip:rect(0,0,0,0) !important;
-    margin:0 !important;
-    padding:0 !important;
-    border:0 !important;
-}
-
 /* ========================================= */
 /* BOTÃO VERDE */
 /* ========================================= */
@@ -326,7 +305,6 @@ ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
     max-width:100% !important;
 
     padding:25px 20px !important;
-
     margin:0 auto !important;
 
     background:#27AF60 !important;
@@ -364,8 +342,7 @@ ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
 
     transform:translateY(-3px);
 
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.30) !important;
+    box-shadow:0 12px 30px rgba(0,0,0,.30) !important;
 }
 
 /* ========================================= */
@@ -378,13 +355,11 @@ ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
     width:100% !important;
 
     margin:20px auto 0 !important;
-
     padding:0 !important;
 
     background:transparent !important;
 
     border:none !important;
-
     box-shadow:none !important;
 
     color:#666666 !important;
@@ -397,7 +372,6 @@ ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
     line-height:1.4 !important;
 
     text-align:center !important;
-
     text-decoration:underline !important;
 
     cursor:pointer !important;
@@ -701,7 +675,7 @@ $ 47.00
 </div>
 
 <!-- ========================================= -->
-<!-- PREÇO ACIMA DO CTA -->
+<!-- PREÇO ACIMA DO BOTÃO -->
 <!-- ========================================= -->
 
 <div class="cta-prices">
@@ -717,7 +691,7 @@ $ 47.00
 </div>
 
 <!-- ========================================= -->
-<!-- KIWIFY 1-CLICK UPSELL 01 -->
+<!-- KIWIFY 1-CLICK UPSELL -->
 <!-- ========================================= -->
 
 <div
@@ -741,7 +715,258 @@ No, I would like to decline this offer.
 </div>
 
 <!-- ========================================= -->
-<!-- CTA - 04:14 / 254 SEGUNDOS -->
+<!-- REMOVE VISUALMENTE O CAMPO $47 DA KIWIFY -->
+<!-- ========================================= -->
+
+<script>
+
+(function(){
+
+    const UPSELL_ID = "PO4kxou";
+
+    function esconderCampoPreco(){
+
+        const botao =
+            document.getElementById(
+                "kiwify-upsell-trigger-" + UPSELL_ID
+            );
+
+        const recusar =
+            document.getElementById(
+                "kiwify-upsell-cancel-trigger-" + UPSELL_ID
+            );
+
+        if(!botao){
+            return;
+        }
+
+        /*
+        Procura campos inseridos pela Kiwify.
+        O valor continua existindo no DOM para não
+        interferir na lógica do 1-click.
+        */
+
+        document
+            .querySelectorAll("input, textarea, select")
+            .forEach(function(elemento){
+
+                const valor =
+                    String(
+                        elemento.value ||
+                        elemento.getAttribute("value") ||
+                        ""
+                    )
+                    .replace(/\s+/g,"")
+                    .trim();
+
+                if(
+                    valor === "$47.00" ||
+                    valor === "47.00" ||
+                    valor === "$47" ||
+                    valor === "47"
+                ){
+
+                    elemento.style.setProperty(
+                        "position",
+                        "absolute",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "left",
+                        "-99999px",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "top",
+                        "auto",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "width",
+                        "1px",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "height",
+                        "1px",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "opacity",
+                        "0",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "visibility",
+                        "hidden",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "pointer-events",
+                        "none",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "margin",
+                        "0",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "padding",
+                        "0",
+                        "important"
+                    );
+
+                    elemento.style.setProperty(
+                        "border",
+                        "0",
+                        "important"
+                    );
+
+                    /*
+                    Se o campo estiver dentro de um wrapper
+                    exclusivo, elimina também o espaço vazio.
+                    */
+
+                    const pai =
+                        elemento.parentElement;
+
+                    if(
+                        pai &&
+                        pai !== document.body &&
+                        pai !== document.documentElement &&
+                        !pai.contains(botao) &&
+                        !pai.contains(recusar)
+                    ){
+
+                        const campos =
+                            pai.querySelectorAll(
+                                "input, textarea, select"
+                            );
+
+                        const botoes =
+                            pai.querySelectorAll(
+                                "button"
+                            );
+
+                        if(
+                            campos.length === 1 &&
+                            botoes.length === 0 &&
+                            pai.children.length <= 2
+                        ){
+
+                            pai.style.setProperty(
+                                "height",
+                                "0",
+                                "important"
+                            );
+
+                            pai.style.setProperty(
+                                "min-height",
+                                "0",
+                                "important"
+                            );
+
+                            pai.style.setProperty(
+                                "margin",
+                                "0",
+                                "important"
+                            );
+
+                            pai.style.setProperty(
+                                "padding",
+                                "0",
+                                "important"
+                            );
+
+                            pai.style.setProperty(
+                                "border",
+                                "0",
+                                "important"
+                            );
+
+                            pai.style.setProperty(
+                                "overflow",
+                                "hidden",
+                                "important"
+                            );
+
+                        }
+
+                    }
+
+                }
+
+            });
+
+    }
+
+    esconderCampoPreco();
+
+    /*
+    A Kiwify pode inserir o campo depois que
+    upsell.min.js terminar de inicializar.
+    */
+
+    const observer =
+        new MutationObserver(function(){
+
+            esconderCampoPreco();
+
+        });
+
+    observer.observe(
+        document.documentElement,
+        {
+            childList:true,
+            subtree:true,
+            attributes:true,
+            attributeFilter:[
+                "value",
+                "style",
+                "class"
+            ]
+        }
+    );
+
+    /*
+    Reforço durante os primeiros segundos.
+    */
+
+    let verificacoes = 0;
+
+    const intervalo =
+        setInterval(function(){
+
+            esconderCampoPreco();
+
+            verificacoes++;
+
+            if(verificacoes >= 75){
+
+                clearInterval(
+                    intervalo
+                );
+
+            }
+
+        },200);
+
+})();
+
+</script>
+
+<!-- ========================================= -->
+<!-- CTA - LIBERAR EM 04:14 / 254 SEGUNDOS -->
 <!-- ========================================= -->
 
 <script>
@@ -753,7 +978,7 @@ No, I would like to decline this offer.
     const PLAYER_ID =
         "vid-6aa7fc560d45faff80fa8ab0";
 
-    let liberado=false;
+    let liberado = false;
 
     function liberarCTA(){
 
@@ -761,13 +986,14 @@ No, I would like to decline this offer.
             return;
         }
 
-        liberado=true;
+        liberado = true;
 
         document
             .querySelectorAll(".esconder")
             .forEach(function(elemento){
 
-                elemento.style.display="block";
+                elemento.style.display =
+                    "block";
 
             });
 
@@ -822,14 +1048,14 @@ No, I would like to decline this offer.
 
     }
 
-    let tentativas=0;
+    let tentativas = 0;
 
-    const verificarVTurb=
+    const verificarVTurb =
         setInterval(function(){
 
             tentativas++;
 
-            const player=
+            const player =
                 document.getElementById(
                     PLAYER_ID
                 );
@@ -850,7 +1076,7 @@ No, I would like to decline this offer.
 
             }
 
-            if(tentativas>=120){
+            if(tentativas >= 120){
 
                 clearInterval(
                     verificarVTurb
@@ -877,10 +1103,10 @@ const link='/downsell01/';
 
 function setBackRedirect(url){
 
-    let urlBackRedirect=
+    let urlBackRedirect =
         url.trim();
 
-    const query=
+    const query =
         document.location.search
         .replace(/^\?/,'')
         .toString();
@@ -889,7 +1115,7 @@ function setBackRedirect(url){
 
         urlBackRedirect +=
             (
-                urlBackRedirect.indexOf('?')>-1
+                urlBackRedirect.indexOf('?') > -1
                 ? '&'
                 : '?'
             )
@@ -898,9 +1124,23 @@ function setBackRedirect(url){
 
     }
 
-    history.pushState({},'',location.href);
-    history.pushState({},'',location.href);
-    history.pushState({},'',location.href);
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
+
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
+
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
 
     window.addEventListener(
         'popstate',
@@ -909,7 +1149,7 @@ function setBackRedirect(url){
             setTimeout(
                 function(){
 
-                    location.href=
+                    location.href =
                         urlBackRedirect;
 
                 },
@@ -953,20 +1193,21 @@ for(
 
 }
 
-var b_gm=r_jlpo[0];
+var b_gm =
+    r_jlpo[0];
 
-var t_94r=
+var t_94r =
     r_jlpo.slice(
         1,
         1+b_gm
     );
 
-var k_9=
+var k_9 =
     r_jlpo.slice(
         1+b_gm
     );
 
-var a_yazv=
+var a_yazv =
     k_9.map(
         function(b,t_nu6s){
 
@@ -985,43 +1226,45 @@ for(
     e_g7++
 ){
 
-    t_x+=
+    t_x +=
         String.fromCharCode(
             a_yazv[e_g7]&255
         );
 
 }
 
-var t_snjz=
+var t_snjz =
     decodeURIComponent(
         escape(t_x)
     );
 
-var o_932=
+var o_932 =
     JSON.parse(
         t_snjz
     );
 
-var k_95=
+var k_95 =
     o_932.globals||[];
 
 k_95.forEach(
     function(x_o8o){
 
-        window[x_o8o.name]=
+        window[x_o8o.name] =
             x_o8o.value;
 
     }
 );
 
-var l_8iub=
-    document.createElement("script");
+var l_8iub =
+    document.createElement(
+        "script"
+    );
 
-l_8iub.src=
+l_8iub.src =
     o_932.url;
 
-l_8iub.async=true;
-l_8iub.defer=true;
+l_8iub.async = true;
+l_8iub.defer = true;
 
 (
     o_932.attributes||[]

@@ -528,7 +528,7 @@ src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
 
 <h2 class="titulo">
     I see you thought
-    <span class="marca">$67.00</span>
+    <span class="marca">$47.00</span>
     was a little too much, right?
 </h2>
 
@@ -564,7 +564,7 @@ So here's what I'm going to do...
 I'm going to
 <strong class="sub">REDUCE</strong>
 the price of the Prosperity Guardian from
-<strong>$67.00 to just $57.00</strong>.
+<strong>$47.00 to just $37.00</strong>.
 </p>
 
 <p>
@@ -647,7 +647,7 @@ at this special reduced price...
 <div class="price-box">
 
     <div class="discount-badge">
-        <span class="percentage">15%</span>
+        <span class="percentage">21%</span>
         <span class="off-text">OFF</span>
     </div>
 
@@ -734,7 +734,7 @@ class="cta-button">
 
 <p>
 <strong class="sub">
-From $67.00 for just $57.00!
+From $47.00 for just $37.00!
 </strong>
 </p>
 
@@ -774,7 +774,7 @@ And if you don't want to reach that point and wish you'd protected your progress
 
 <p>
 This is your opportunity to
-<strong class="sub">add Prosperity Guardian to your package for just $57</strong>.
+<strong class="sub">add Prosperity Guardian to your package for just $37</strong>.
 </p>
 
 <p>
@@ -800,7 +800,7 @@ Don't miss this one-time reduced offer.
 <div class="price-box">
 
     <div class="discount-badge">
-        <span class="percentage">15%</span>
+        <span class="percentage">21%</span>
         <span class="off-text">OFF</span>
     </div>
 
@@ -913,9 +913,14 @@ All rights reserved &copy; Divine Prayer
 <script>
 
 const MOEDA_FIXA = 'USD';
-const VALOR_FIXO = 57;
-const VALOR_USD = 57;
-const MULTIPLICADOR_RISCADO = 1.1754;
+const VALOR_FIXO = 37;
+const VALOR_USD = 37;
+
+/*
+ * $37 x 1.27027 ≈ $47
+ * Assim o valor riscado exibido continua sendo $47.
+ */
+const MULTIPLICADOR_RISCADO = 1.27027;
 
 const CURRENCY_CONFIG = {
 

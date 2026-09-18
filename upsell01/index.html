@@ -272,36 +272,14 @@ body{
     font-weight:800;
 }
 
-.cta-button{
-    display:block;
+/* ========================================= */
+/* HOTMART SALES FUNNEL */
+/* ========================================= */
+
+#hotmart-sales-funnel{
     width:100%;
-    padding:25px;
-    background:#27AF60;
-    color:#FFFFFF;
-    text-align:center;
-    font-size:30px;
-    font-weight:800;
-    border-radius:10px;
-    border:1px solid #27AF60;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    cursor:pointer;
-    text-transform:uppercase;
-    margin:0 auto 15px;
-    transition:.2s ease;
-}
-
-.cta-button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(0,0,0,.3);
-}
-
-.decline-button{
-    margin-top:1rem;
-    cursor:pointer;
-    font-size:16px;
-    text-decoration:underline;
-    color:#666666;
-    text-align:center;
+    max-width:100%;
+    margin:0 auto;
 }
 
 /* MOBILE */
@@ -331,11 +309,6 @@ body{
 
     .price-old{
         font-size:28px;
-    }
-
-    .cta-button{
-        font-size:22px;
-        padding:20px;
     }
 
     .benefits-bottom{
@@ -369,17 +342,14 @@ body{
     .benefit-item-bottom{
         font-size:13px;
     }
-
-    .cta-button{
-        font-size:19px;
-        padding:18px 12px;
-    }
 }
 
 </style>
 
 
+<!-- ========================================= -->
 <!-- META PIXEL -->
+<!-- ========================================= -->
 
 <script>
 
@@ -425,6 +395,10 @@ fbq('track','PageView');
 <body>
 
 
+<!-- ========================================= -->
+<!-- META PIXEL NOSCRIPT -->
+<!-- ========================================= -->
+
 <noscript>
 <img
     height="1"
@@ -435,6 +409,10 @@ fbq('track','PageView');
 >
 </noscript>
 
+
+<!-- ========================================= -->
+<!-- TOPO -->
+<!-- ========================================= -->
 
 <header class="faixa">
 
@@ -765,102 +743,25 @@ $ 47.00
 
 
 <!-- ========================================= -->
-<!-- KIWIFY 1-CLICK UPSELL -->
+<!-- HOTMART - SALES FUNNEL - UPSELL 01 -->
 <!-- ========================================= -->
 
-<div
-    style="text-align:center"
-    id="kiwify-upsell-l4q4eou"
-    data-upsell-url="https://sacredprosperity.site/upsell02/?src=aurora"
-    data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
->
+<div id="hotmart-sales-funnel"></div>
 
-<button
-    id="kiwify-upsell-trigger-l4q4eou"
-    class="cta-button"
-    type="button"
->
-YES, I ACCEPT THIS SPECIAL OFFER!
-</button>
-
-<div
-    id="kiwify-upsell-cancel-trigger-l4q4eou"
-    class="decline-button"
->
-No, I would like to decline this offer.
-</div>
-
-</div>
-
-
-<script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
-
-
-</div>
-
-
-<!-- ========================================= -->
-<!-- BACK REDIRECT -->
-<!-- UPSELL 1 -> DOWNSELL 1 -->
-<!-- ========================================= -->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
 
 <script>
-
-(function(){
-
-    const link='/downsell01/';
-
-    function setBackRedirect(url){
-
-        let urlBackRedirect =
-            url.trim();
-
-        const query =
-            document.location.search
-            .replace(/^\?/,'')
-            .toString();
-
-        if(query){
-
-            urlBackRedirect +=
-                (
-                    urlBackRedirect.indexOf('?') > -1
-                    ? '&'
-                    : '?'
-                )
-                +
-                query;
-
-        }
-
-        history.pushState({},'',location.href);
-        history.pushState({},'',location.href);
-        history.pushState({},'',location.href);
-
-        window.addEventListener(
-            'popstate',
-            function(){
-
-                setTimeout(
-                    function(){
-
-                        location.href =
-                            urlBackRedirect;
-
-                    },
-                    1
-                );
-
-            }
-        );
-
-    }
-
-    setBackRedirect(link);
-
-})();
-
+checkoutElements
+    .init('salesFunnel')
+    .mount('#hotmart-sales-funnel');
 </script>
+
+<!-- ========================================= -->
+<!-- FIM HOTMART SALES FUNNEL -->
+<!-- ========================================= -->
+
+
+</div>
 
 
 <!-- ========================================= -->
@@ -980,5 +881,4 @@ l_8iub.defer=true;
 
 
 </body>
-
 </html>

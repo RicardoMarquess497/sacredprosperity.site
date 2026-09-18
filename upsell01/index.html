@@ -259,7 +259,7 @@ body{
 }
 
 /* ========================================= */
-/* PREÇO ANTES DO CTA */
+/* PREÇO ACIMA DO BOTÃO */
 /* ========================================= */
 
 .cta-prices{
@@ -284,28 +284,37 @@ body{
 }
 
 /* ========================================= */
-/* KIWIFY - CONTAINER */
+/* KIWIFY */
 /* ========================================= */
 
 #kiwify-upsell-PO4kxou{
-    width:100%;
-    max-width:100%;
-    margin:0 auto;
-    text-align:center;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 auto !important;
+    text-align:center !important;
 
     --kiwify-upsell-accept-bg:#27AF60 !important;
     --kiwify-upsell-accept-color:#FFFFFF !important;
 }
 
-/* ========================================= */
-/* KIWIFY - ESCONDER CAMPO DE PREÇO */
-/* ========================================= */
-
 /*
-A versão v2 pode inserir elementos auxiliares dentro
-do container. O script abaixo também remove visualmente
-o campo de preço depois que a Kiwify carregar.
+=================================================
+ESCONDE SOMENTE O INPUT VISUAL DE PREÇO DA KIWIFY
+=================================================
 */
+
+#kiwify-upsell-PO4kxou input{
+    position:absolute !important;
+    width:1px !important;
+    height:1px !important;
+    opacity:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+    clip:rect(0,0,0,0) !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+}
 
 /* ========================================= */
 /* BOTÃO VERDE */
@@ -317,6 +326,8 @@ o campo de preço depois que a Kiwify carregar.
     max-width:100% !important;
 
     padding:25px 20px !important;
+
+    margin:0 auto !important;
 
     background:#27AF60 !important;
     background-color:#27AF60 !important;
@@ -338,14 +349,12 @@ o campo de preço depois que a Kiwify carregar.
 
     cursor:pointer !important;
 
-    margin:0 auto !important;
+    appearance:none !important;
+    -webkit-appearance:none !important;
 
     transition:
         transform .2s ease,
         box-shadow .2s ease !important;
-
-    appearance:none !important;
-    -webkit-appearance:none !important;
 }
 
 #kiwify-upsell-trigger-PO4kxou:hover{
@@ -356,11 +365,11 @@ o campo de preço depois que a Kiwify carregar.
     transform:translateY(-3px);
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.3) !important;
+        0 12px 30px rgba(0,0,0,.30) !important;
 }
 
 /* ========================================= */
-/* BOTÃO DE RECUSA */
+/* RECUSAR OFERTA */
 /* ========================================= */
 
 #kiwify-upsell-cancel-trigger-PO4kxou{
@@ -425,6 +434,15 @@ o campo de preço depois que a Kiwify carregar.
         font-size:28px;
     }
 
+    .benefits-bottom{
+        grid-template-columns:repeat(3,1fr);
+        gap:12px;
+    }
+
+    .benefit-item-bottom{
+        font-size:11px;
+    }
+
     #kiwify-upsell-trigger-PO4kxou{
         font-size:22px !important;
         padding:20px 15px !important;
@@ -433,15 +451,6 @@ o campo de preço depois que a Kiwify carregar.
     #kiwify-upsell-cancel-trigger-PO4kxou{
         font-size:15px !important;
         margin-top:18px !important;
-    }
-
-    .benefits-bottom{
-        grid-template-columns:repeat(3,1fr);
-        gap:12px;
-    }
-
-    .benefit-item-bottom{
-        font-size:11px;
     }
 
 }
@@ -466,10 +475,6 @@ o campo de preço depois que a Kiwify carregar.
 
     .benefit-item-bottom{
         font-size:13px;
-    }
-
-    .cta-prices{
-        margin-bottom:20px;
     }
 
     .cta-price-old{
@@ -520,9 +525,7 @@ o campo de preço depois que a Kiwify carregar.
     n.queue=[];
 
     t=b.createElement(e);
-
     t.async=true;
-
     t.src=v;
 
     s=b.getElementsByTagName(e)[0];
@@ -537,7 +540,6 @@ o campo de preço depois que a Kiwify carregar.
 );
 
 fbq('init','1604486801113999');
-
 fbq('track','PageView');
 
 </script>
@@ -553,17 +555,14 @@ height="1"
 width="1"
 style="display:none"
 src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
-alt=""
->
+alt="">
 
 </noscript>
 
 <header class="faixa">
 
 <p class="destaque-topo">
-
 STEP 1 of 2: Please do not close or refresh this page, as it may cause errors with your purchase!
-
 </p>
 
 </header>
@@ -591,16 +590,16 @@ Watch this short video before you continue.
 <div class="video-wrapper">
 
 <!-- ========================================= -->
-<!-- VTURB PLAYER - EMBED ORIGINAL -->
+<!-- VTURB PLAYER -->
 <!-- ========================================= -->
 
 <vturb-smartplayer
 id="vid-6aa7fc560d45faff80fa8ab0"
-style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+style="display:block;margin:0 auto;width:100%;max-width:400px;">
 
 <div
 class="vturb-player-placeholder"
-style="position: relative; width: 100%; padding: 119.62962962962962% 0 0; z-index: 0; background-color: black;">
+style="position:relative;width:100%;padding:119.62962962962962% 0 0;z-index:0;background-color:black;">
 </div>
 
 </vturb-smartplayer>
@@ -630,9 +629,7 @@ document.head.appendChild(s);
 <div class="offer-header">
 
 <div class="offer-title">
-
 Special Offer For A Limited Time!
-
 </div>
 
 </div>
@@ -652,21 +649,15 @@ OFF
 </div>
 
 <div class="price-label">
-
 Your price:
-
 </div>
 
 <div class="price-old">
-
 $ 197.00
-
 </div>
 
 <div class="price-new">
-
 $ 47.00
-
 </div>
 
 </div>
@@ -678,78 +669,55 @@ $ 47.00
 <div class="benefits-bottom">
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>LIFETIME ACCESS</span>
-
 </div>
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>30-DAY GUARANTEE</span>
-
 </div>
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>SECURE PAYMENT</span>
-
 </div>
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>INSTANT ACCESS</span>
-
 </div>
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>SATISFACTION GUARANTEED</span>
-
 </div>
 
 <div class="benefit-item-bottom">
-
 <div class="benefit-icon">✓</div>
-
 <span>PRIVACY PROTECTED</span>
-
 </div>
 
 </div>
 
 <!-- ========================================= -->
-<!-- PREÇO ANTES DO BOTÃO -->
+<!-- PREÇO ACIMA DO CTA -->
 <!-- ========================================= -->
 
 <div class="cta-prices">
 
 <span class="cta-price-old">
-
 $ 197.00
-
 </span>
 
 <span class="cta-price-new">
-
 $ 47.00
-
 </span>
 
 </div>
 
 <!-- ========================================= -->
 <!-- KIWIFY 1-CLICK UPSELL 01 -->
-<!-- ID: PO4kxou -->
 <!-- ========================================= -->
 
 <div
@@ -759,15 +727,11 @@ data-downsell-url="https://sacredprosperity.site/downsell01/?src=aurora"
 style="--kiwify-upsell-accept-bg:#27AF60;--kiwify-upsell-accept-color:#FFFFFF">
 
 <button id="kiwify-upsell-trigger-PO4kxou">
-
 YES, I ACCEPT THIS SPECIAL OFFER!
-
 </button>
 
 <div id="kiwify-upsell-cancel-trigger-PO4kxou">
-
 No, I would like to decline this offer.
-
 </div>
 
 </div>
@@ -777,137 +741,7 @@ No, I would like to decline this offer.
 </div>
 
 <!-- ========================================= -->
-<!-- CORREÇÃO VISUAL DO SNIPPET KIWIFY V2 -->
-<!-- REMOVE APENAS O CAMPO DE PREÇO INJETADO -->
-<!-- ========================================= -->
-
-<script>
-
-(function(){
-
-    const UPSELL_ID = "kiwify-upsell-PO4kxou";
-
-    function ajustarKiwify(){
-
-        const container =
-            document.getElementById(UPSELL_ID);
-
-        if(!container){
-            return;
-        }
-
-        const accept =
-            document.getElementById(
-                "kiwify-upsell-trigger-PO4kxou"
-            );
-
-        const cancel =
-            document.getElementById(
-                "kiwify-upsell-cancel-trigger-PO4kxou"
-            );
-
-        /*
-         * Mantém apenas o botão de aceitar e
-         * o botão/link de recusar visíveis.
-         *
-         * Se o Kiwify v2 inserir um INPUT com
-         * o preço ($47.00), ele é escondido.
-         */
-
-        container
-            .querySelectorAll("input")
-            .forEach(function(element){
-
-                element.style.display="none";
-
-            });
-
-        /*
-         * Caso o campo seja criado dentro de
-         * um wrapper próprio, escondemos o
-         * elemento que contém somente o input.
-         */
-
-        container
-            .querySelectorAll("input")
-            .forEach(function(input){
-
-                const parent =
-                    input.parentElement;
-
-                if(
-                    parent &&
-                    parent !== container &&
-                    parent !== accept &&
-                    parent !== cancel
-                ){
-
-                    const texto =
-                        parent.textContent.trim();
-
-                    if(
-                        texto === "" ||
-                        /^\$?\s*47(?:\.00)?$/.test(texto)
-                    ){
-
-                        parent.style.display="none";
-
-                    }
-
-                }
-
-            });
-
-    }
-
-    /*
-     * Executa imediatamente.
-     */
-
-    ajustarKiwify();
-
-    /*
-     * Observa o container porque o script
-     * da Kiwify pode inserir o preço depois.
-     */
-
-    const iniciarObservador =
-        setInterval(function(){
-
-            const container =
-                document.getElementById(UPSELL_ID);
-
-            if(!container){
-                return;
-            }
-
-            ajustarKiwify();
-
-            const observer =
-                new MutationObserver(function(){
-
-                    ajustarKiwify();
-
-                });
-
-            observer.observe(
-                container,
-                {
-                    childList:true,
-                    subtree:true
-                }
-            );
-
-            clearInterval(iniciarObservador);
-
-        },200);
-
-})();
-
-</script>
-
-<!-- ========================================= -->
-<!-- CTA - LIBERAR EM 04:14 / 254 SEGUNDOS -->
+<!-- CTA - 04:14 / 254 SEGUNDOS -->
 <!-- ========================================= -->
 
 <script>
@@ -919,7 +753,7 @@ No, I would like to decline this offer.
     const PLAYER_ID =
         "vid-6aa7fc560d45faff80fa8ab0";
 
-    let liberado = false;
+    let liberado=false;
 
     function liberarCTA(){
 
@@ -927,7 +761,7 @@ No, I would like to decline this offer.
             return;
         }
 
-        liberado = true;
+        liberado=true;
 
         document
             .querySelectorAll(".esconder")
@@ -947,7 +781,7 @@ No, I would like to decline this offer.
             );
 
         if(!player){
-            return false;
+            return;
         }
 
         if(
@@ -979,40 +813,33 @@ No, I would like to decline this offer.
 
                 player.onTime(
                     TEMPO_CTA,
-                    function(){
-
-                        liberarCTA();
-
-                    }
+                    liberarCTA
                 );
 
             }catch(e){}
 
         }
 
-        return true;
-
     }
 
-    let tentativas = 0;
+    let tentativas=0;
 
-    const verificarVTurb =
+    const verificarVTurb=
         setInterval(function(){
 
             tentativas++;
 
-            const player =
+            const player=
                 document.getElementById(
                     PLAYER_ID
                 );
 
-            if(!player){
-                return;
-            }
-
             if(
-                typeof player.displayHiddenElements === "function" ||
-                typeof player.onTime === "function"
+                player &&
+                (
+                    typeof player.displayHiddenElements === "function" ||
+                    typeof player.onTime === "function"
+                )
             ){
 
                 configurarPlayer();
@@ -1023,9 +850,7 @@ No, I would like to decline this offer.
 
             }
 
-            if(
-                tentativas >= 120
-            ){
+            if(tentativas>=120){
 
                 clearInterval(
                     verificarVTurb
@@ -1041,7 +866,7 @@ No, I would like to decline this offer.
 
 <!-- ========================================= -->
 <!-- BACK REDIRECT -->
-<!-- UPSELL 1 -> DOWNSELL 1 -->
+<!-- UPSELL 01 -> DOWNSELL 01 -->
 <!-- ========================================= -->
 
 <script>
@@ -1052,10 +877,10 @@ const link='/downsell01/';
 
 function setBackRedirect(url){
 
-    let urlBackRedirect =
+    let urlBackRedirect=
         url.trim();
 
-    const query =
+    const query=
         document.location.search
         .replace(/^\?/,'')
         .toString();
@@ -1064,7 +889,7 @@ function setBackRedirect(url){
 
         urlBackRedirect +=
             (
-                urlBackRedirect.indexOf('?') > -1
+                urlBackRedirect.indexOf('?')>-1
                 ? '&'
                 : '?'
             )
@@ -1073,23 +898,9 @@ function setBackRedirect(url){
 
     }
 
-    history.pushState(
-        {},
-        '',
-        location.href
-    );
-
-    history.pushState(
-        {},
-        '',
-        location.href
-    );
-
-    history.pushState(
-        {},
-        '',
-        location.href
-    );
+    history.pushState({},'',location.href);
+    history.pushState({},'',location.href);
+    history.pushState({},'',location.href);
 
     window.addEventListener(
         'popstate',
@@ -1098,7 +909,7 @@ function setBackRedirect(url){
             setTimeout(
                 function(){
 
-                    location.href =
+                    location.href=
                         urlBackRedirect;
 
                 },
@@ -1142,8 +953,7 @@ for(
 
 }
 
-var b_gm=
-    r_jlpo[0];
+var b_gm=r_jlpo[0];
 
 var t_94r=
     r_jlpo.slice(
@@ -1158,10 +968,7 @@ var k_9=
 
 var a_yazv=
     k_9.map(
-        function(
-            b,
-            t_nu6s
-        ){
+        function(b,t_nu6s){
 
             return b^t_94r[
                 t_nu6s%b_gm
@@ -1201,18 +1008,14 @@ var k_95=
 k_95.forEach(
     function(x_o8o){
 
-        window[
-            x_o8o.name
-        ]=
-        x_o8o.value;
+        window[x_o8o.name]=
+            x_o8o.value;
 
     }
 );
 
 var l_8iub=
-    document.createElement(
-        "script"
-    );
+    document.createElement("script");
 
 l_8iub.src=
     o_932.url;

@@ -15,31 +15,31 @@
 
 <script>
 !function(i,n){
-    i._plt=i._plt||(
-        n&&n.timeOrigin
-        ? n.timeOrigin+n.now()
-        : Date.now()
-    );
+i._plt=i._plt||(
+n&&n.timeOrigin
+? n.timeOrigin+n.now()
+: Date.now()
+);
 }(window,performance);
 </script>
 
 <link
-    rel="preload"
-    href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js"
-    as="script"
+rel="preload"
+href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js"
+as="script"
 >
 
 <link
-    rel="preload"
-    href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-    as="script"
+rel="preload"
+href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+as="script"
 >
 
 <link
-    rel="preload"
-    href="https://cdn.converteai.net/787c5677-903d-425e-8e33-86e900d53780/6aa7fc11a70d93f5eb745257/main.m3u8"
-    as="fetch"
-    crossorigin
+rel="preload"
+href="https://cdn.converteai.net/787c5677-903d-425e-8e33-86e900d53780/6aa7fc11a70d93f5eb745257/main.m3u8"
+as="fetch"
+crossorigin
 >
 
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
@@ -52,23 +52,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 :root{
-    --vermelho:#C0170F;
-    --vermelho-escuro:#8E0F09;
-    --preto:#111111;
-    --amarelo:#FFF3B0;
+--vermelho:#C0170F;
+--vermelho-escuro:#8E0F09;
+--preto:#111111;
+--amarelo:#FFF3B0;
 }
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-    background:#FFFFFF;
-    color:var(--preto);
-    font-family:'Montserrat',Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;
+background:#FFFFFF;
+color:var(--preto);
+font-family:'Montserrat',Arial,sans-serif;
+-webkit-font-smoothing:antialiased;
 }
 
 /* ========================================= */
@@ -76,7 +76,7 @@ body{
 /* ========================================= */
 
 .esconder{
-    display:none;
+display:none;
 }
 
 /* ========================================= */
@@ -84,19 +84,19 @@ body{
 /* ========================================= */
 
 .faixa{
-    background:var(--vermelho);
-    color:#FFFFFF;
-    padding:16px 20px;
-    text-align:center;
-    border-bottom:4px solid var(--vermelho-escuro);
+background:var(--vermelho);
+color:#FFFFFF;
+padding:16px 20px;
+text-align:center;
+border-bottom:4px solid var(--vermelho-escuro);
 }
 
 .faixa .destaque-topo{
-    max-width:820px;
-    margin:0 auto;
-    font-size:16px;
-    font-weight:600;
-    line-height:1.45;
+max-width:820px;
+margin:0 auto;
+font-size:16px;
+font-weight:600;
+line-height:1.45;
 }
 
 /* ========================================= */
@@ -104,29 +104,29 @@ body{
 /* ========================================= */
 
 .video-section{
-    max-width:900px;
-    margin:0 auto;
-    padding:36px 22px 20px;
-    text-align:center;
+max-width:900px;
+margin:0 auto;
+padding:36px 22px 20px;
+text-align:center;
 }
 
 .video-section h1{
-    font-size:28px;
-    font-weight:800;
-    line-height:1.3;
-    margin-bottom:24px;
-    color:#111111;
+font-size:28px;
+font-weight:800;
+line-height:1.3;
+margin-bottom:24px;
+color:#111111;
 }
 
 .marca{
-    background:var(--amarelo);
-    padding:2px 6px;
+background:var(--amarelo);
+padding:2px 6px;
 }
 
 .video-wrapper{
-    width:100%;
-    max-width:400px;
-    margin:0 auto;
+width:100%;
+max-width:400px;
+margin:0 auto;
 }
 
 /* ========================================= */
@@ -134,163 +134,193 @@ body{
 /* ========================================= */
 
 .offer-container{
-    max-width:900px;
-    margin:35px auto 50px;
-    padding:40px;
-    background:#FFFFFF;
-    border:3px dashed #4facfe;
-    border-radius:15px;
-    box-shadow:0 10px 40px rgba(0,0,0,.1);
-    font-family:'Montserrat',Arial,sans-serif;
+max-width:900px;
+margin:35px auto 50px;
+padding:40px;
+background:#FFFFFF;
+border:3px dashed #4facfe;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,.1);
+font-family:'Montserrat',Arial,sans-serif;
 }
 
 .offer-header{
-    text-align:center;
-    margin-bottom:30px;
+text-align:center;
+margin-bottom:30px;
 }
 
 .offer-title{
-    font-size:42px;
-    font-weight:800;
-    color:#333333;
-    line-height:1.2;
+font-size:42px;
+font-weight:800;
+color:#333333;
+line-height:1.2;
 }
 
 .price-box{
-    background:#fff3e0;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-    margin-bottom:30px;
-    border:3px dashed #4facfe;
-    position:relative;
+background:#fff3e0;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+margin-bottom:30px;
+border:3px dashed #4facfe;
+position:relative;
 }
 
 .discount-badge{
-    position:absolute;
-    top:-15px;
-    right:-15px;
-    background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
-    color:#FFFFFF;
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    box-shadow:0 8px 20px rgba(255,107,107,.4);
-    animation:pulse-badge 2s infinite;
+position:absolute;
+top:-15px;
+right:-15px;
+background:linear-gradient(135deg,#ff6b6b,#ee5a6f);
+color:#FFFFFF;
+width:80px;
+height:80px;
+border-radius:50%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+font-weight:800;
+box-shadow:0 8px 20px rgba(255,107,107,.4);
+animation:pulse-badge 2s infinite;
 }
 
 .discount-badge .percentage{
-    font-size:28px;
-    line-height:1;
+font-size:28px;
+line-height:1;
 }
 
 .discount-badge .off-text{
-    font-size:14px;
-    line-height:1;
-    margin-top:3px;
+font-size:14px;
+line-height:1;
+margin-top:3px;
 }
 
 @keyframes pulse-badge{
 
-    0%,100%{
-        transform:scale(1);
-    }
+0%,100%{
+    transform\:scale(1);
+}
 
-    50%{
-        transform:scale(1.05);
-    }
+50%{
+    transform\:scale(1.05);
+}
 
 }
 
 .price-label{
-    font-size:20px;
-    margin-bottom:15px;
-    font-weight:600;
-    color:#666666;
+font-size:20px;
+margin-bottom:15px;
+font-weight:600;
+color:#666666;
 }
 
 .price-old{
-    font-size:36px;
-    text-decoration:line-through;
-    margin-bottom:8px;
-    font-weight:600;
-    color:#ff1744;
+font-size:36px;
+text-decoration:line-through;
+margin-bottom:8px;
+font-weight:600;
+color:#ff1744;
 }
 
 .price-new{
-    font-size:72px;
-    font-weight:800;
-    line-height:1;
-    color:#00c853;
+font-size:72px;
+font-weight:800;
+line-height:1;
+color:#00c853;
 }
 
 .benefits-bottom{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    padding:30px 20px;
-    background:#fff3e0;
-    border-radius:10px;
-    margin-bottom:30px;
-    border:3px dashed #4facfe;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:30px 20px;
+background:#fff3e0;
+border-radius:10px;
+margin-bottom:30px;
+border:3px dashed #4facfe;
 }
 
 .benefit-item-bottom{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    font-size:14px;
-    font-weight:600;
-    color:#333333;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+font-size:14px;
+font-weight:600;
+color:#333333;
 }
 
 .benefit-icon{
-    width:26px;
-    height:26px;
-    background:#00c853;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#FFFFFF;
-    font-size:16px;
-    flex-shrink:0;
+width:26px;
+height:26px;
+background:#00c853;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#FFFFFF;
+font-size:16px;
+flex-shrink:0;
 }
 
 .cta-prices{
-    text-align:center;
-    margin-bottom:20px;
-    font-size:22px;
-    font-weight:700;
+text-align:center;
+margin-bottom:20px;
+font-size:22px;
+font-weight:700;
 }
 
 .cta-price-old{
-    text-decoration:line-through;
-    color:#ff1744;
-    margin-right:15px;
+text-decoration:line-through;
+color:#ff1744;
+margin-right:15px;
 }
 
 .cta-price-new{
-    color:#00c853;
-    font-size:39px;
-    font-weight:800;
+color:#00c853;
+font-size:39px;
+font-weight:800;
 }
 
-/* ========================================= */
-/* HOTMART SALES FUNNEL */
-/* ========================================= */
+.kiwify-button-wrapper{
+text-align:center;
+margin:0 auto;
+}
 
-#hotmart-sales-funnel{
-    width:100%;
-    max-width:100%;
-    margin:0 auto;
+.kiwify-upsell-button{
+display:block;
+width:100%;
+padding:25px;
+background:#27AF60;
+color:#FFFFFF;
+text-align:center;
+font-size:30px;
+font-weight:800;
+border-radius:10px;
+border:1px solid #27AF60;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+cursor:pointer;
+text-transform:uppercase;
+margin:0 auto 15px;
+transition:.2s ease;
+}
+
+.kiwify-upsell-button:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+
+.kiwify-decline{
+margin-top:30px;
+padding-top:30px;
+border-top:2px solid #dddddd;
+cursor:pointer;
+font-size:15px;
+font-weight:600;
+color:#666666;
+text-decoration:underline;
+text-align:center;
 }
 
 /* ========================================= */
@@ -299,63 +329,73 @@ body{
 
 @media(max-width:768px){
 
-    .video-section h1{
-        font-size:22px;
-    }
+.video-section h1{
+    font-size:22px;
+}
 
-    .offer-container{
-        padding:25px;
-        margin:25px 20px 40px;
-    }
+.offer-container{
+    padding:25px;
+    margin:25px 20px 40px;
+}
 
-    .offer-title{
-        font-size:28px;
-    }
+.offer-title{
+    font-size:28px;
+}
 
-    .price-box{
-        padding:30px 25px;
-    }
+.price-box{
+    padding:30px 25px;
+}
 
-    .price-new{
-        font-size:56px;
-    }
+.price-new{
+    font-size:56px;
+}
 
-    .price-old{
-        font-size:28px;
-    }
+.price-old{
+    font-size:28px;
+}
 
-    .benefits-bottom{
-        grid-template-columns:repeat(3,1fr);
-        gap:12px;
-    }
+.kiwify-upsell-button{
+    font-size:22px;
+    padding:20px;
+}
 
-    .benefit-item-bottom{
-        font-size:11px;
-    }
+.benefits-bottom{
+    grid-template-columns\:repeat(3,1fr);
+    gap:12px;
+}
+
+.benefit-item-bottom{
+    font-size:11px;
+}
 
 }
 
 @media(max-width:480px){
 
-    .offer-title{
-        font-size:24px;
-    }
+.offer-title{
+    font-size:24px;
+}
 
-    .price-new{
-        font-size:48px;
-    }
+.price-new{
+    font-size:48px;
+}
 
-    .price-old{
-        font-size:24px;
-    }
+.price-old{
+    font-size:24px;
+}
 
-    .benefits-bottom{
-        grid-template-columns:1fr;
-    }
+.benefits-bottom{
+    grid-template-columns:1fr;
+}
 
-    .benefit-item-bottom{
-        font-size:13px;
-    }
+.benefit-item-bottom{
+    font-size:13px;
+}
+
+.kiwify-upsell-button{
+    font-size:19px;
+    padding:18px 12px;
+}
 
 }
 
@@ -369,50 +409,50 @@ body{
 
 !function(f,b,e,v,n,t,s){
 
-    if(f.fbq)return;
+if(f.fbq)return;
 
-    n=f.fbq=function(){
+n=f.fbq=function(){
 
-        n.callMethod
-        ? n.callMethod.apply(n,arguments)
-        : n.queue.push(arguments);
+    n.callMethod
+    ? n.callMethod.apply(n,arguments)
+    : n.queue.push(arguments);
 
-    };
+};
 
-    if(!f._fbq)f._fbq=n;
+if(!f.\_fbq)f.\_fbq=n;
 
-    n.push=n;
-    n.loaded=true;
-    n.version='2.0';
-    n.queue=[];
+n.push=n;
+n.loaded=true;
+n.version='2.0';
+n.queue=[];
 
-    t=b.createElement(e);
-    t.async=true;
-    t.src=v;
+t=b.createElement(e);
+t.async=true;
+t.src=v;
 
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s);
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
 
 }(
-    window,
-    document,
-    'script',
-    'https://connect.facebook.net/en_US/fbevents.js'
+window,
+document,
+'script',
+'https://connect.facebook.net/en_US/fbevents.js'
 );
 
 fbq(
-    'init',
-    '1604486801113999'
+'init',
+'1604486801113999'
 );
 
 fbq(
-    'track',
-    'PageView'
+'track',
+'PageView'
 );
 
 fbq(
-    'trackCustom',
-    'Upsell2'
+'trackCustom',
+'Upsell2'
 );
 
 </script>
@@ -428,11 +468,11 @@ fbq(
 <noscript>
 
 <img
-    height="1"
-    width="1"
-    style="display:none"
-    src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
-    alt=""
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
+alt=""
 >
 
 </noscript>
@@ -472,24 +512,24 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 <div class="video-wrapper">
 
 <vturb-smartplayer
-    id="vid-6aa7fc2fb33b1fe99d96445e"
-    style="
-        display:block;
-        margin:0 auto;
-        width:100%;
-        max-width:400px;
-    "
+id="vid-6aa7fc2fb33b1fe99d96445e"
+style="
+display:block;
+margin:0 auto;
+width:100%;
+max-width:400px;
+"
 >
 
 <div
-    class="vturb-player-placeholder"
-    style="
-        position:relative;
-        width:100%;
-        padding:119.62962962962962% 0 0;
-        z-index:0;
-        background-color:black;
-    "
+class="vturb-player-placeholder"
+style="
+position:relative;
+width:100%;
+padding:119.62962962962962% 0 0;
+z-index:0;
+background-color:black;
+"
 ></div>
 
 </vturb-smartplayer>
@@ -505,239 +545,255 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 
 (function(){
 
-    const PLAYER_ID =
-        "vid-6aa7fc2fb33b1fe99d96445e";
+const PLAYER\_ID =
+    "vid-6aa7fc2fb33b1fe99d96445e";
 
-    const TEMPO_CTA =
-        218;
+const TEMPO\_CTA =
+    218;
 
-    const STORAGE_KEY =
-        "upsell2_cta_6aa7fc2fb33b1fe99d96445e";
+const STORAGE\_KEY =
+    "upsell2\_cta\_6aa7fc2fb33b1fe99d96445e";
 
-    const player =
-        document.getElementById(
-            PLAYER_ID
-        );
+const player =
+    document.getElementById(
+        PLAYER\_ID
+    );
 
-    if(!player){
+if(!player){
 
-        console.error(
-            "VTurb Upsell 2 não encontrado."
-        );
+    console.error(
+        "VTurb Upsell 2 não encontrado."
+    );
 
+    return;
+
+}
+
+let ctaJaExibida =
+    false;
+
+
+
+function mostrarCTA(){
+
+    if(ctaJaExibida){
         return;
-
     }
 
-    let ctaJaExibida =
-        false;
+    ctaJaExibida =
+        true;
 
-    function mostrarCTA(){
+    document
+        .querySelectorAll(
+            ".esconder"
+        )
+        .forEach(
+            function(elemento){
 
-        if(ctaJaExibida){
-            return;
-        }
+                elemento.style.display =
+                    "block";
 
-        ctaJaExibida =
-            true;
-
-        document
-            .querySelectorAll(
-                ".esconder"
-            )
-            .forEach(
-                function(elemento){
-
-                    elemento.style.display =
-                        "block";
-
-                }
-            );
-
-        try{
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                "true"
-            );
-
-        }catch(error){
-
-            console.warn(
-                "Não foi possível salvar o estado da CTA."
-            );
-
-        }
-
-        console.log(
-            "CTA do Upsell 2 liberada aos 218 segundos."
+            }
         );
-
-    }
-
-    /*
-     * Se o usuário já chegou ao pitch antes,
-     * mantém a oferta liberada.
-     */
 
     try{
 
+        localStorage.setItem(
+            STORAGE\_KEY,
+            "true"
+        );
+
+    }catch(error){
+
+        console.warn(
+            "Não foi possível salvar o estado da CTA."
+        );
+
+    }
+
+    console.log(
+        "CTA do Upsell 2 liberada aos 218 segundos."
+    );
+
+}
+
+
+
+/\*
+ \* Se o usuário já chegou ao pitch antes,
+ \* mantém a oferta liberada.
+ \*/
+
+try{
+
+    if(
+        localStorage.getItem(
+            STORAGE\_KEY
+        ) === "true"
+    ){
+
+        mostrarCTA();
+
+    }
+
+}catch(error){
+
+    console.warn(
+        "LocalStorage indisponível."
+    );
+
+}
+
+
+
+/\*
+ \* Monitora continuamente
+ \* o tempo real do vídeo.
+ \*/
+
+player.addEventListener(
+    "video\:timeupdate",
+    function(event){
+
         if(
-            localStorage.getItem(
-                STORAGE_KEY
-            ) === "true"
+            !event ||
+            !event.detail
+        ){
+            return;
+        }
+
+        const tempoAtual =
+            Number(
+                event.detail.time
+            );
+
+        if(
+            !Number.isFinite(
+                tempoAtual
+            )
+        ){
+            return;
+        }
+
+        if(
+            tempoAtual >= TEMPO\_CTA
         ){
 
             mostrarCTA();
 
         }
 
-    }catch(error){
+    }
+);
 
-        console.warn(
-            "LocalStorage indisponível."
+
+
+/\*
+ \* Quando o player ficar pronto,
+ \* cria gatilhos adicionais.
+ \*/
+
+player.addEventListener(
+    "player\:ready",
+    function(){
+
+        console.log(
+            "VTurb Upsell 2 pronto."
         );
+
+
+
+        /\*
+         \* Método de delay da VTurb.
+         \*/
+
+        if(
+            typeof player.displayHiddenElements
+            \=== "function"
+        ){
+
+            player.displayHiddenElements(
+                TEMPO\_CTA,
+                [".esconder"],
+                {
+                    display:"block",
+                    persist\:true
+                }
+            );
+
+        }
+
+
+
+        /\*
+         \* Gatilho redundante onTime.
+         \*/
+
+        if(
+            typeof player.onTime
+            \=== "function"
+        ){
+
+            player.onTime(
+                TEMPO\_CTA,
+                function(){
+
+                    mostrarCTA();
+
+                }
+            );
+
+        }
+
+
+
+        /\*
+         \* Caso o player já esteja
+         \* além dos 218 segundos.
+         \*/
+
+        if(
+            Number(player.currentTime)
+            \>= TEMPO\_CTA
+        ){
+
+            mostrarCTA();
+
+        }
 
     }
+);
 
-    /*
-     * Monitora continuamente
-     * o tempo real do vídeo.
-     */
 
-    player.addEventListener(
-        "video:timeupdate",
-        function(event){
 
-            if(
-                !event ||
-                !event.detail
-            ){
-                return;
-            }
+/\*
+ \* Carrega o VTurb somente depois
+ \* dos listeners estarem registrados.
+ \*/
 
-            const tempoAtual =
-                Number(
-                    event.detail.time
-                );
-
-            if(
-                !Number.isFinite(
-                    tempoAtual
-                )
-            ){
-                return;
-            }
-
-            if(
-                tempoAtual >= TEMPO_CTA
-            ){
-
-                mostrarCTA();
-
-            }
-
-        }
+const scriptVTurb =
+    document.createElement(
+        "script"
     );
 
-    /*
-     * Quando o player ficar pronto,
-     * cria gatilhos adicionais.
-     */
+scriptVTurb.src =
+    "[https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js](https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js)";
 
-    player.addEventListener(
-        "player:ready",
-        function(){
+scriptVTurb.async =
+    true;
 
-            console.log(
-                "VTurb Upsell 2 pronto."
-            );
+scriptVTurb.onerror =
+    function(){
 
-            /*
-             * Método de delay da VTurb.
-             */
-
-            if(
-                typeof player.displayHiddenElements
-                === "function"
-            ){
-
-                player.displayHiddenElements(
-                    TEMPO_CTA,
-                    [".esconder"],
-                    {
-                        display:"block",
-                        persist:true
-                    }
-                );
-
-            }
-
-            /*
-             * Gatilho redundante onTime.
-             */
-
-            if(
-                typeof player.onTime
-                === "function"
-            ){
-
-                player.onTime(
-                    TEMPO_CTA,
-                    function(){
-
-                        mostrarCTA();
-
-                    }
-                );
-
-            }
-
-            /*
-             * Caso o player já esteja
-             * além dos 218 segundos.
-             */
-
-            if(
-                Number(player.currentTime)
-                >= TEMPO_CTA
-            ){
-
-                mostrarCTA();
-
-            }
-
-        }
-    );
-
-    /*
-     * Carrega o VTurb somente depois
-     * dos listeners estarem registrados.
-     */
-
-    const scriptVTurb =
-        document.createElement(
-            "script"
+        console.error(
+            "Erro ao carregar o VTurb do Upsell 2."
         );
 
-    scriptVTurb.src =
-        "https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/players/6aa7fc2fb33b1fe99d96445e/v4/player.js";
+    };
 
-    scriptVTurb.async =
-        true;
-
-    scriptVTurb.onerror =
-        function(){
-
-            console.error(
-                "Erro ao carregar o VTurb do Upsell 2."
-            );
-
-        };
-
-    document.head.appendChild(
-        scriptVTurb
-    );
+document.head.appendChild(
+    scriptVTurb
+);
 
 })();
 
@@ -751,8 +807,8 @@ about protecting yourself from negativity, envy and unwanted outside influence.
 <!-- ========================================= -->
 
 <div
-    class="offer-container esconder"
-    id="upsell2-offer"
+class="offer-container esconder"
+id="upsell2-offer"
 >
 
 <div class="offer-header">
@@ -804,7 +860,7 @@ $ 27.00
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -816,7 +872,7 @@ LIFETIME ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -828,7 +884,7 @@ LIFETIME ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -840,7 +896,7 @@ SECURE PAYMENT
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -852,7 +908,7 @@ INSTANT ACCESS
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -864,7 +920,7 @@ SATISFACTION GUARANTEED
 <div class="benefit-item-bottom">
 
 <div class="benefit-icon">
-&#10003;
+✓
 </div>
 
 <span>
@@ -892,24 +948,124 @@ $ 27.00
 </div>
 
 <!-- ========================================= -->
-<!-- HOTMART - SALES FUNNEL - UPSELL 02 -->
+<!-- SNIPPET ORIGINAL KIWIFY - UPSELL 2 -->
 <!-- ========================================= -->
 
-<div id="hotmart-sales-funnel"></div>
+<div
+class="kiwify-button-wrapper"
+id="kiwify-upsell-49RsYmG"
+data-upsell-url=""
+data-downsell-url="https://sacredprosperity.site/downsell02/?src=aurora"
+>
 
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<button
+id="kiwify-upsell-trigger-49RsYmG"
+class="kiwify-upsell-button"
+type="button"
+>
 
-<script>
-checkoutElements
-    .init('salesFunnel')
-    .mount('#hotmart-sales-funnel');
-</script>
+YES, I ACCEPT THIS SPECIAL OFFER!
 
-<!-- ========================================= -->
-<!-- FIM HOTMART SALES FUNNEL -->
-<!-- ========================================= -->
+</button>
+
+<div
+id="kiwify-upsell-cancel-trigger-49RsYmG"
+class="kiwify-decline"
+>
+
+No, I would like to decline this offer.
 
 </div>
+
+</div>
+
+<script
+src="https://snippets.kiwify.com/upsell/upsell.min.js"
+></script>
+
+</div>
+
+<!-- ========================================= -->
+<!-- BACK REDIRECT -->
+<!-- UPSELL 2 -> DOWNSELL 2 -->
+<!-- ========================================= -->
+
+<script>
+
+(function(){
+
+const link =
+    '/downsell02/';
+
+
+
+function setBackRedirect(url){
+
+    let urlBackRedirect =
+        url.trim();
+
+    const query =
+        document.location.search
+        .replace(/^\\?/,'')
+        .toString();
+
+    if(query){
+
+        urlBackRedirect +=
+        (
+            urlBackRedirect.indexOf('?') > -1
+            ? '&'
+            : '?'
+        )
+        \+
+        query;
+
+    }
+
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
+
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
+
+    history.pushState(
+        {},
+        '',
+        location.href
+    );
+
+    window\.addEventListener(
+        'popstate',
+        function(){
+
+            setTimeout(
+                function(){
+
+                    location.href =
+                        urlBackRedirect;
+
+                },
+                1
+            );
+
+        }
+    );
+
+}
+
+setBackRedirect(
+    link
+);
+
+})();
+
+</script>
 
 <!-- ========================================= -->
 <!-- UTMIFY -->
@@ -926,116 +1082,118 @@ var r_al4i=atob(
 var y_2=[];
 
 for(
-    var r_w=0;
-    r_w<r_al4i.length;
-    r_w++
+var r_w=0;
+r_w<r_al4i.length;
+r_w++
 ){
 
-    y_2.push(
-        r_al4i.charCodeAt(r_w)&255
-    );
+y\_2.push(
+    r\_al4i.charCodeAt(r\_w)&255
+);
 
 }
 
 var c_ia=
-    y_2[0];
+y_2[0];
 
 var g_v=
-    y_2.slice(
-        1,
-        1+c_ia
-    );
+y_2.slice(
+1,
+1+c_ia
+);
 
 var o_2t6=
-    y_2.slice(
-        1+c_ia
-    );
+y_2.slice(
+1+c_ia
+);
 
 var j_29m=
-    o_2t6.map(
-        function(
-            b,
-            u_011a
-        ){
+o_2t6.map(
+function(
+b,
+u_011a
+){
 
-            return b^g_v[
-                u_011a%c_ia
-            ];
+        return b^g\_v[
+            u\_011a%c\_ia
+        ];
 
-        }
-    );
+    }
+);
 
 var w_lc="";
 
 for(
-    var d_6mw=0;
-    d_6mw<j_29m.length;
-    d_6mw++
+var d_6mw=0;
+d_6mw<j_29m.length;
+d_6mw++
 ){
 
-    w_lc +=
-        String.fromCharCode(
-            j_29m[d_6mw]&255
-        );
+w\_lc +=
+    String.fromCharCode(
+        j\_29m[d\_6mw]&255
+    );
 
 }
 
 var v_7mq8=
-    decodeURIComponent(
-        escape(w_lc)
-    );
+decodeURIComponent(
+escape(w_lc)
+);
 
 var b_5f=
-    JSON.parse(
-        v_7mq8
-    );
+JSON.parse(
+v_7mq8
+);
 
 var d_xey=
-    b_5f.globals||[];
+b_5f.globals||[];
 
 d_xey.forEach(
-    function(x_lwhz){
+function(x_lwhz){
 
-        window[
-            x_lwhz.name
-        ]=
-        x_lwhz.value;
+    window[
+        x\_lwhz.name
+    ]=
+    x\_lwhz.value;
 
-    }
+}
+
 );
 
 var d_e=
-    document.createElement(
-        "script"
-    );
+document.createElement(
+"script"
+);
 
 d_e.src=
-    b_5f.url;
+b_5f.url;
 
 d_e.async=
-    true;
+true;
 
 d_e.defer=
-    true;
+true;
 
 (
-    b_5f.attributes||[]
+b_5f.attributes||[]
 ).forEach(
-    function(d_gvk){
+function(d_gvk){
 
-        d_e.setAttribute(
-            d_gvk.name,
-            d_gvk.value
-        );
+    d\_e.setAttribute(
+        d\_gvk.name,
+        d\_gvk.value
+    );
 
-    }
+}
+
 );
 
 (
-    document.head ||
-    document.documentElement
+document.head ||
+document.documentElement
 ).appendChild(
-    d_e
+d_e
 );
 
 })();
@@ -1043,4 +1201,5 @@ d_e.defer=
 </script>
 
 </body>
+
 </html>

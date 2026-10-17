@@ -114,5 +114,279 @@ main{max-width:900px;margin:24px auto 55px}
 .stats{font-size:12px;margin-top:10px}
 .muted{color:#aaa;font-style:italic}
 .separator{color:#777;margin:0 9px}
-.subscribe{align-self:center;background:#cf0000;
+.subscribe{align-self:center;background:#cf0000;color:#fff;border:0;border-radius:4px;padding:11px 22px;font-weight:800;letter-spacing:.7px;cursor:pointer}
+.subscribe.active{background:#353535}
+.chat{background:#101010;margin-top:15px;border-radius:6px;overflow:hidden}
+.chat-title{height:39px;padding:12px 16px;border-bottom:1px solid #292929;font-size:12px;font-weight:800}
+.dot{display:inline-block;width:8px;height:8px;background:#e40000;border-radius:50%;margin-right:7px}
+.messages{height:550px;overflow-y:auto;padding:0 16px 10px;scrollbar-color:#414141 transparent;scrollbar-width:thin}
+.message{display:flex;gap:12px;padding:9px 0}
+.avatar{width:32px;height:32px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;font-weight:bold;font-size:12px}
+.who{font-size:11px;letter-spacing:.3px;color:#aaa;font-weight:bold}
+.msg{font-size:13px;margin-top:3px}
+.when{font-size:10px;color:#606060;margin-top:6px}
+.sendbar{display:flex;gap:8px;border-top:1px solid #303030;padding:11px 16px}
+.sendbar input{background:#1c1c1c;border:1px solid #333;border-radius:4px;flex:1;min-width:0;padding:10px 12px;color:white}
+.sendbar button{background:#cf0000;border:0;color:white;font-weight:bold;border-radius:4px;padding:0 18px;cursor:pointer}
+footer{padding:22px 14px 32px;text-align:center;color:#999;font-size:12px}
+footer a{color:#bbb}
+footer a:hover{color:#fff}
 
+@media(max-width:950px){
+  main{margin:15px 12px 35px}
+}
+@media(max-width:600px){
+  header{height:56px;gap:16px}
+  .brand{font-size:19px}
+  .right{gap:14px}
+  main{margin:0 0 24px}
+  .video-wrap{padding:0}
+  .player{max-width:min(100%,440px)}
+  .channel{padding:12px;gap:9px;min-height:135px}
+  .logo{height:37px;width:37px}
+  .headline{font-size:14px;margin-top:12px}
+  .subscribe{padding:10px;font-size:11px}
+  .stats{font-size:11px}
+  .messages{height:470px}
+  .chat{margin-top:10px;border-radius:0}
+}
+</style>
+</head>
+
+<body>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1061880189599809&ev=PageView&noscript=1" alt="">
+</noscript>
+
+<!-- CABEÇALHO -->
+<header>
+  <span class="hamb">☰</span>
+  <div class="brand">
+    <span class="yt">▶</span>
+    YouTube
+  </div>
+  <div class="right">
+    <span aria-label="Search">⌕</span>
+    <span>⋮</span>
+    <span class="profile">♙</span>
+  </div>
+</header>
+
+<main>
+
+<!-- PLAYER VTURB 9:16 -->
+<div class="video-wrap">
+  <div class="player" id="player">
+    <vturb-smartplayer
+      id="ab-6ac7bd3cd0f722600e1de3bb"
+      style="display:block;margin:0 auto;width:100%;">
+    </vturb-smartplayer>
+  </div>
+</div>
+
+<!-- CANAL E TÍTULO -->
+<section class="channel">
+  <div class="logo">✺</div>
+  <div class="channel-body">
+    <div class="name">FAITH & HISTORY REPORTS</div>
+    <div class="subcount">SPECIAL DOCUMENTARY CHANNEL</div>
+    <div class="headline">
+      <span class="red">● LIVE</span>
+      - Special Report: Ancient Templar Manuscript Raises Questions About the Four Archangels
+    </div>
+    <div class="stats">
+      <span class="red">●</span>
+      <span id="viewer-count">18,432</span> watching now
+      <span class="separator">|</span>
+      <span class="muted">The Chant of the Four</span>
+    </div>
+  </div>
+  <button class="subscribe" id="subscribe" type="button">SUBSCRIBE</button>
+</section>
+
+<!-- CHAT COM COMENTÁRIOS CONTÍNUOS -->
+<section class="chat">
+  <div class="chat-title">
+    <span class="dot"></span>
+    LIVE CHAT
+  </div>
+  <div class="messages" id="messages"></div>
+  <form class="sendbar" id="form">
+    <input id="input" maxlength="250"
+      aria-label="Type a message"
+      placeholder="Type a message...">
+    <button type="submit">SEND</button>
+  </form>
+</section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+  Copyright 2026 – Exclusive Content ®
+  <br>
+  All rights reserved.
+  <p>
+    <a href="termos.html">Terms of Use</a>
+    –
+    <a href="privacidade.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<!-- VTURB A/B PLAYER SCRIPT -->
+<script async src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6ac7bd3cd0f722600e1de3bb/player.js"></script>
+
+<!-- CONTADOR DE ESPECTADORES EM TEMPO REAL -->
+<script>
+let currentViewers = 18432;
+function updateViewerCount() {
+  // Variação suave entre -25 e +25 espectadores
+  const change = Math.floor(Math.random() * 51) - 25; 
+  currentViewers += change;
+  
+  // Limites mínimos e máximos da variação
+  if (currentViewers < 17800) currentViewers = 17800;
+  if (currentViewers > 19200) currentViewers = 19200;
+  
+  const el = document.getElementById('viewer-count');
+  if (el) {
+    el.textContent = currentViewers.toLocaleString('en-US');
+  }
+  
+  // Atualiza a cada 2.5 a 4.5 segundos
+  setTimeout(updateViewerCount, 2500 + Math.random() * 2000);
+}
+updateViewerCount();
+</script>
+
+<!-- CHAT -->
+<script>
+const entries=[
+  ["MARIA L.","What is the Chant of the Four?","#c45bdd","3 min ago"],
+  ["TOM W.","Just joined. Is this about the Templars?","#edc44b","2 min ago"],
+  ["SARAH K.","I would like to know more about the manuscript.","#ee7356","just now"],
+  ["LUCAS B.","Which four archangels are mentioned?","#568de9","just now"],
+  ["MIKE T.","Interesting story about the Vatican archives.","#35cc73","just now"],
+  ["GRACE W.","Is there a historical source for this document?","#c35adb","just now"]
+];
+
+const list=document.getElementById('messages');
+
+function addMessage(name,message,color,when){
+  const row=document.createElement('div');
+  row.className='message';
+
+  const av=document.createElement('div');
+  av.className='avatar';
+  av.style.background=color;
+  av.textContent=name.split(' ')
+    .map(x=>x[0]).join('')
+    .replace('.','').slice(0,2);
+
+  const content=document.createElement('div');
+
+  const who=document.createElement('div');
+  who.className='who';
+  who.textContent=name;
+
+  const msg=document.createElement('div');
+  msg.className='msg';
+  msg.textContent=message;
+
+  const time=document.createElement('div');
+  time.className='when';
+  time.textContent=when;
+
+  content.append(who,msg,time);
+  row.append(av,content);
+  list.append(row);
+}
+
+entries.forEach(x=>addMessage(...x));
+
+const rotatingComments=[
+  ["ANNA P.","Michael, Raphael, Gabriel and Uriel — did I get that right?","#a56de2"],
+  ["DAVID R.","What do historians say about the Templar manuscripts?","#4b92e7"],
+  ["EMILY S.","The question about unanswered prayers really resonates.","#e26b98"],
+  ["PETER M.","I wonder how they reconstructed the sounds.","#54b7a5"],
+  ["GRACE W.","Does the presentation explain the 19-day routine?","#db9d52"],
+  ["JOHN D.","Just joined. What is the Chant of the Four?","#e57661"],
+  ["OLIVIA B.","I would like to read the source documents.","#7a89df"],
+  ["MARCUS T.","Listening to the section about the four archangels.","#59bc83"],
+  ["SOFIA L.","Is this a documentary or a spiritual presentation?","#b86cd3"],
+  ["ROB K.","The historical background is intriguing.","#e4ad52"],
+  ["LISA F.","What does the speaker mean by sound frequencies?","#4cb7d1"],
+  ["THOMAS H.","Has the manuscript been independently authenticated?","#d2788d"],
+  ["CAROL N.","Can someone explain the difference between the four frequencies?","#a188e3"],
+  ["MICHAEL J.","I am curious about the origins of the 19-day practice.","#56a4a4"]
+];
+
+let nextComment=0;
+
+function appendSimulatedComment(){
+  const atBottom=
+    list.scrollHeight-list.scrollTop-list.clientHeight<90;
+
+  const comment=
+    rotatingComments[nextComment%rotatingComments.length];
+
+  nextComment++;
+
+  addMessage(comment[0],comment[1],comment[2],'just now');
+
+  while(list.children.length>80){
+    list.firstElementChild.remove();
+  }
+
+  if(atBottom){
+    list.scrollTop=list.scrollHeight;
+  }
+
+  window.setTimeout(
+    appendSimulatedComment,
+    2200+Math.floor(Math.random()*2600)
+  );
+}
+
+list.scrollTop=list.scrollHeight;
+window.setTimeout(appendSimulatedComment,2400);
+
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const input=document.getElementById('input');
+
+  if(!input.value.trim())return;
+
+  addMessage('YOU',input.value.trim(),'#888','just now');
+  input.value='';
+  list.scrollTop=list.scrollHeight;
+});
+
+document.getElementById('subscribe').onclick=e=>{
+  e.currentTarget.classList.toggle('active');
+  e.currentTarget.textContent=
+    e.currentTarget.classList.contains('active')
+    ?'SUBSCRIBED':'SUBSCRIBE';
+};
+</script>
+
+<!-- BACK REDIRECT ORIGINAL -->
+<script type="text/javascript">
+var back_redirect_back_link="/br"+location.search;
+
+history.pushState({},"",location.href);
+history.pushState({},"",location.href);
+
+window.addEventListener("popstate",function(event){
+  if(event.state){
+    setTimeout(function(){
+      location.href=back_redirect_back_link;
+    },1);
+  }
+},false);
+</script>
+
+</body>
+</html>

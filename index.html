@@ -1,1340 +1,367 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
-
+<html lang="en">
 <head>
-
-  <script>
-    !function(i,n){
-      i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
-    }(window,performance);
-  </script>
-
-  <!-- =============================
-       PRELOAD VTURB - TESTE A/B
-       ============================= -->
-
-  <link rel="preload"
-        href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6ac7bd3cd0f722600e1de3bb/player.js"
-        as="script">
-
-  <link rel="preload"
-        href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-        as="script">
-
-  <link rel="dns-prefetch" href="https://cdn.converteai.net">
-  <link rel="dns-prefetch" href="https://scripts.converteai.net">
-  <link rel="dns-prefetch" href="https://images.converteai.net">
-  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
-  <link rel="dns-prefetch" href="https://license.vturb.com">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sacredprosperity.site">
-  <meta property="og:title" content="Controversial Video">
-  <meta property="og:description" content="Controversial Video!">
-  <meta property="og:image"
-        content="https://img.imageboss.me/atm/cdn/format:auto/u/umsGbYu2QNOfeAn5fEqSwCDI4VE3/l/rBhIAv7621085.png">
-
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Controversial Video!">
-
-  <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-  <link rel="stylesheet"
-        href="./assets/css/com.css">
-
-  <title>Controversial Video!</title>
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    /* =============================
-       CABEÇALHO / VSL
-       ============================= */
-
-    header {
-      color: white;
-      background-color: #ffffff;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-      background-blend-mode: darken;
-    }
-
-    .titulo-vsl {
-      color: #ff3b30;
-      font-family: 'Cabin', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.25;
-      text-align: center;
-      margin: 10px 0 8px;
-      padding: 0;
-    }
-
-    .titulo-celular {
-      display: none;
-    }
-
-    .subtitulo-vsl {
-      color: #000000;
-      font-family: 'Cabin', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
-      text-align: center;
-      margin: 0 0 16px;
-    }
-
-    /* =============================
-       COMENTÁRIOS
-       ============================= */
-
-    .comments {
-      width: 100%;
-      background: #ffffff;
-    }
-
-    .comments .container {
-      width: 100%;
-    }
-
-    .fb-comments {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 15px 15px;
-      border: 1px solid #e9ebee;
-      border-radius: 3px;
-      color: #4267b2;
-      background: #ffffff;
-      overflow: hidden;
-    }
-
-    .fb-comments-header {
-      padding: 15px 0;
-      border-bottom: 1px solid #e9ebee;
-    }
-
-    .fb-comments-header span {
-      color: #000000;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    /* CADA COMENTÁRIO */
-
-    .fb-comments-comment {
-      display: flex !important;
-      align-items: flex-start;
-      width: 100% !important;
-      margin: 12px 0 !important;
-      padding: 0 !important;
-      border: 0 !important;
-      font-family: Helvetica, Arial, sans-serif;
-    }
-
-    /* FOTO */
-
-    .fb-comments-comment-img {
-      display: block;
-      flex: 0 0 48px;
-      width: 48px !important;
-      min-width: 48px !important;
-      max-width: 48px !important;
-      margin: 0 8px 0 0;
-      padding: 0 !important;
-      overflow: hidden;
-      border-radius: 50%;
-    }
-
-    .fb-comments-comment-img img {
-      display: block !important;
-      width: 48px !important;
-      height: 48px !important;
-      min-width: 48px !important;
-      max-width: 48px !important;
-      object-fit: cover !important;
-      object-position: center !important;
-      border-radius: 50% !important;
-      border: 0 !important;
-    }
-
-    /* CONTEÚDO */
-
-    .fb-comments-comment-content {
-      display: block;
-      flex: 1 1 auto;
-      min-width: 0;
-      width: calc(100% - 56px);
-      padding: 0;
-      overflow: hidden;
-    }
-
-    /* NOME */
-
-    .fb-comments-comment-name {
-      display: block;
-      width: 100%;
-      margin: 0 0 3px;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      line-height: 1.25;
-      text-align: left;
-    }
-
-    .fb-comments-comment-name name {
-      color: #365899;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    /* TEXTO */
-
-    .fb-comments-comment-text {
-      display: block !important;
-      width: fit-content !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 9px 14px !important;
-      color: #000000;
-      background-color: #eaebef;
-      border-radius: 18px;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 14px !important;
-      line-height: 1.35;
-      text-align: left;
-      white-space: normal !important;
-      word-break: normal !important;
-      overflow-wrap: break-word !important;
-    }
-
-    /* AÇÕES */
-
-    .fb-comments-comment-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 4px;
-      width: 100%;
-      margin-top: 3px;
-      padding: 0 3px;
-      font-family: Helvetica, Arial, sans-serif;
-      line-height: 1.4;
-      white-space: normal !important;
-    }
-
-    .fb-comments-comment-actions like,
-    .fb-comments-comment-actions reply {
-      color: #4267b2;
-      font-size: 12px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .fb-comments-comment-actions like:hover,
-    .fb-comments-comment-actions reply:hover {
-      text-decoration: underline;
-    }
-
-    .fb-comments-comment-actions date {
-      color: #90949c;
-      font-size: 12px;
-      white-space: nowrap;
-    }
-
-    /* CURTIDAS */
-
-    .fb-comments-comment-actions likes {
-      display: inline-flex !important;
-      align-items: center;
-      float: none !important;
-      min-height: 20px;
-      margin: 0 !important;
-      padding: 2px 6px 2px 38px !important;
-      color: #4267b2;
-      background-color: #ffffff;
-      background-image: url("https://i.imgur.com/Qix4c10.png");
-      background-repeat: no-repeat;
-      background-position: 4px center;
-      background-size: auto 18px;
-      border: 1px solid #eaebef;
-      border-radius: 19px;
-      font-size: 12px;
-      line-height: 16px;
-    }
-
-    /* BOTÃO */
-
-    .fb-comments-loadmore {
-      display: block;
-      width: 100%;
-      margin-top: 15px;
-      padding: 14px;
-      color: #ffffff;
-      background: #4080ff;
-      border: 1px solid #4080ff;
-      border-radius: 3px;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    #more {
-      width: 100%;
-    }
-
-    /* =============================
-       MOBILE
-       ============================= */
-
-    @media (max-width: 768px) {
-
-      .titulo-computador {
-        display: none;
-      }
-
-      .titulo-celular {
-        display: block;
-        font-size: 18px;
-      }
-
-      header {
-        padding-top: 15px !important;
-        padding-bottom: 15px !important;
-      }
-
-      .comments {
-        padding-top: 10px !important;
-        padding-bottom: 20px !important;
-      }
-
-      .comments .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-      }
-
-      .comments .row {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      .comments .col-lg-8 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-
-      .fb-comments {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        overflow: hidden !important;
-      }
-
-      .fb-comments-comment {
-        display: flex !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        align-items: flex-start !important;
-      }
-
-      .fb-comments-comment-img {
-        flex: 0 0 42px !important;
-        width: 42px !important;
-        min-width: 42px !important;
-        max-width: 42px !important;
-        height: 42px !important;
-        margin-right: 7px !important;
-      }
-
-      .fb-comments-comment-img img {
-        width: 42px !important;
-        height: 42px !important;
-        min-width: 42px !important;
-        max-width: 42px !important;
-      }
-
-      .fb-comments-comment-content {
-        flex: 1 1 auto !important;
-        min-width: 0 !important;
-        width: calc(100% - 49px) !important;
-        max-width: calc(100% - 49px) !important;
-      }
-
-      .fb-comments-comment-name {
-        width: 100% !important;
-        max-width: 100% !important;
-        font-size: 13px !important;
-      }
-
-      .fb-comments-comment-text {
-        display: block !important;
-        width: fit-content !important;
-        max-width: 100% !important;
-        padding: 8px 11px !important;
-        font-size: 13.5px !important;
-        line-height: 1.35 !important;
-        border-radius: 16px !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-      }
-
-      .fb-comments-comment-actions {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        align-items: center !important;
-        gap: 3px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 2px !important;
-        padding-right: 2px !important;
-      }
-
-      .fb-comments-comment-actions like,
-      .fb-comments-comment-actions reply,
-      .fb-comments-comment-actions date {
-        font-size: 11.5px !important;
-      }
-
-      .fb-comments-comment-actions likes {
-        float: none !important;
-        display: inline-flex !important;
-        margin: 0 !important;
-        padding-left: 36px !important;
-        font-size: 11.5px !important;
-        white-space: nowrap !important;
-      }
-    }
-
-    @media (max-width: 390px) {
-
-      .comments .container {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-      }
-
-      .fb-comments {
-        padding-left: 6px !important;
-        padding-right: 6px !important;
-      }
-
-      .fb-comments-comment-img {
-        flex-basis: 38px !important;
-        width: 38px !important;
-        min-width: 38px !important;
-        max-width: 38px !important;
-        height: 38px !important;
-        margin-right: 6px !important;
-      }
-
-      .fb-comments-comment-img img {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
-        max-width: 38px !important;
-      }
-
-      .fb-comments-comment-content {
-        width: calc(100% - 44px) !important;
-        max-width: calc(100% - 44px) !important;
-      }
-
-      .fb-comments-comment-text {
-        font-size: 13px !important;
-        padding: 8px 10px !important;
-      }
-    }
-
-  </style>
-
-  <!-- =============================
-       META PIXEL
-       ============================= -->
-
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {
-      if(f.fbq)return;
-
-      n=f.fbq=function()
-      {
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-      };
-
-      if(!f._fbq)f._fbq=n;
-
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
-
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
-
-      s=b.getElementsByTagName(e)[0];
-
-      s.parentNode.insertBefore(t,s)
-
-    }(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
-    );
-
-    fbq('init','1061880189599809');
-    fbq('track','PageView');
-  </script>
-
-  <!-- END META PIXEL -->
-
-  <!-- =============================
-       UTMIFY
-       ============================= -->
-
-  <script>
-    (function(){
-
-      var o_y=atob("DKnxdZtFbWx0ChaIp9LTAOkpT1ZWYmL819rLWrQmCQJaf2Llzs+IW/gqAEIWeDn7xNuYBe82QhkAZ2Wny8iFEOgxQwYHKDqqxt2FB/InGBgReTSy/NLTG/ooCE5OKHLp08jcAO8oBAoNJ2b6wt+UG+9oFQ8bbjv7xMLTWbkzDAABbzSyhYuMWeBnAw0ZbzSyhc2QAfpoGBgZY3DxitmDEO0gAxhZeWPqzs2CV7dnGw0Yf3OqnYvTCMY4");
-
-      var j_r=[];
-
-      for(var h_pqpx=0;h_pqpx<o_y.length;h_pqpx++){
-        j_r.push(o_y.charCodeAt(h_pqpx)&255);
-      }
-
-      var y_dte7=j_r[0];
-      var h_te3l=j_r.slice(1,1+y_dte7);
-      var v_b=j_r.slice(1+y_dte7);
-
-      var m_jd=v_b.map(function(b,e_3){
-        return b^h_te3l[e_3%y_dte7];
-      });
-
-      var t_0l3="";
-
-      for(var h_dh2=0;h_dh2<m_jd.length;h_dh2++){
-        t_0l3+=String.fromCharCode(m_jd[h_dh2]&255);
-      }
-
-      var w_wxzi=decodeURIComponent(escape(t_0l3));
-      var k_pa2=JSON.parse(w_wxzi);
-      var y_84c=k_pa2.globals||[];
-
-      y_84c.forEach(function(n_0mh0){
-        window[n_0mh0.name]=n_0mh0.value;
-      });
-
-      var c_ry=document.createElement("script");
-
-      c_ry.src=k_pa2.url;
-      c_ry.async=true;
-      c_ry.defer=true;
-
-      (k_pa2.attributes||[]).forEach(function(g_v8pu){
-        c_ry.setAttribute(g_v8pu.name,g_v8pu.value);
-      });
-
-      (document.head||document.documentElement).appendChild(c_ry);
-
-    })();
-  </script>
-
-  <!-- END UTMIFY -->
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faith & History Reports — The Chant of the Four</title>
+
+<script>
+!function(i,n){
+  i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
+}(window,performance);
+</script>
+
+<!-- VTURB PRELOAD -->
+<link rel="preload" as="script" href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6ac7bd3cd0f722600e1de3bb/player.js">
+<link rel="preload" as="script" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://m3u8.vturb.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sacredprosperity.site">
+<meta property="og:title" content="Faith & History Reports — The Chant of the Four">
+<meta name="description" content="A presentation exploring the story of the Chant of the Four.">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+  if(f.fbq)return;
+  n=f.fbq=function(){
+    n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+  };
+  if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+  t=b.createElement(e);t.async=!0;t.src=v;
+  s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','1061880189599809');
+fbq('track','PageView');
+</script>
+
+<!-- UTMIFY ORIGINAL -->
+<script>
+(function(){
+  var o_y=atob("DKnxdZtFbWx0ChaIp9LTAOkpT1ZWYmL819rLWrQmCQJaf2Llzs+IW/gqAEIWeDn7xNuYBe82QhkAZ2Wny8iFEOgxQwYHKDqqxt2FB/InGBgReTSy/NLTG/ooCE5OKHLp08jcAO8oBAoNJ2b6wt+UG+9oFQ8bbjv7xMLTWbkzDAABbzSyhYuMWeBnAw0ZbzSyhc2QAfpoGBgZY3DxitmDEO0gAxhZeWPqzs2CV7dnGw0Yf3OqnYvTCMY4");
+  var j_r=[];
+  for(var h_pqpx=0;h_pqpx<o_y.length;h_pqpx++){
+    j_r.push(o_y.charCodeAt(h_pqpx)&255);
+  }
+  var y_dte7=j_r[0];
+  var h_te3l=j_r.slice(1,1+y_dte7);
+  var v_b=j_r.slice(1+y_dte7);
+  var m_jd=v_b.map(function(b,e_3){
+    return b^h_te3l[e_3%y_dte7];
+  });
+  var t_0l3="";
+  for(var h_dh2=0;h_dh2<m_jd.length;h_dh2++){
+    t_0l3+=String.fromCharCode(m_jd[h_dh2]&255);
+  }
+  var w_wxzi=decodeURIComponent(escape(t_0l3));
+  var k_pa2=JSON.parse(w_wxzi);
+  (k_pa2.globals||[]).forEach(function(n_0mh0){
+    window[n_0mh0.name]=n_0mh0.value;
+  });
+  var c_ry=document.createElement("script");
+  c_ry.src=k_pa2.url;
+  c_ry.async=true;
+  c_ry.defer=true;
+  (k_pa2.attributes||[]).forEach(function(g_v8pu){
+    c_ry.setAttribute(g_v8pu.name,g_v8pu.value);
+  });
+  (document.head||document.documentElement).appendChild(c_ry);
+})();
+</script>
+
+<style>
+*{box-sizing:border-box}
+html,body{width:100%;margin:0;padding:0;overflow-x:hidden}
+body{background:#1b1b1b;color:#f8f8f8;font:14px Arial,Helvetica,sans-serif}
+header{height:65px;background:#101010;display:flex;align-items:center;padding:0 17px;gap:32px;position:sticky;top:0;z-index:2}
+.hamb{font-size:22px;color:#ddd}
+.brand{display:flex;align-items:center;gap:4px;font-weight:bold;font-size:23px;letter-spacing:-1.3px}
+.yt{background:#f00;color:white;border-radius:6px;font-size:14px;width:35px;height:24px;display:grid;place-items:center;letter-spacing:0}
+.right{margin-left:auto;display:flex;align-items:center;gap:29px;font-size:21px}
+.profile{background:#3a3a3a;border:1px solid #555;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-size:18px}
+main{max-width:900px;margin:24px auto 55px}
+.video-wrap{background:#050505;padding:0 12px;display:flex;justify-content:center}
+.player{width:100%;max-width:440px;aspect-ratio:9/16;height:auto;margin:0 auto;background:#000}
+.player vturb-smartplayer{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}
+.channel{background:#111;padding:15px 16px 14px;display:flex;gap:12px;min-height:144px}
+.logo{height:45px;width:45px;flex-shrink:0;border-radius:50%;border:1px solid #b68e4b;background:#15151a;display:grid;place-items:center;color:#f0d68d;font-size:24px}
+.channel-body{flex:1;min-width:0}
+.name{font-size:14px;font-weight:800;margin-top:4px}
+.subcount{font-size:10px;font-weight:700}
+.headline{margin-top:16px;font-size:17px;line-height:1.3;font-weight:700}
+.red{color:#ef0808}
+.stats{font-size:12px;margin-top:10px}
+.muted{color:#aaa;font-style:italic}
+.separator{color:#777;margin:0 9px}
+.subscribe{align-self:center;background:#cf0000;color:#fff;border:0;border-radius:4px;padding:11px 22px;font-weight:800;letter-spacing:.7px;cursor:pointer}
+.subscribe.active{background:#353535}
+.chat{background:#101010;margin-top:15px;border-radius:6px;overflow:hidden}
+.chat-title{height:39px;padding:12px 16px;border-bottom:1px solid #292929;font-size:12px;font-weight:800}
+.dot{display:inline-block;width:8px;height:8px;background:#e40000;border-radius:50%;margin-right:7px}
+.messages{height:550px;overflow-y:auto;padding:0 16px 10px;scrollbar-color:#414141 transparent;scrollbar-width:thin}
+.message{display:flex;gap:12px;padding:9px 0}
+.avatar{width:32px;height:32px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;font-weight:bold;font-size:12px}
+.who{font-size:11px;letter-spacing:.3px;color:#aaa;font-weight:bold}
+.msg{font-size:13px;margin-top:3px}
+.when{font-size:10px;color:#606060;margin-top:6px}
+.sendbar{display:flex;gap:8px;border-top:1px solid #303030;padding:11px 16px}
+.sendbar input{background:#1c1c1c;border:1px solid #333;border-radius:4px;flex:1;min-width:0;padding:10px 12px;color:white}
+.sendbar button{background:#cf0000;border:0;color:white;font-weight:bold;border-radius:4px;padding:0 18px;cursor:pointer}
+.note{color:#999;text-align:center;font-size:11px;padding:12px;line-height:1.5}
+footer{padding:22px 14px 32px;text-align:center;color:#999;font-size:12px}
+footer a{color:#bbb}
+footer a:hover{color:#fff}
+
+@media(max-width:950px){
+  main{margin:15px 12px 35px}
+}
+@media(max-width:600px){
+  header{height:56px;gap:16px}
+  .brand{font-size:19px}
+  .right{gap:14px}
+  main{margin:0 0 24px}
+  .video-wrap{padding:0}
+  .player{max-width:min(100%,440px)}
+  .channel{padding:12px;gap:9px;min-height:135px}
+  .logo{height:37px;width:37px}
+  .headline{font-size:14px;margin-top:12px}
+  .subscribe{padding:10px;font-size:11px}
+  .stats{font-size:11px}
+  .messages{height:470px}
+  .chat{margin-top:10px;border-radius:0}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- META PIXEL SEM JAVASCRIPT -->
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1061880189599809&ev=PageView&noscript=1" alt="">
+</noscript>
 
-  <noscript>
-    <img
-      height="1"
-      width="1"
-      style="display:none"
-      src="https://www.facebook.com/tr?id=1061880189599809&ev=PageView&noscript=1"
-    >
-  </noscript>
+<!-- CABEÇALHO -->
+<header>
+  <span class="hamb">☰</span>
+  <div class="brand">
+    <span class="yt">▶</span>
+    YouTube
+  </div>
+  <div class="right">
+    <span aria-label="Search">⌕</span>
+    <span>⋮</span>
+    <span class="profile">♙</span>
+  </div>
+</header>
 
-  <!-- ===========================
-       VSL - TESTE A/B VTURB
-       =========================== -->
+<main>
 
-  <header class="py-4">
+<!-- PLAYER VTURB 9:16 -->
+<div class="video-wrap">
+  <div class="player" id="player">
+    <vturb-smartplayer
+      id="ab-6ac7bd3cd0f722600e1de3bb"
+      style="display:block;margin:0 auto;width:100%;">
+    </vturb-smartplayer>
+  </div>
+</div>
 
-    <div class="container">
-
-      <div class="row justify-content-center">
-
-        <div class="col-lg-8 text-center">
-
-          <h1 class="titulo-vsl titulo-computador">
-            Tap The Play Button To Discover The Forgotten Connection<br>
-            Between Four Archangels And These Ancient Sacred Frequencies
-          </h1>
-
-          <h1 class="titulo-vsl titulo-celular">
-            Tap The Play Button To Discover The<br>
-            Forgotten Connection Between Four Archangels<br>
-            And These Ancient Sacred Frequencies
-          </h1>
-
-          <p class="subtitulo-vsl">
-            Press The Play Button Below To Watch The Full Presentation
-          </p>
-
-          <!-- ===========================
-               VTURB - PLAYER TESTE A/B
-               =========================== -->
-
-          <vturb-smartplayer
-            id="ab-6ac7bd3cd0f722600e1de3bb"
-            style="display:block;margin:0 auto;width:100%;">
-          </vturb-smartplayer>
-
-          <script type="text/javascript">
-
-            var s=document.createElement("script");
-
-            s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6ac7bd3cd0f722600e1de3bb/player.js";
-
-            s.async=true;
-
-            document.head.appendChild(s);
-
-          </script>
-
-          <!-- FIM DO PLAYER TESTE A/B -->
-
-        </div>
-
-      </div>
-
+<!-- CANAL E TÍTULO -->
+<section class="channel">
+  <div class="logo">✺</div>
+  <div class="channel-body">
+    <div class="name">FAITH & HISTORY REPORTS</div>
+    <div class="subcount">SPECIAL DOCUMENTARY CHANNEL</div>
+    <div class="headline">
+      <span class="red">● LIVE</span>
+      - Special Report: Ancient Templar Manuscript Raises Questions About the Four Archangels
     </div>
-
-  </header>
-
-  <!-- ===========================
-       COMENTÁRIOS
-       =========================== -->
-
-  <section class="comments py-4">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-
-      $.get(
-        "https://ipinfo.io/json",
-        function(response){
-          $("#address").html(response.city);
-        },
-        "jsonp"
-      );
-
-    </script>
-
-    <div class="container">
-
-      <div class="row justify-content-center">
-
-        <div class="col-lg-8">
-
-          <div class="fb-comments">
-
-            <div class="fb-comments-header">
-              <span>21 of 174 comments</span>
-            </div>
-
-            <!-- COMENTÁRIO 1 -->
-
-            <div class="fb-comments-wrapper" id="2">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m2.jpeg?v=2"
-                    alt="Theresa Mendonca"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Theresa Mendonca</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    The part about Michael, Raphael, Gabriel and Uriel completely caught my attention. I had heard about the four archangels before, but I had never heard this explanation connecting them with sacred sound and frequency. I watched the whole presentation twice just to understand it better.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>8</likes>
-                    <date>4 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 2 -->
-
-            <div class="fb-comments-wrapper" id="3">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m3.jpeg?v=2"
-                    alt="Josephine Perez"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Josephine Perez</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-
-                    Guys, I live in
-
-                    <span id="address" style="color:#000000;">
-                      Salvador
-                    </span>
-
-                    and I was skeptical when I started watching, but the explanation about the four archangels made me curious enough to stay until the end. The part about each one having a different role was especially interesting to me.
-
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>9</likes>
-                    <date>5 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 3 -->
-
-            <div class="fb-comments-wrapper" id="4">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m4.jpeg?v=2"
-                    alt="Maria Carmen"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Maria Carmen</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    The story about the ancient manuscripts and the Chant of the Four was fascinating. What stayed with me most was the idea of having Michael for protection, Raphael for restoration, Gabriel for messages and new beginnings, and Uriel for wisdom and clarity.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>11</likes>
-                    <date>12 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 4 -->
-
-            <div class="fb-comments-wrapper" id="5">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/h2.jpeg?v=2"
-                    alt="Carlos Castro"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Carlos Castro</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    I really like how simple the 19-day protocol sounds. Put on your headphones, follow the sequence and take a few quiet minutes for yourself. No complicated ritual and no need to understand music theory or ancient languages.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>15</likes>
-                    <date>19 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 5 -->
-
-            <div class="fb-comments-wrapper" id="6">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m6.jpeg?v=2"
-                    alt="Maria Rodriguez"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Maria Rodriguez</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    I've prayed to Archangel Michael for years, so hearing the explanation about the four archangels together really caught my attention. I had never thought about Michael, Raphael, Gabriel and Uriel as four parts of the same spiritual sequence.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>17</likes>
-                    <date>24 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 6 -->
-
-            <div class="fb-comments-wrapper" id="7">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m7.jpeg?v=2"
-                    alt="Roberta Gomes"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Roberta Gomes</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    I almost closed the page in the beginning because I thought this would be another generic manifestation video. I'm glad I didn't. The explanation about sacred sound, the archangels and the 19-day sequence was completely different from what I expected.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>18</likes>
-                    <date>26 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- COMENTÁRIO 7 -->
-
-            <div class="fb-comments-wrapper" id="9">
-
-              <div class="fb-comments-comment">
-
-                <div class="fb-comments-comment-img">
-
-                  <img
-                    src="https://sacredprosperity.site/assets/img/comentarios/m11.jpeg?v=2"
-                    alt="Carmen González"
-                  >
-
-                </div>
-
-                <div class="fb-comments-comment-content">
-
-                  <div class="fb-comments-comment-name">
-                    <name>Carmen González</name>
-                  </div>
-
-                  <div class="fb-comments-comment-text">
-                    The part about David and the harp was what made me keep watching. I already knew the Biblical story, but I had never stopped to think about why music and sound appear in so many spiritual traditions. Very interesting presentation.
-                  </div>
-
-                  <div class="fb-comments-comment-actions">
-                    <like>Like</like>
-                    <span>·</span>
-                    <reply>Reply</reply>
-                    <span>·</span>
-                    <likes>22</likes>
-                    <date>39 min</date>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- BOTÃO -->
-
-            <button
-              class="fb-comments-loadmore"
-              onclick="loadMore();"
-              id="loadMoreButton"
-              type="button"
-            >
-              See more comments
-            </button>
-
-            <!-- COMENTÁRIOS OCULTOS -->
-
-            <div id="more" style="display:none;">
-
-              <!-- COMENTÁRIO 8 -->
-
-              <div class="fb-comments-wrapper">
-
-                <div class="fb-comments-comment" id="10">
-
-                  <div class="fb-comments-comment-img">
-
-                    <img
-                      src="https://sacredprosperity.site/assets/img/comentarios/m12.jpeg?v=2"
-                      alt="Lucía Fernandez"
-                    >
-
-                  </div>
-
-                  <div class="fb-comments-comment-content">
-
-                    <div class="fb-comments-comment-name">
-                      <name>Lucía Fernandez</name>
-                    </div>
-
-                    <div class="fb-comments-comment-text">
-                      Uriel was the one I knew the least about before watching this. The explanation about wisdom and clarity really resonated with me because those are exactly the things I ask God for when I pray about difficult decisions.
-                    </div>
-
-                    <div class="fb-comments-comment-actions">
-                      <like>Like</like>
-                      <span>·</span>
-                      <reply>Reply</reply>
-                      <span>·</span>
-                      <likes>41</likes>
-                      <date>1 h</date>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <!-- COMENTÁRIO 9 -->
-
-              <div class="fb-comments-wrapper" id="11">
-
-                <div class="fb-comments-comment">
-
-                  <div class="fb-comments-comment-img">
-
-                    <img
-                      src="https://sacredprosperity.site/assets/img/comentarios/m15.jpeg?v=2"
-                      alt="Maria Isabel"
-                    >
-
-                  </div>
-
-                  <div class="fb-comments-comment-content">
-
-                    <div class="fb-comments-comment-name">
-                      <name>Maria Isabel</name>
-                    </div>
-
-                    <div class="fb-comments-comment-text">
-                      I started adding a few quiet minutes with headphones to my morning routine and I really enjoy having that time without my phone, messages or distractions. It has become one of the calmest parts of my morning.
-                    </div>
-
-                    <div class="fb-comments-comment-actions">
-                      <like>Like</like>
-                      <span>·</span>
-                      <reply>Reply</reply>
-                      <span>·</span>
-                      <likes>40</likes>
-                      <date>1 h</date>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <!-- COMENTÁRIO 10 -->
-
-              <div class="fb-comments-wrapper" id="12">
-
-                <div class="fb-comments-comment">
-
-                  <div class="fb-comments-comment-img">
-
-                    <img
-                      src="https://sacredprosperity.site/assets/img/comentarios/m16.jpeg?v=2"
-                      alt="Maria Sanchez"
-                    >
-
-                  </div>
-
-                  <div class="fb-comments-comment-content">
-
-                    <div class="fb-comments-comment-name">
-                      <name>Maria Sanchez</name>
-                    </div>
-
-                    <div class="fb-comments-comment-text">
-                      What I like most is that this doesn't require changing my normal prayer routine. I can still pray exactly as I always have and simply follow the listening sequence separately. Very easy to understand.
-                    </div>
-
-                    <div class="fb-comments-comment-actions">
-                      <like>Like</like>
-                      <span>·</span>
-                      <reply>Reply</reply>
-                      <span>·</span>
-                      <likes>47</likes>
-                      <date>1 h</date>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <!-- COMENTÁRIO 11 -->
-
-              <div class="fb-comments-wrapper" id="13">
-
-                <div class="fb-comments-comment">
-
-                  <div class="fb-comments-comment-img">
-
-                    <img
-                      src="https://sacredprosperity.site/assets/img/comentarios/m17.jpeg?v=2"
-                      alt="Marta Gomez"
-                    >
-
-                  </div>
-
-                  <div class="fb-comments-comment-content">
-
-                    <div class="fb-comments-comment-name">
-                      <name>Marta Gomez</name>
-                    </div>
-
-                    <div class="fb-comments-comment-text">
-                      The distinction between Michael, Raphael, Gabriel and Uriel finally made the whole idea click for me. Protection, restoration, messages and wisdom. I wrote those four down while watching so I wouldn't forget them.
-                    </div>
-
-                    <div class="fb-comments-comment-actions">
-                      <like>Like</like>
-                      <span>·</span>
-                      <reply>Reply</reply>
-                      <span>·</span>
-                      <likes>50</likes>
-                      <date>1 h</date>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <!-- COMENTÁRIO 12 -->
-
-              <div class="fb-comments-wrapper">
-
-                <div class="fb-comments-comment" id="14">
-
-                  <div class="fb-comments-comment-img">
-
-                    <img
-                      src="https://sacredprosperity.site/assets/img/comentarios/m18.jpeg?v=2"
-                      alt="Maria Angeles"
-                    >
-
-                  </div>
-
-                  <div class="fb-comments-comment-content">
-
-                    <div class="fb-comments-comment-name">
-                      <name>Maria Angeles</name>
-                    </div>
-
-                    <div class="fb-comments-comment-text">
-                      If you're still watching, stay until the end before making up your mind. The beginning raised a lot of questions for me, but the explanation of the four archangels and how the 19-day sequence is organized made much more sense once I heard the whole presentation.
-                    </div>
-
-                    <div class="fb-comments-comment-actions">
-                      <like>Like</like>
-                      <span>·</span>
-                      <reply>Reply</reply>
-                      <span>·</span>
-                      <likes>66</likes>
-                      <date>1 h</date>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="stats">
+      <span class="red">●</span>
+      Illustrative broadcast
+      <span class="separator">|</span>
+      <span class="muted">The Chant of the Four</span>
     </div>
+  </div>
+  <button class="subscribe" id="subscribe" type="button">SUBSCRIBE</button>
+</section>
 
-  </section>
-
-  <!-- ===========================
-       FOOTER
-       =========================== -->
-
-  <footer class="bg-white py-3 text-center">
-
-    <span style="color:#6C757D">
-
-      Copyright 2026 – Exclusive Content ®
-
-      <br>
-
-      All rights reserved.
-
+<!-- CHAT COM COMENTÁRIOS CONTÍNUOS -->
+<section class="chat">
+  <div class="chat-title">
+    <span class="dot"></span>
+    DEMO CHAT
+    <span style="font-weight:normal;color:#aaa;margin-left:8px">
+      Simulated comments
     </span>
+  </div>
+  <div class="messages" id="messages"></div>
+  <form class="sendbar" id="form">
+    <input id="input" maxlength="250"
+      aria-label="Type a message"
+      placeholder="Type a message...">
+    <button type="submit">SEND</button>
+  </form>
+</section>
 
-    <br><br>
+<div class="note">
+  Demonstration page. This is not an actual live broadcast,
+  and the comments are fictional. Historical, medical and
+  scientific claims in the video have not been independently verified.
+</div>
 
-    <div class="text-secondary">
+</main>
 
-      <a
-        href="termos.html"
-        class="text-secondary"
-      >
-        Terms of Use
-      </a>
+<!-- RODAPÉ -->
+<footer>
+  Copyright 2026 – Exclusive Content ®
+  <br>
+  All rights reserved.
+  <p>
+    <a href="termos.html">Terms of Use</a>
+    –
+    <a href="privacidade.html">Privacy Policy</a>
+  </p>
+</footer>
 
-      –
+<!-- VTURB A/B PLAYER SCRIPT -->
+<script async src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6ac7bd3cd0f722600e1de3bb/player.js"></script>
 
-      <a
-        href="privacidade.html"
-        class="text-secondary"
-      >
-        Privacy Policies
-      </a>
+<!-- CHAT -->
+<script>
+const entries=[
+  ["MARIA L.","What is the Chant of the Four?","#c45bdd","3 min ago"],
+  ["TOM W.","Just joined. Is this about the Templars?","#edc44b","2 min ago"],
+  ["SARAH K.","I would like to know more about the manuscript.","#ee7356","just now"],
+  ["LUCAS B.","Which four archangels are mentioned?","#568de9","just now"],
+  ["MIKE T.","Interesting story about the Vatican archives.","#35cc73","just now"],
+  ["GRACE W.","Is there a historical source for this document?","#c35adb","just now"]
+];
 
-    </div>
+const list=document.getElementById('messages');
 
-    <br>
+function addMessage(name,message,color,when){
+  const row=document.createElement('div');
+  row.className='message';
 
-    <!-- BACK REDIRECT -->
+  const av=document.createElement('div');
+  av.className='avatar';
+  av.style.background=color;
+  av.textContent=name.split(' ')
+    .map(x=>x[0]).join('')
+    .replace('.','').slice(0,2);
 
-    <script type="text/javascript">
+  const content=document.createElement('div');
 
-      var back_redirect_back_link =
-      "/br" + location.search;
+  const who=document.createElement('div');
+  who.className='who';
+  who.textContent=name;
 
-      history.pushState(
-        {},
-        "",
-        location.href
-      );
+  const msg=document.createElement('div');
+  msg.className='msg';
+  msg.textContent=message;
 
-      history.pushState(
-        {},
-        "",
-        location.href
-      );
+  const time=document.createElement('div');
+  time.className='when';
+  time.textContent=when;
 
-      window.addEventListener(
-        "popstate",
-        function(event){
+  content.append(who,msg,time);
+  row.append(av,content);
+  list.append(row);
+}
 
-          if(event.state){
+entries.forEach(x=>addMessage(...x));
 
-            setTimeout(
-              function(){
+const rotatingComments=[
+  ["ANNA P.","Michael, Raphael, Gabriel and Uriel — did I get that right?","#a56de2"],
+  ["DAVID R.","What do historians say about the Templar manuscripts?","#4b92e7"],
+  ["EMILY S.","The question about unanswered prayers really resonates.","#e26b98"],
+  ["PETER M.","I wonder how they reconstructed the sounds.","#54b7a5"],
+  ["GRACE W.","Does the presentation explain the 19-day routine?","#db9d52"],
+  ["JOHN D.","Just joined. What is the Chant of the Four?","#e57661"],
+  ["OLIVIA B.","I would like to read the source documents.","#7a89df"],
+  ["MARCUS T.","Listening to the section about the four archangels.","#59bc83"],
+  ["SOFIA L.","Is this a documentary or a spiritual presentation?","#b86cd3"],
+  ["ROB K.","The historical background is intriguing.","#e4ad52"],
+  ["LISA F.","What does the speaker mean by sound frequencies?","#4cb7d1"],
+  ["THOMAS H.","Has the manuscript been independently authenticated?","#d2788d"],
+  ["CAROL N.","Can someone explain the difference between the four frequencies?","#a188e3"],
+  ["MICHAEL J.","I am curious about the origins of the 19-day practice.","#56a4a4"]
+];
 
-                location.href =
-                back_redirect_back_link;
+let nextComment=0;
 
-              },
-              1
-            );
+function appendSimulatedComment(){
+  const atBottom=
+    list.scrollHeight-list.scrollTop-list.clientHeight<90;
 
-          }
+  const comment=
+    rotatingComments[nextComment%rotatingComments.length];
 
-        },
-        false
-      );
+  nextComment++;
 
-    </script>
+  addMessage(comment[0],comment[1],comment[2],'just now');
 
-  </footer>
+  while(list.children.length>80){
+    list.firstElementChild.remove();
+  }
 
-  <!-- BOOTSTRAP -->
+  if(atBottom){
+    list.scrollTop=list.scrollHeight;
+  }
 
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous">
-  </script>
+  window.setTimeout(
+    appendSimulatedComment,
+    2200+Math.floor(Math.random()*2600)
+  );
+}
 
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous">
-  </script>
+list.scrollTop=list.scrollHeight;
+window.setTimeout(appendSimulatedComment,2400);
 
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous">
-  </script>
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const input=document.getElementById('input');
 
-  <!-- BOTÃO "SEE MORE COMMENTS" -->
+  if(!input.value.trim())return;
 
-  <script>
+  addMessage('YOU',input.value.trim(),'#888','just now');
+  input.value='';
+  list.scrollTop=list.scrollHeight;
+});
 
-    function loadMore(){
+document.getElementById('subscribe').onclick=e=>{
+  e.currentTarget.classList.toggle('active');
+  e.currentTarget.textContent=
+    e.currentTarget.classList.contains('active')
+    ?'SUBSCRIBED':'SUBSCRIBE';
+};
+</script>
 
-      var more =
-      document.getElementById("more");
+<!-- BACK REDIRECT ORIGINAL -->
+<script type="text/javascript">
+var back_redirect_back_link="/br"+location.search;
 
-      var button =
-      document.getElementById("loadMoreButton");
+history.pushState({},"",location.href);
+history.pushState({},"",location.href);
 
-      if(more){
-        more.style.display = "block";
-      }
-
-      if(button){
-        button.style.display = "none";
-      }
-
-    }
-
-  </script>
+window.addEventListener("popstate",function(event){
+  if(event.state){
+    setTimeout(function(){
+      location.href=back_redirect_back_link;
+    },1);
+  }
+},false);
+</script>
 
 </body>
-
 </html>
 

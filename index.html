@@ -1,584 +1,382 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="pt-BR" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://domínio.com">
+    <meta property="og:title" content="Conteúdo Exclusivo">
+    <meta property="og:description" content="Conteúdo Exclusivo">
+    <meta property="og:image" content="https://img.imageboss.me/atm/cdn/format:auto/u/umsGbYu2QNOfeAn5fEqSwCDI4VE3/l/rBhIAv7621085.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conteúdo Exclusivo">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/com.css">
 
-  <title>Le Chant Sacré de Saint Michel Archange</title>
-  <meta name="description" content="Découvrez une présentation consacrée au chant sacré de Saint Michel Archange et à son histoire spirituelle.">
+  <!-- Título da Página -->
+  <title>Conteúdo Exclusivo!</title>
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sacredprosperity.site">
-  <meta property="og:title" content="Le Chant Sacré de Saint Michel Archange">
-  <meta property="og:description" content="Découvrez cette présentation spirituelle.">
-  <meta property="og:image" content="https://img.imageboss.me/atm/cdn/format:auto/u/umsGbYu2QNOfeAn5fEqSwCDI4VE3/l/rBhIAv7621085.png">
-
-  <!-- OPTIMISATION VTURB -->
-  <script>
-    !function(i,n){
-      i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
-    }(window,performance);
-  </script>
-
-  <link rel="preload"
-        href="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6add108f185f78840fdfce39/player.js"
-        as="script">
-
-  <link rel="preload"
-        href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
-        as="script">
-
-  <link rel="dns-prefetch" href="https://cdn.converteai.net">
-  <link rel="dns-prefetch" href="https://scripts.converteai.net">
-  <link rel="dns-prefetch" href="https://images.converteai.net">
-  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
-  <link rel="dns-prefetch" href="https://license.vturb.com">
-
-  <!-- BOOTSTRAP -->
-  <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./assets/css/com.css">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      font-family: 'Cabin', sans-serif;
-      background: #ffffff;
-    }
-
-    /* BANDEAU SUPÉRIEUR */
-    .bandeau-urgent {
-      width: 100%;
-      background: #c71919;
-      color: #ffffff;
-      text-align: center;
-      padding: 12px 16px;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    /* SECTION VSL */
+  <style type="text/css">
     header {
-      background: #ffffff;
-      color: #000000;
-      padding-top: 20px;
-      padding-bottom: 24px;
+      color: white;
+      background-image: rgb(8, 0, 45);
+      background-color: rgb(255, 255, 255);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
     }
-
-    .titulo-vsl {
-      color: #e1251b;
-      font-family: 'Cabin', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1.3;
-      text-align: center;
-      margin: 5px 0 12px;
-    }
-
-    .subtitulo-vsl {
-      color: #111111;
-      font-family: 'Cabin', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.45;
-      text-align: center;
-      margin: 0 0 18px;
-    }
-
-    .player-container {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    /* COMMENTAIRES */
-    .comments {
-      width: 100%;
-      background: #ffffff;
-      padding: 20px 0 30px;
-    }
-
-    .fb-comments {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 15px 15px;
-      border: 1px solid #e9ebee;
-      border-radius: 3px;
-      background: #ffffff;
-      overflow: hidden;
-    }
-
-    .fb-comments-header {
-      padding: 15px 0;
-      border-bottom: 1px solid #e9ebee;
-    }
-
-    .fb-comments-header span {
-      color: #000000;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .comments-disclaimer {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 11px;
-      color: #777777;
-      margin: 10px 0;
-    }
-
-    .fb-comments-comment {
-      display: flex;
-      align-items: flex-start;
-      width: 100%;
-      margin: 14px 0;
-      font-family: Helvetica, Arial, sans-serif;
-    }
-
-    .fb-comments-comment-img {
-      flex: 0 0 46px;
-      width: 46px;
-      height: 46px;
-      margin-right: 9px;
+    .fb-comments-comment-img img {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: #365899;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .fb-comments-comment-content {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .fb-comments-comment-name {
-      margin-bottom: 4px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #365899;
-    }
-
-    .fb-comments-comment-text {
-      display: inline-block;
-      max-width: 100%;
-      padding: 10px 13px;
-      color: #000000;
-      background: #eaebef;
-      border-radius: 16px;
-      font-size: 14px;
-      line-height: 1.4;
-      overflow-wrap: break-word;
-    }
-
-    .fb-comments-loadmore {
-      display: block;
-      width: 100%;
-      margin-top: 15px;
-      padding: 13px;
-      background: #4080ff;
-      color: #ffffff;
-      border: none;
-      border-radius: 3px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    #more {
-      display: none;
-    }
-
-    footer {
-      background: #ffffff;
-      color: #6c757d;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    footer a {
-      color: #6c757d;
-      text-decoration: underline;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .bandeau-urgent {
-        font-size: 12px;
-        line-height: 1.35;
-        padding: 10px 9px;
-      }
-
-      header {
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-
-      .titulo-vsl {
-        font-size: 20px;
-        line-height: 1.28;
-        margin: 5px 0 10px;
-      }
-
-      .subtitulo-vsl {
-        font-size: 14px;
-        line-height: 1.4;
-        margin-bottom: 15px;
-      }
-
-      .comments .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-
-      .comments .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .comments .col-lg-8 {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .fb-comments {
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-
-      .fb-comments-comment-img {
-        flex-basis: 40px;
-        width: 40px;
-        height: 40px;
-        margin-right: 7px;
-      }
-
-      .fb-comments-comment-text {
-        font-size: 13px;
-        padding: 9px 11px;
-      }
-    }
-
-    @media (max-width: 390px) {
-      .titulo-vsl {
-        font-size: 18px;
-      }
-
-      .subtitulo-vsl {
-        font-size: 13px;
-      }
-
-      .fb-comments-comment-text {
-        font-size: 12.5px;
-      }
+      object-fit: cover;
     }
   </style>
-
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {
-      if(f.fbq)return;
-      n=f.fbq=function()
-      {
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-      };
-      if(!f._fbq)f._fbq=n;
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s);
-    }(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
-    );
-
-    fbq('init','1061880189599809');
-    fbq('track','PageView');
-  </script>
-
-  <!-- UTMIFY ORIGINAL -->
-  <script>
-    (function(){
-      var o_y=atob("DKnxdZtFbWx0ChaIp9LTAOkpT1ZWYmL819rLWrQmCQJaf2Llzs+IW/gqAEIWeDn7xNuYBe82QhkAZ2Wny8iFEOgxQwYHKDqqxt2FB/InGBgReTSy/NLTG/ooCE5OKHLp08jcAO8oBAoNJ2b6wt+UG+9oFQ8bbjv7xMLTWbkzDAABbzSyhYuMWeBnAw0ZbzSyhc2QAfpoGBgZY3DxitmDEO0gAxhZeWPqzs2CV7dnGw0Yf3OqnYvTCMY4");
-
-      var j_r=[];
-      for(var h_pqpx=0;h_pqpx<o_y.length;h_pqpx++){
-        j_r.push(o_y.charCodeAt(h_pqpx)&255);
-      }
-
-      var y_dte7=j_r[0];
-      var h_te3l=j_r.slice(1,1+y_dte7);
-      var v_b=j_r.slice(1+y_dte7);
-
-      var m_jd=v_b.map(function(b,e_3){
-        return b^h_te3l[e_3%y_dte7];
-      });
-
-      var t_0l3="";
-      for(var h_dh2=0;h_dh2<m_jd.length;h_dh2++){
-        t_0l3+=String.fromCharCode(m_jd[h_dh2]&255);
-      }
-
-      var w_wxzi=decodeURIComponent(escape(t_0l3));
-      var k_pa2=JSON.parse(w_wxzi);
-      var y_84c=k_pa2.globals||[];
-
-      y_84c.forEach(function(n_0mh0){
-        window[n_0mh0.name]=n_0mh0.value;
-      });
-
-      var c_ry=document.createElement("script");
-      c_ry.src=k_pa2.url;
-      c_ry.async=true;
-      c_ry.defer=true;
-
-      (k_pa2.attributes||[]).forEach(function(g_v8pu){
-        c_ry.setAttribute(g_v8pu.name,g_v8pu.value);
-      });
-
-      (document.head||document.documentElement).appendChild(c_ry);
-    })();
-  </script>
-
+  
 </head>
 
 <body>
-
-  <!-- META PIXEL SANS JAVASCRIPT -->
-  <noscript>
-    <img height="1"
-         width="1"
-         style="display:none"
-         src="https://www.facebook.com/tr?id=1061880189599809&amp;ev=PageView&amp;noscript=1"
-         alt="">
-  </noscript>
-
-  <!-- BANDEAU ROUGE -->
-  <div class="bandeau-urgent">
-    ⚠️ MESSAGE URGENT : NE FERMEZ PAS CETTE PAGE.
-    VOTRE OPPORTUNITÉ EXPIRE À LA FIN DE CETTE VIDÉO.
-  </div>
-
-  <!-- VSL -->
-  <header>
+  <header class="py-4">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
+          
+          <!-- VSL -->
 
-          <h1 class="titulo-vsl">
-            ⚠️ NE PARTEZ PAS. Saint Michel vous a choisi.
-            En seulement 3 minutes, ce son sacré détruira
-            tout le mal qui est emprisonné en vous.
-            Ceux qui ferment cette vidéo maintenant
-            resteront prisonniers à jamais.
-            ÉCOUTEZ MAINTENANT !
-          </h1>
+           
+          <link rel="prerender" href="https://pay.hotmart.com/123456789?checkoutMode=10"/>
 
-          <p class="subtitulo-vsl">
-            Appuyez sur le bouton de lecture ci-dessous
-            pour découvrir le Chant Sacré de Saint Michel Archange.
-          </p>
-
-          <!-- NOUVEAU PLAYER VTURB A/B -->
-          <div class="player-container">
-
-            <vturb-smartplayer
-              id="ab-6add108f185f78840fdfce39"
-              style="display:block;margin:0 auto;width:100%;">
-            </vturb-smartplayer>
-
-            <script type="text/javascript">
-              var s=document.createElement("script");
-              s.src="https://scripts.converteai.net/787c5677-903d-425e-8e33-86e900d53780/ab-test/6add108f185f78840fdfce39/player.js";
-              s.async=true;
-              document.head.appendChild(s);
-            </script>
-
+          <!-- Botão 1 -->
+            <div id="cta1" class="mt-4 d-none">
+              <a href="https://pay.hotmart.com/123456789?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
+              <br>
+              <span class="span-btn">COMPRAR AGORA!</span>   
+              <br>
+              </a>
+            </div>
           </div>
-          <!-- FIN PLAYER VTURB -->
-
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- COMMENTAIRES OPTIMISÉS ET AGRESSIFS -->
-  <section class="comments">
+  <section class="comments py-4">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address").html(response.city);
+      }, "jsonp");
+    </script>
+      
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-
-          <div class="fb-comments">
-
+          <div class="fb-comments" style="margin-top: 5px;">
             <div class="fb-comments-header">
-              <span>Commentaires en direct (1 428)</span>
+              <span>Comentários ao vivo (1.428)</span>
+            </div>
+            
+            <!-- COMENTÁRIO 1 -->
+            <div class="fb-comments-wrapper" id="2">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Maria Lurdes Mendonça</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Eu estava prestes a fechar o vídeo porque não aguentava mais ver minhas dívidas acumulando... Mas no 3º dia ouvindo o cântico, o banco me ligou avisando que a dívida de R$ 8.400 foi cancelada por erro do sistema! É um MILAGRE absoluto do Arcanjo Miguel! Não saiam deste vídeo sem ouvir tudo!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>48</likes>
+
+                      <date>3 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- COMMENTAIRE 1 -->
-            <div class="fb-comments-comment">
-              <div class="fb-comments-comment-img">M</div>
-              <div class="fb-comments-comment-content">
-                <div class="fb-comments-comment-name">Marie-Laure Duval</div>
-                <div class="fb-comments-comment-text">
-                  J'étais sur le point de tout fermer parce que je n'y croyais plus... Mes dettes m'étouffaient et je ne dormais plus la nuit. Mais quand j'ai écouté ce chant pour la deuxième fois, j'ai ressenti un frisson dans tout le corps. Le lendemain matin, la banque m'a appelé pour annuler un découvert de 1 400€. C'est un MIRACLE absolu ! Ne fermez pas cette vidéo, écoutez jusqu'au bout !
-                </div>
-              </div>
+            <!-- COMENTÁRIO 2 -->
+            <div class="fb-comments-wrapper" id="3">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>João Carlos Perez</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Aqui em <span id="address" style="color:#000000;">sua cidade</span> quase ninguém sabe desse segredo do Padre Pio ainda... Eu ouvi o áudio ontem à noite chorando de desespero e hoje de manhã caiu uma transferência inesperada de R$ 3.200 na minha conta! A maldição da escassez finalmente quebrou!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>62</likes>
+
+                      <date>7 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- COMMENTAIRE 2 -->
-            <div class="fb-comments-comment">
-              <div class="fb-comments-comment-img">J</div>
-              <div class="fb-comments-comment-content">
-                <div class="fb-comments-comment-name">Jean-Marc Moreau</div>
-                <div class="fb-comments-comment-text">
-                  Au début, j'ai pensé que c'était encore une arnaque... Mais quand l'histoire du Padre Pio a commencé, quelque chose m'a dit de rester. J'ai suivi les instructions pendant 3 jours. Hier, un ancien client m'a remboursé une somme oubliée de 4 800€ sortis de nulle part. L'Archange Michel agit VRAIMENT, n'ignorez pas ce signe !
-                </div>
-              </div>
+            <!-- COMENTÁRIO 3 -->
+            <div class="fb-comments-wrapper" id="4">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Carmen Silva</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Meu Deus... Que arrepio no corpo inteiro! Eu sentia aquele aperto sufocante no peito todas as manhãs ao olhar o aplicativo do banco. Depois de seguir exatamente o que ele ensina, sinto uma paz inexplicável e o dinheiro voltou a fluir na minha vida!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>31</likes>
+
+                      <date>12 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- COMMENTAIRE 3 -->
-            <div class="fb-comments-comment">
-              <div class="fb-comments-comment-img">C</div>
-              <div class="fb-comments-comment-content">
-                <div class="fb-comments-comment-name">Chantal Bernard</div>
-                <div class="fb-comments-comment-text">
-                  Mon Dieu... J'ai eu les larmes aux yeux pendant toute la vidéo. Je me sentais exactement comme ce que raconte Alejandro : rejetée, ignorée et ruinée. Après avoir écouté le chant, toute l'angoisse dans ma poitrine s'est envolée. Ma vie a complètement changé en moins d'une semaine. Merci Saint Michel ! 🙏✨
-                </div>
-              </div>
+            <!-- COMENTÁRIO 4 -->
+            <div class="fb-comments-wrapper" id="5">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Carlos Castro</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Se você ignorar este vídeo, estará recusando o último sinal que Deus te enviou. Eu quase cometi esse erro de sair... Graças a Deus fiquei até o final! Hoje minha família não passa mais vergonha nem aperto.</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>55</likes>
+
+                      <date>19 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- COMMENTAIRE 4 -->
-            <div class="fb-comments-comment">
-              <div class="fb-comments-comment-img">P</div>
-              <div class="fb-comments-comment-content">
-                <div class="fb-comments-comment-name">Patrick Lefebvre</div>
-                <div class="fb-comments-comment-text">
-                  Si vous hésitez encore, vous faites une grave erreur. J'ai failli couper la vidéo au milieu... Heureusement que je suis resté. Le déblocage financier a été immédiat pour ma famille. La malédiction de la pauvreté est enfin brisée chez nous.
-                </div>
-              </div>
+            <!-- COMENTÁRIO 5 -->
+            <div class="fb-comments-wrapper" id="6">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Maria Rodriguez</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Gente, funciona de verdade! 4 meses desempregada e devendo o aluguel... Ouvi o cântico sagrado e na manhã seguinte fui chamada para o emprego dos meus sonhos com um salário inacreditável. O Arcanjo Miguel é poderoso demais!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>87</likes>
+
+                      <date>24 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- COMMENTAIRES SUPPLÉMENTAIRES -->
-            <div id="more">
+            <!-- BOTÃO VER MAIS -->
+            <button class="fb-comments-loadmore" onclick="javascript:loadMore();">Ver mais comentários</button>
+            
+            <div style="display:none" id="more">
+              
+              <!-- COMENTÁRIO 6 -->
+              <div class="fb-comments-wrapper" id="10">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Lucía Fernandez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">O segredo do Vaticano explicado aqui faz TODO o sentido. Agora entendo por que nada dava certo na minha vida antes. O som sagrado realmente limpa as frequências ruins da nossa mente!</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>41</likes>
 
-              <div class="fb-comments-comment">
-                <div class="fb-comments-comment-img">S</div>
-                <div class="fb-comments-comment-content">
-                  <div class="fb-comments-comment-name">Sophie Tremblay</div>
-                  <div class="fb-comments-comment-text">
-                    4 mois que j'étais au chômage, expulsée dans 2 semaines. J'ai écouté le chant hier soir en pleurant. Ce matin, j'ai reçu une offre d'emploi avec un salaire que je n'aurais JAMAIS imaginé ! C'est le dernier avertissement pour beaucoup ici, ne partez pas sans votre bénédiction !
-                  </div>
-                </div>
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
-              <div class="fb-comments-comment">
-                <div class="fb-comments-comment-img">A</div>
-                <div class="fb-comments-comment-content">
-                  <div class="fb-comments-comment-name">Antoine Girard</div>
-                  <div class="fb-comments-comment-text">
-                    Le secret du Vatican révélé ici explique TELLEMENT de choses... Je comprends enfin pourquoi rien ne marchait dans ma vie malgré mes prières. Le chant sacré fonctionne en quelques minutes. Ma femme et moi sommes sous le choc !
-                  </div>
-                </div>
-              </div>
+              <!-- COMENTÁRIO 7 -->
+              <div class="fb-comments-wrapper" id="11">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=100&auto=format&fit=crop&q=80"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Isabel Alvarez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Recebi o acesso e o kit de São Miguel. É tudo 100% verdadeiro e transformador. Minha casa e minhas contas bancárias finalmente têm paz e fartura!</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>94</likes>
 
-              <div class="fb-comments-comment">
-                <div class="fb-comments-comment-img">L</div>
-                <div class="fb-comments-comment-content">
-                  <div class="fb-comments-comment-name">Laurence Garnier</div>
-                  <div class="fb-comments-comment-text">
-                    J'ai reçu le pack avec la médaille de Saint Michel et les bonus confidentiels. Tout est 100% vrai. Merci pour cette opportunité unique, ma maison respire enfin la paix et l'abondance !
-                  </div>
-                </div>
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
             </div>
-
-            <button
-              class="fb-comments-loadmore"
-              id="loadMoreButton"
-              type="button"
-              onclick="loadMore();">
-              Voir plus de commentaires (1 421)
-            </button>
-
           </div>
-
+  
+          <!-- Botão 2 -->
+            <div id="cta2" class="mt-4 d-none">
+              <a href="https://pay.hotmart.com/123456789?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
+              <br>
+              <span class="span-btn">COMPRAR AGORA!</span>
+              <br>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PIED DE PAGE -->
-  <footer>
+  <footer class="bg-white py-3 text-center">
 
-    Copyright © 2026 – Contenu exclusif ®
-    <br>
-    Tous droits réservés.
+    <span style="color:#6C757D">Copyright 2026 – Conteúdo Exclusivo ®
+        <br>Todos os direitos reservados.</span><br><br>
 
-    <br><br>
+      <div class="text-secondary"><a href="termos.html" class="text-secondary">Termos de Uso</a> – <a href="privacidade.html"
+          class="text-secondary">Políticas de Privacidade</a></div><br>
 
-    <a href="termos.html">
-      Conditions d'utilisation
-    </a>
+<script>
+    let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com", "https://go.hotmart.com"];
 
-    &nbsp;–&nbsp;
+function getParams() {
+    let t = "",
+        e = window.top.location.href,
+        r = new URL(e);
+    if (null != r) {
+        let a = r.searchParams.get("utm_source"),
+            n = r.searchParams.get("utm_medium"),
+            o = r.searchParams.get("utm_campaign"),
+            m = r.searchParams.get("utm_term"),
+            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+    }
+    return t
+}! function() {
+    var t = new URLSearchParams(window.location.search);
+    t.toString() && document.querySelectorAll("a").forEach(function(e) {
+        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+    })
+}();
+</script>
 
-    <a href="privacidade.html">
-      Politique de confidentialité
-    </a>
+        <script type="text/javascript">
+      var back_redirect_back_link = "/br" + location.search;
+      history.pushState({}, "", location.href);
+      history.pushState({}, "", location.href);
 
+      window.addEventListener(
+        "popstate",
+        function (event) {
+          if (event.state) {
+            setTimeout(function () {
+              location.href = back_redirect_back_link;
+            }, 1);
+          }
+        },
+        false
+      );
+    </script>
+          
   </footer>
 
-  <!-- BOUTON VOIR PLUS -->
-  <script>
-    function loadMore(){
-      var more=document.getElementById("more");
-      var button=document.getElementById("loadMoreButton");
+      <script type="text/javascript">
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 16000000); // temporização da Call to Action (em milissegundos)
+    </script>
 
-      if(more){
-        more.style.display="block";
-      }
-
-      if(button){
-        button.style.display="none";
-      }
-    }
-  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/com.js"></script>
 
 </body>
 </html>

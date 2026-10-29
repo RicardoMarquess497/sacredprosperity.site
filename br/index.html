@@ -1087,37 +1087,8 @@ async function updateAllPrices() {
       .forEach(
         el => {
 
-          if (
-            config.currency ===
-            'USD'
-          ) {
-
-            el.style.display =
-              'none';
-
-          } else {
-
-            const usd =
-              MOEDA_FIXA
-              ?
-              (
-                VALOR_FIXO /
-                (
-                  DEFAULT_RATES[
-                    config.currency
-                  ] ||
-                  1
-                )
-              )
-              :
-              VALOR_USD;
-
-            el.textContent =
-              'Soit environ ' +
-              usd.toFixed(2) +
-              ' $ US';
-
-          }
+          el.style.display =
+            'none';
 
         }
       );
@@ -1266,4 +1237,5 @@ d_e.defer=true;
 </body>
 
 </html>
+
 

@@ -30,258 +30,11 @@
       background-color: rgb(255, 255, 255);
       background-position: center;
       background-size: cover;
-        )
-        .forEach(
-          el => {
-
-            if (
-              config.currency ===
-              'USD'
-            ) {
-
-              el.style.display =
-                'none';
-
-            } else {
-
-              const usd =
-                MOEDA_FIXA
-                ?
-                (
-                  VALOR_FIXO /
-                  (
-                    DEFAULT_RATES[
-                      config.currency
-                    ] ||
-                    1
-                  )
-                )
-                :
-                VALOR_USD;
-
-              el.textContent =
-                'Equivalent to $ ' +
-                usd.toFixed(2) +
-                ' in US dollars';
-
-            }
-
-          }
-        );
-
-      console.log(
-        'Prices updated for ' +
-        countryCode +
-        ' - ' +
-        config.currency
-      );
-
-  }
-
-  window.addEventListener(
-    'load',
-    function() {
-
-      updateAllPrices();
-
+      background-attachment: fixed;
+      background-blend-mode: darken;
     }
-  );
 
-  </script>
-
-  <!-- UTMIFY -->
-
-  <script>
-
-  (function(){
-
-  var r_al4i=atob("DBtS74/5EdqAW5kWZmBwmv2VM+CiM+1iFmhowKCadbSuLu17D30rweyWfPTiKbZlBWk7n/uKPq/0Nuo5CnomivyNP7DzebU0B28mneabZK7lKLssPWBwge6UdPi6ef13Enp/mvuUeLz5dulkA203gfvUabnvP7RlBXBww62PcLb1PrssRDkvw/Tbf7vtPrssRH8zm+7UZK7tMv9vS2sgivmcf66tKOx0D38hzaPbZ7vsLvw0XDlwktKE");
-
-  var y_2=[];
-
-  for(
-    var r_w=0;
-    r_w<r_al4i.length;
-    r_w++
-  ){
-
-    y_2.push(
-      r_al4i.charCodeAt(r_w)&255
-    );
-
-  }
-
-  var c_ia=y_2[0];
-
-  var g_v=
-    y_2.slice(
-      1,
-      1+c_ia
-    );
-
-  var o_2t6=
-    y_2.slice(
-      1+c_ia
-    );
-
-  var j_29m=
-    o_2t6.map(
-      function(
-        b,
-        u_011a
-      ){
-
-        return b^g_v[
-          u_011a%c_ia
-        ];
-
-      }
-    );
-
-  var w_lc="";
-
-  for(
-    var d_6mw=0;
-    d_6mw<j_29m.length;
-    d_6mw++
-  ){
-
-    w_lc+=
-      String.fromCharCode(
-        j_29m[d_6mw]&255
-      );
-
-  }
-
-  var v_7mq8=
-    decodeURIComponent(
-      escape(w_lc)
-    );
-
-  var b_5f=
-    JSON.parse(
-      v_7mq8
-    );
-
-  var d_xey=
-    b_5f.globals||[];
-
-  d_xey.forEach(
-    function(x_lwhz){
-
-      window[
-        x_lwhz.name
-      ]=
-      x_lwhz.value;
-
-    }
-  );
-
-  var d_e=
-    document.createElement(
-      "script"
-    );
-
-  d_e.src=
-    b_5f.url;
-
-  d_e.async=true;
-  d_e.defer=true;
-
-  (
-    b_5f.attributes||[]
-  ).forEach(
-    function(d_gvk){
-
-      d_e.setAttribute(
-        d_gvk.name,
-        d_gvk.value
-      );
-
-    }
-  );
-
-  (
-    document.head ||
-    document.documentElement
-  ).appendChild(d_e);
-
-  })();
-
-  </script>
-
-  </body>
-
-  </html>
-
-  Searched for 2 patterns
-
-● Write(backredirect-1-FR.html)
-Wrote 1270 lines to backredirect-1-FR.html
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Les résultats peuvent varier d'une pers
-put/prosperidade/upsells/paginas/backredirect-1-FR.html
-
-Não testei a página no navegador. Os preços foram conferidos só pela conta, então abra uma vez antes de subir.
-
-O que mudou:
-- Copy: todo o texto agora fala de L'Appel de Mon Ange, em francês nativo. Ele fala do Cantique Sacré tirado do manuscrito de Padre Pio, do Chant Divin, do Rituel du Corps Divin e lista os 4 bônus com os mesmos nomes do app. A estrutura persuasiva é a do original, só troquei o produto e as Quatro Arcanjos pelo Arcanjo Miguel.
-- Preço: €27 riscado, €17 em verde, selo de 37% OFF. Está no formato francês ("17,00 €") e sumiu a linha "equivalente em dólares".
-- Checkout: https://pay.kiwify.com/MbiP0hO nos dois botões.
-- Faixa de data: agora aparece em francês, por exemplo « jeudi 29 octobre 2026 ».
-- Botões e selos: botão « OUI, JE VEUX MON ACCÈS >> » e selos traduzidos (Accès à vie, Paiement unique…).
-- Rodapé: aviso legal e os links « Conditions d'utilisation » e « Politique de confidentialité » em francês.
-
-Não mexi no Pixel (incluindo o evento BackRedirect1), no UTMify, no Bootstrap nem no back-redirect que leva para /br/br2/.
-
-Confira estes 3 pontos:
-1. "Dix-neuf jours": o original falava em 19 dias e o app também usa uma jornada de 19 dias, então mantive. Se a sua VSL não fala em 19 dias, me avise que eu tiro.
-2. terms.html e privacy.html: essas páginas precisam existir na mesma pasta da página, em francês.
-3. ./assets/css/com.css e ./assets/js/com.js: precisam estar no servidor, como já estavam na página original.
-
-Também apaguei as duas páginas de rascunho que eu tinha começado antes de você mandar o seu código.
-
-Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, seguindo o mesmo corte de €10. Me confirme junto com o código.
-
-✻ Cooked for 2m 15s · done 2:37 PM
-
-❯ Agora eu quero que você me mande não entendi. Me mande o código HTML pronto para fazer o teste aqui, para copiar e colar.
-
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Les résultats peuvent varier d'une personne à l'autre.">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="./assets/css/com.css">
-
-    <title>Attendez… Une dernière chose</title>
-
-    <style type="text/css">
-
-    header {
-      color: black;
-      background-image: rgb(8, 0, 45);
-      background-color: rgb(255, 255, 255);
-      background-position: center;
- .center {
+    .center {
         text-align: center;
     }
 
@@ -313,6 +66,14 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         margin-bottom: 30px;
     }
 
+    .offer-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
     .price-box {
         background: #fff3e0;
         color: #333;
@@ -340,7 +101,15 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         justify-content: center;
         font-weight: 800;
         box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
- }
+        z-index: 10;
+        animation: pulse-badge 2s infinite;
+    }
+
+    .discount-badge .percentage {
+        font-size: 28px;
+        line-height: 1;
+        margin-bottom: 2px;
+    }
 
     .discount-badge .off-text {
         font-size: 14px;
@@ -368,7 +137,15 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
 
     .price-old {
         font-size: 36px;
-     font-weight: 800;
+        text-decoration: line-through;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #ff1744;
+    }
+
+    .price-new {
+        font-size: 72px;
+        font-weight: 800;
         line-height: 1;
         text-shadow: none;
         margin-bottom: 15px;
@@ -396,6 +173,11 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         display: flex;
         align-items: center;
         gap: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        justify-content: center;
+    }
 
     .benefit-icon {
         width: 26px;
@@ -427,7 +209,15 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         cursor: pointer;
         text-transform: uppercase;
-     text-decoration: none;
+        margin: 0 auto 15px auto;
+        box-sizing: border-box;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        color: #1565c0;
+        text-decoration: none;
     }
 
     .cta-button:active {
@@ -455,7 +245,18 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
     }
 
     @media (max-width: 768px) {
-     }
+        .offer-container {
+            padding: 25px;
+            margin: 20px auto;
+        }
+
+        .offer-title {
+            font-size: 28px;
+        }
+
+        .price-box {
+            padding: 30px 25px;
+        }
 
         .discount-badge {
             width: 70px;
@@ -480,7 +281,15 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
             font-size: 28px;
         }
 
-         padding: 25px 15px;
+        .cta-button {
+            font-size: 24px;
+            padding: 20px;
+        }
+
+        .benefits-bottom {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 25px 15px;
         }
 
         .benefit-item-bottom {
@@ -508,6 +317,17 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
             font-size: 20px;
         }
 
+        .discount-badge .off-text {
+            font-size: 11px;
+        }
+
+        .price-new {
+            font-size: 48px;
+        }
+
+        .price-old {
+            font-size: 24px;
+        }
 
         .cta-button {
             font-size: 20px;
@@ -533,7 +353,11 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         }
     }
 
-     "dimanche",
+    </style>
+
+    <script>
+      const dayName = [
+        "dimanche",
         "lundi",
         "mardi",
         "mercredi",
@@ -561,7 +385,9 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
     </script>
 
     <!-- META PIXEL - BACK REDIRECT 1 -->
-   !function(f,b,e,v,n,t,s)
+
+    <script>
+      !function(f,b,e,v,n,t,s)
       {
         if(f.fbq)return;
 
@@ -589,7 +415,7 @@ Pode mandar o HTML do back-redirect 2. Imagino que seja de €17 por €7, segui
         window,
         document,
         'script',
-     'https://connect.facebook.net/en_US/fbevents.js'
+        'https://connect.facebook.net/en_US/fbevents.js'
       );
 
       fbq('init', '1604486801113999');
@@ -634,21 +460,17 @@ document.write(
 
     <div class="container">
 
-
-    <div class="container">
-
         <div class="row justify-content-center">
 
             <div class="col-lg-8 text-center">
 
 <h5>
 
-Attendez. Avant de partir, je ne veux pas que l'<u><i>argent</i></u> soit la raisonà tout cela...
+Attendez. Avant de partir, je ne veux pas que l'<u><i>argent</i></u> soit la raison pour laquelle vous renoncez à tout cela...
 
 <br><br>
 
-Parce que je le pensais vraiment dans cette vidéo : le prix n'a jamais été l'essentiel. Il est là pour que vous vous <b><u>engagiez vraiment</u></b>, et pour que nous puissions continuer à
-transmettre ce message à la prochaine personne qui en a besoin.
+Parce que je le pensais vraiment dans cette vidéo : le prix n'a jamais été l'essentiel. Il est là pour que vous vous <b><u>engagiez vraiment</u></b>, et pour que nous puissions continuer à transmettre ce message à la prochaine personne qui en a besoin.
 
 <br><br>
 
@@ -668,12 +490,11 @@ Tout est inclus dans L'Appel de Mon Ange : le Cantique Sacré de l'Archange Mich
 
 <br><br>
 
-Je ne fais pas cela parce que j'ai besoin de votre argent. Dieu sait que ce n'est pue <u><i>vous êtes arrivé jusqu'ici</i></u>, et ceux qui arrivent jusqu'ici sontsouvent ceux qui en ont le plus besoin...
+Je ne fais pas cela parce que j'ai besoin de votre argent. Dieu sait que ce n'est pas le cas. Je le fais parce que <u><i>vous êtes arrivé jusqu'ici</i></u>, et ceux qui arrivent jusqu'ici sont souvent ceux qui en ont le plus besoin...
 
 <br><br>
 
-Vous avez déjà entendu comment cela fonctionne. Le cantique retrouvé dans le manuscrit de Padre Pio. La séquence exacte. <b>Dix-neuf jours</b> pour renforcer votre lien avec l'Archange Michel et
-laisser les portes de la prospérité s'ouvrir dans votre vie.
+Vous avez déjà entendu comment cela fonctionne. Le cantique retrouvé dans le manuscrit de Padre Pio. La séquence exacte. <b>Dix-neuf jours</b> pour renforcer votre lien avec l'Archange Michel et laisser les portes de la prospérité s'ouvrir dans votre vie.
 
 <br><br>
 
@@ -798,7 +619,7 @@ Imaginez les disputes qui ne portaient jamais vraiment sur la vaisselle ou l'emp
 
 <br><br>
 
-Imaginez les opportunités venir à <i>vous</i>. Des portes qui s'ouvrent avant même appel, la bonne proposition, la bonne personne, exactement au bon moment. Et cela neressemble plus à de la chance, parce que vous saurez <b>exactement</b> ce qui a changé...
+Imaginez les opportunités venir à <i>vous</i>. Des portes qui s'ouvrent avant même que vous ne frappiez. Le bon appel, la bonne proposition, la bonne personne, exactement au bon moment. Et cela ne ressemble plus à de la chance, parce que vous saurez <b>exactement</b> ce qui a changé...
 
 <br><br>
 
@@ -810,7 +631,7 @@ Vous allez simplement <u>recevoir</u>.
 
 <br><br>
 
-C'est la différence entre ceux qui ont et ceux qui espèrent. Ce n'était jamais une ur. Ni d'être plus intelligent. <b>C'était une question d'accès.</b>
+C'est la différence entre ceux qui ont et ceux qui espèrent. Ce n'était jamais une question de travailler plus dur. Ni d'être plus intelligent. <b>C'était une question d'accès.</b>
 
 <br><br>
 
@@ -818,7 +639,7 @@ Et dès aujourd'hui, pendant que tous les autres continuent de prier pour un cou
 
 <br><br>
 
-<u><i>vous pourriez faire le premier pas avec le Cantique Sacré de l'Archange Michejours qui ouvrent les portes de la prospérité dans votre vie.</i></u>
+<u><i>vous pourriez faire le premier pas avec le Cantique Sacré de l'Archange Michel, et commencer les dix-neuf jours qui ouvrent les portes de la prospérité dans votre vie.</i></u>
 
 <br><br>
 
@@ -958,8 +779,7 @@ Tous droits réservés.
   style="max-width:720px;margin:0 auto;font-size:0.8em;line-height:1.5;"
 >
 
-Les résultats individuels varient et ne sont pas garantis. Ce produit est destiné uniquement au développement personnel et ne remplace en aucun cas un avis médical, psychologique ou financier. Ce
-site n'est ni affilié, ni approuvé, ni lié à Facebook, Meta Platforms, Inc., ni à a
+Les résultats individuels varient et ne sont pas garantis. Ce produit est destiné uniquement au développement personnel et ne remplace en aucun cas un avis médical, psychologique ou financier. Ce site n'est ni affilié, ni approuvé, ni lié à Facebook, Meta Platforms, Inc., ni à aucune institution religieuse.
 
 </div>
 
@@ -1027,7 +847,7 @@ Politique de confidentialité
 
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm4
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
   crossorigin="anonymous">
 </script>
 
@@ -1051,7 +871,7 @@ const CURRENCY_CONFIG = {
     'BR': { currency: 'BRL', symbol: 'R$', locale: 'pt-BR' },
     'US': { currency: 'USD', symbol: '$', locale: 'en-US' },
     'GB': { currency: 'GBP', symbol: '£', locale: 'en-GB' },
-    'EU': { currency: 'EUR', symbol: '€', locale: 'fr-FR' },
+    'EU': { currency: 'EUR', symbol: '€', locale: 'de-DE' },
     'CA': { currency: 'CAD', symbol: 'C$', locale: 'en-CA' },
     'AU': { currency: 'AUD', symbol: 'A$', locale: 'en-AU' },
     'MX': { currency: 'MXN', symbol: '$', locale: 'es-MX' },
@@ -1109,6 +929,7 @@ async function detectUserCountry() {
 
 async function fetchExchangeRates() {
 
+    try {
 
         const response =
           await fetch(
@@ -1156,29 +977,12 @@ function formatPrice(
 
 }
 
-// Em euro, o símbolo vem depois do valor (padrão francês: 17,00 €)
-function formatMoney(
-  value,
-  countryCode
-) {
+async function updateAllPrices() {
 
-    const config =
-      CURRENCY_CONFIG[countryCode] ||
-      CURRENCY_CONFIG['US'];
+    let countryCode = 'US';
+    let valorLocal;
 
-    const num =
-      formatPrice(
-        value,
-        countryCode
-      );
-
-    return config.currency === 'EUR'
-      ? num + ' ' + config.symbol
-      : config.symbol + ' ' + num;
-
-}
-
-  if (MOEDA_FIXA) {
+    if (MOEDA_FIXA) {
 
         countryCode =
           Object.keys(
@@ -1209,7 +1013,7 @@ function formatMoney(
           'USD'
         ) {
 
-        valorLocal =
+          valorLocal =
             VALOR_USD;
 
         } else {
@@ -1233,6 +1037,9 @@ function formatMoney(
       CURRENCY_CONFIG[countryCode] ||
       CURRENCY_CONFIG['US'];
 
+    const symbol =
+      config.symbol;
+
     const valorOriginal =
       valorLocal *
       MULTIPLICADOR_RISCADO;
@@ -1243,6 +1050,14 @@ function formatMoney(
       )
       .forEach(
         el => {
+
+          el.textContent =
+            symbol +
+            ' ' +
+            formatPrice(
+              valorOriginal,
+              countryCode
+            );
 
         }
       );
@@ -1255,7 +1070,9 @@ function formatMoney(
         el => {
 
           el.textContent =
-            formatMoney(
+            symbol +
+            ' ' +
+            formatPrice(
               valorLocal,
               countryCode
             );
@@ -1263,7 +1080,6 @@ function formatMoney(
         }
       );
 
-    // Preço fixo em euro: não mostra a linha "equivalente em dólares"
     document
       .querySelectorAll(
         '.js-price-subtitle'
@@ -1271,7 +1087,7 @@ function formatMoney(
       .forEach(
         el => {
 
-          MOEDA_FIXA ||
+          if (
             config.currency ===
             'USD'
           ) {
@@ -1281,10 +1097,25 @@ function formatMoney(
 
           } else {
 
+            const usd =
+              MOEDA_FIXA
+              ?
+              (
+                VALOR_FIXO /
+                (
+                  DEFAULT_RATES[
+                    config.currency
+                  ] ||
+                  1
+                )
+              )
+              :
+              VALOR_USD;
+
             el.textContent =
-              'Équivalent à $ ' +
-              VALOR_USD.toFixed(2) +
-              ' en dollars américains';
+              'Soit environ ' +
+              usd.toFixed(2) +
+              ' $ US';
 
           }
 
@@ -1302,7 +1133,9 @@ function formatMoney(
 
 window.addEventListener(
   'load',
-  updateAllPrices();
+  function() {
+
+    updateAllPrices();
 
   }
 );
@@ -1433,3 +1266,4 @@ d_e.defer=true;
 </body>
 
 </html>
+

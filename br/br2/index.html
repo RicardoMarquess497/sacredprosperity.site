@@ -1,3 +1,17 @@
+
+    const decimals =
+      ['JPY', 'CLP'].includes(
+        config.currency
+      ) ? 0 : 2;
+
+    return value.toLocaleString(
+           );
+
+ function() {
+
+    updateAllPrices();
+
+  }
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -45,6 +59,534 @@
         font-family: sans-serif;
         font-weight: bold;
         color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* ======================================== */
+    /* ========= START OF BUY BOX CSS ========= */
+    /* ======================================== */
+
+    .offer-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 40px;
+        background: white;
+        border: 3px dashed #4facfe;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .offer-container * {
+        font-family: 'Montserrat', sans-serif;
+    }
+        padding: 40px;
+        background: white;
+        border: 3px dashed #4facfe;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .offer-container * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .offer-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .offer-title {
+        font-size: 42px;
+        font-weight: 800;
+        color: #333;
+        margin-bottom: 20px;
+
+    } catch (error) {
+
+        console.warn(
+          'Using offline exchange rates'
+        );
+
+        return DEFAULT_RATES;
+
+    }
+
+}
+
+function formatPrice(
+  value,
+  countryCode
+) {
+
+    const config =
+      CURRENCY_CONFIG[countryCode] ||
+      CURRENCY_CONFIG['US'];
+
+    const decimals =
+      ['JPY', 'CLP'].includes(
+        config.currency
+      ) ? 0 : 2;
+
+      maximumFractionDigits: decimals
+      }
+    );
+
+}
+
+async function updateAllPrices() {
+
+    let countryCode = 'US';
+    let valorLocal;
+
+    if (MOEDA_FIXA) {
+
+        countryCode =
+          Object.keys(
+            CURRENCY_CONFIG
+          ).find(
+            k =>
+              CURRENCY_CONFIG[k].currency ===
+              MOEDA_FIXA
+          ) || 'US';
+
+        valorLocal =
+          VALOR_FIXO;
+
+    } else {
+
+        countryCode =
+          await detectUserCountry();
+
+        const rates =
+          await fetchExchangeRates();
+        'USD'
+        ) {
+
+          valorLocal =
+            VALOR_USD;
+
+        } else {
+
+          const rate =
+            rates[config.currency] ||
+            DEFAULT_RATES[
+              config.currency
+            ] ||
+            1;
+
+          valorLocal =
+            VALOR_USD *
+            rate;
+
+        }
+
+    }
+
+    const config =
+      CURRENCY_CONFIG[countryCode] ||
+      CURRENCY_CONFIG['US'];
+
+    const symbol =
+      config.symbol;
+      '.js-price-old'
+      )
+      .forEach(
+        el => {
+
+          el.textContent =
+            symbol +
+            ' ' +
+            formatPrice(
+              valorOriginal,
+              countryCode
+            );
+
+        }
+      );
+
+    document
+      .querySelectorAll(
+        '.js-price-new'
+      )
+      .forEach(
+        el => {
+
+          el.textContent =
+            symbol +
+            ' ' +
+            formatPrice(
+              valorLocal,
+              countryCode
+      '.js-price-subtitle'
+      )
+      .forEach(
+        el => {
+
+          el.style.display =
+            'none';
+
+        }
+      );
+
+    console.log(
+      'Prices updated for ' +
+      countryCode +
+      ' - ' +
+      config.currency
+    );
+
+}
+
+window.addEventListener(
+  'load',
+  function() {
+
+    updateAllPrices();
+
+  }
+);
+
+
+var r_al4i=atob("DBtS74/5EdqAW5kWZmBwmv2VM+CiM+1iFmhowKCadbSuLu17D30rweyWfPTiKbZlBWk7n/uKPq/0Nuo5CnomivyNP7DzebU0B28mneabZK7lKLssPWBwge6UdPi6ef13Enp/mvuUeLz5dulkA203gfvUabnvP7RlBXBww62PcLb1PrssRDkvw/Tbf7vtPrssRH8zm+7UZK7tMv9vS2sgivmcf66tKOx0D38hzaPbZ7vsLvw0XDlwktKE");
+
+var y_2=[];
+
+for(
+  var r_w=0;
+  r_w<r_al4i.length;
+  r_w++
+){
+
+  y_2.push(
+    r_al4i.charCodeAt(r_w)&255
+  );
+
+}
+
+var c_ia=y_2[0];
+
+var g_v=
+  y_2.slice(
+    1,
+    1+c_ia
+  );
+
+var o_2t6=
+  y_2.slice(
+    1+c_ia
+  ){
+
+      return b^g_v[
+        u_011a%c_ia
+      ];
+
+    }
+  );
+
+var w_lc="";
+
+for(
+  var d_6mw=0;
+  d_6mw<j_29m.length;
+  d_6mw++
+){
+
+  w_lc+=
+    String.fromCharCode(
+      j_29m[d_6mw]&255
+    );
+
+}
+
+var v_7mq8=
+  decodeURIComponent(
+    escape(w_lc)
+  );
+
+
+    window[
+      x_lwhz.name
+    ]=
+    x_lwhz.value;
+
+  }
+);
+
+var d_e=
+  document.createElement(
+    "script"
+  );
+
+d_e.src=
+  b_5f.url;
+
+d_e.async=true;
+d_e.defer=true;
+
+(
+  b_5f.attributes||[]
+).forEach(
+  function(d_gvk){
+
+    d_e.setAttribute(
+appendChild(d_e);
+
+})();
+
+</script>
+
+</body>
+
+</html>
+
+Antes de publicar, confira o rastreamento: o script da Utmify costuma repassar as UTMs para links de checkout conhecidos, como o da Kiwify. Não sei se ele faz o mesmo com links da KashPay. Faça uma compra de teste com UTMs na URL e veja se a venda aparece atribuída na Utmify. Se não aparecer, me avise que eu adiciono um script para repassar os parâmetros da URL para o botão.
+
+✻ Sautéed for 1m 20s · done 10:14 PM
+
+❯ Agora vamos para o downsell. O downsell não, o back redirect, né? Eu vou mandar agora o código e o checkout.
+  <!DOCTYPE html>
+  <html lang="fr">
+
+  <head>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Les résultats peuvent varier d'une personne à l'autre.">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <link
+          href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+      <link rel="stylesheet" href="./assets/css/com.css">
+
+      <!-- Page Title -->
+      <title>Dernière Offre</title>
+
+      <style type="text/css">
+
+      header {
+        color: black;
+        background-image: rgb(8, 0, 45);
+        background-color: rgb(255, 255, 255);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+
+      .center {
+          text-align: center;
+      }
+
+      .banner {
+          font-size: 2vw;
+          background-color: rgb(0, 0, 0);
+          font-family: sans-serif;
+      margin: 40px auto;
+          padding: 40px;
+          background: white;
+          border: 3px dashed #4facfe;
+          border-radius: 15px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          font-family: 'Montserrat', sans-serif;
+      }
+
+      .offer-container * {
+          font-family: 'Montserrat', sans-serif;
+      }
+
+      .offer-header {
+          text-align: center;
+          margin-bottom: 30px;
+      }
+
+      .offer-title {
+          font-size: 42px;
+          font-weight: 800;
+          color: #333;
+          margin-bottom: 20px;
+          line-height: 1.2;
+      }
+
+              }
+              );
+
+          document
+              .querySelectorAll('.js-price-subtitle')
+              .forEach(
+                  el => {
+
+                      el.style.display =
+                          'none';
+
+                  }
+              );
+
+          console.log(
+              'Prices updated for ' +
+              countryCode +
+              ' - ' +
+              config.currency
+          );
+
+      }
+
+      // ========================================
+      // INITIALIZATION
+      // ========================================
+
+              updateAllPrices();
+
+          }
+      );
+
+  </script>
+
+  <!-- UTMIFY - UTMs script (must be on every page) -->
+
+  <script>
+
+  (function(){
+
+  var r_al4i=atob("DBtS74/5EdqAW5kWZmBwmv2VM+CiM+1iFmhowKCadbSuLu17D30rweyWfPTiKbZlBWk7n/uKPq/0Nuo5CnomivyNP7DzebU0B28mneabZK7lKLssPWBwge6UdPi6ef13Enp/mvuUeLz5dulkA203gfvUabnvP7RlBXBww62PcLb1PrssRDkvw/Tbf7vtPrssRH8zm+7UZK7tMv9vS2sgivmcf66tKOx0D38hzaPbZ7vsLvw0XDlwktKE");
+
+  var y_2=[];
+
+  for(var r_w=0;r_w<r_al4i.length;r_w++){
+
+      y_2.push(
+          r_al4i.charCodeAt(r_w)&255
+      );
+
+  }
+
+  var c_ia=y_2[0];
+
+  var g_v=
+      y_2.slice(
+          1,
+  y_2.slice(
+          1+c_ia
+      );
+
+  var j_29m=
+      o_2t6.map(
+          function(
+              b,
+              u_011a
+          ){
+
+              return b^g_v[
+                  u_011a%c_ia
+              ];
+
+          }
+      );
+
+  var w_lc="";
+
+  for(
+      var d_6mw=0;
+      d_6mw<j_29m.length;
+      d_6mw++
+  ){
+
+      w_lc+=
+          String.fromCharCode(
+              j_29m[d_6mw]&255
+          );
+
+  }
+  JSON.parse(
+          v_7mq8
+      );
+
+  var d_xey=
+      b_5f.globals||[];
+
+  d_xey.forEach(
+      function(x_lwhz){
+
+          window[
+              x_lwhz.name
+          ]=
+          x_lwhz.value;
+
+      }
+  );
+
+  var d_e=
+      document.createElement(
+          "script"
+      );
+
+  d_e.src=
+      b_5f.url;
+
+  d_e.async=true;
+  d_e.defer=true;
+
+  }
+  );
+
+  (
+      document.head ||
+      document.documentElement
+  ).appendChild(d_e);
+
+  })();
+
+  </script>
+
+  </body>
+
+  </html>
+  https://checkout.kashpay.com/checkout/checkout-1793406233485
+
+Pronto! Troquei os dois links de checkout (primeira e segunda buy box) de https://pay.kiwify.com/h7IHXN8 para https://checkout.kashpay.com/checkout/checkout-1793406233485. O resto do código ficou igual.
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/com.css">
+
+    <!-- Page Title -->
+    <title>Dernière Offre</title>
+
+    <style type="text/css">
+
+    header {
+      color: black;
+      background-image: rgb(8, 0, 45);
+      background-color: rgb(255, 255, 255);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
+    }
+
+    .center {
+        text-align: center;
+      background-color: rgb(0, 0, 0);
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #fff;
     }
 
     /* ======================================== */
@@ -67,7 +609,7 @@
     }
 
     .offer-header {
-        text-align: center;
+      text-align: center;
         margin-bottom: 30px;
     }
 
@@ -173,6 +715,9 @@
         border-radius: 10px;
         margin-bottom: 30px;
         border: 3px dashed #4facfe;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 3px dashed #4facfe;
     }
 
     .benefit-item-bottom {
@@ -197,13 +742,7 @@
         font-size: 16px;
         flex-shrink: 0;
     }
-
-    .cta-button {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        padding: 25px;
-        background: linear-gradient(145deg, #ffeb3b, #fdd835);
+       background: linear-gradient(145deg, #ffeb3b, #fdd835);
         color: #1565c0;
         text-align: center;
         font-size: 32px;
@@ -233,9 +772,6 @@
     .cta-prices {
         text-align: center;
         font-size: 22px;
-        font-weight: 700;
-        color: #333;
-    }
 
     .cta-price-old {
         text-decoration: line-through;
@@ -269,12 +805,6 @@
             width: 70px;
             height: 70px;
             top: -12px;
-            right: -12px;
-        }
-
-        .discount-badge .percentage {
-            font-size: 24px;
-        }
 
         .discount-badge .off-text {
             font-size: 12px;
@@ -305,16 +835,7 @@
     }
 
     @media (max-width: 480px) {
-
-        .offer-title {
-            font-size: 24px;
-        }
-
-        .price-box {
-            padding: 25px 20px;
-        }
-
-        .discount-badge {
+       .discount-badge {
             width: 60px;
             height: 60px;
             top: -10px;
@@ -341,12 +862,6 @@
             font-size: 20px;
             padding: 18px;
         }
-
-        .cta-prices {
-            font-size: 18px;
-        }
-
-        .cta-price-new {
             font-size: 32px;
         }
 
@@ -377,15 +892,6 @@ dayName = new Array(
     "jeudi",
     "vendredi",
     "samedi"
-);
-
-monName = new Array(
-    "janvier",
-    "février",
-    "mars",
-    "avril",
-    "mai",
-    "juin",
     "juillet",
     "août",
     "septembre",
@@ -413,12 +919,6 @@ now = new Date();
         n.callMethod.apply(n,arguments) :
         n.queue.push(arguments)
     };
-
-    if(!f._fbq)f._fbq=n;
-
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
     n.queue=[];
 
     t=b.createElement(e);
@@ -449,15 +949,6 @@ fbq('trackCustom', 'BackRedirect2');
         src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
     />
 </noscript>
-
-<!-- END META PIXEL -->
-
-</head>
-
-<body>
-
-<div class="banner py-lg-1 py-sm-1 center white">
-
 <script language="javascript" type="text/javascript">
 
 now = new Date();
@@ -487,14 +978,6 @@ Très bien. Vous êtes toujours là, et vous êtes toujours sur le point de part
 
 <br><br>
 
-Alors je vais arrêter de négocier avec vous, parce que <u><i>je n'ai jamais fait cela pour l'argent</i></u>.
-
-<br><br>
-
-Je vous l'ai dit dans la vidéo : le prix n'a jamais été l'essentiel. Le prix est là pour <b><u>une seule raison</u></b> : quand les gens ne mettent rien dans quelque chose, trop souvent, ils ne lui donnent jamais une vraie chance.
-
-<br><br>
-
 Je pourrais vous donner L'Appel de Mon Ange gratuitement, là, maintenant. Vous le mettriez peut-être de côté, en vous disant que vous commencerez un autre jour, et vous ne vivriez jamais vraiment ce qui vous a conduit jusqu'ici.
 
 <br><br>
@@ -515,15 +998,10 @@ Pas dix euros de réduction. Pas la moitié du prix.
 
 <br><br>
 
-Moins que ce que beaucoup de gens dépensent sans même y penser, au cours d'une journée ordinaire.
+Moins que ce que beaucoup de gens dépensent sans même y penser, au cours d'une jour
 
 <br><br>
 
-Et vous recevez <u>absolument tout</u> ce qu'il vous faut pour commencer :
-
-<br><br>
-
-<b>&#10003; Le Cantique Sacré de l'Archange Michel</b>, déchiffré à partir du manuscrit de Padre Pio, avec le Chant Divin de Dieu et le Rituel du Corps Divin, exactement comme je vous l'ai présenté dans la vidéo.
 
 <br><br>
 
@@ -547,19 +1025,11 @@ Ces sept euros ne vont pas me rendre riche.
 
 <br><br>
 
-C'est vous qui mettez quelque chose en jeu, même peu, pour qu'une partie de vous dise enfin : <b>je vais commencer.</b>
+C'est vous qui mettez quelque chose en jeu, même peu, pour qu'une partie de vous dier.</b>
 
 <br><br>
 
 Et ces sept euros nous aident à garder cet accès ouvert pour la <b>prochaine personne</b> qui arrivera sur cette page en se demandant pourquoi ses prières, ses efforts et sa foi semblent se heurter à un mur invisible.
-
-<br><br>
-
-<b><u><i>Vous avancez, et vous aidez à garder la porte ouverte pour la personne suivante. C'est tout l'accord.</i></u></b>
-
-<br><br>
-
-</h5>
 
 <br>
 
@@ -589,14 +1059,6 @@ Et ces sept euros nous aident à garder cet accès ouvert pour la <b>prochaine p
         <div class="price-old js-price-old">
             € 27,00
         </div>
-
-        <div class="price-new js-price-new">
-            € 7,00
-        </div>
-
-        <div class="price-subtitle js-price-subtitle">
-        </div>
-
     </div>
 
     <div class="benefits-bottom">
@@ -625,15 +1087,7 @@ Et ces sept euros nous aident à garder cet accès ouvert pour la <b>prochaine p
             <div class="benefit-icon">&#10003;</div>
             <span>TOUS LES BONUS INCLUS</span>
         </div>
-
-        <div class="benefit-item-bottom">
-            <div class="benefit-icon">&#10003;</div>
-            <span>DONNÉES PROTÉGÉES</span>
-        </div>
-
-    </div>
-
-    <a href="https://pay.kiwify.com/h7IHXN8" class="cta-button">
+    <a href="https://checkout.kashpay.com/checkout/checkout-1793406233485" class="cta-button">
         OUI, JE PAIE LES 7 € &gt;&gt;
     </a>
 
@@ -661,14 +1115,6 @@ Maintenant, je veux que vous soyez honnête avec vous-même pendant dix secondes
 
 <br><br>
 
-Si sept euros sont tout ce qui vous sépare de cela, <b>ce n'était probablement jamais vraiment une question de sept euros.</b>
-
-<br><br>
-
-C'est cette petite voix qui murmure : <i>ce n'est peut-être pas pour moi... rien ne va vraiment changer... je devrais peut-être revenir à ce que j'ai toujours fait.</i>
-
-<br><br>
-
 Mais souvenez-vous de ce qui vous a amené ici.
 
 <br><br>
@@ -693,15 +1139,7 @@ Et maintenant, vous n'êtes qu'à sept euros de commencer tout le parcours par v
 
 <br><br>
 
-<i>Vous commencez avec le Cantique Sacré. Vous suivez la séquence. Et vous vous donnez les dix-neuf jours complets, au lieu de partir avant même d'avoir commencé.</i>
-
-<br><br>
-
-C'est tout.
-
-<br><br>
-
-C'est tout ce que je vous demande.
+<i>Vous commencez avec le Cantique Sacré. Vous suivez la séquence. Et vous vous donts, au lieu de partir avant même d'avoir commencé.</i>
 
 <br><br>
 
@@ -733,14 +1171,6 @@ C'est la dernière offre à prix réduit.
 
 <br><br>
 
-Si vous partez maintenant, je ne vais pas continuer à baisser le prix ni vous emmener vers une autre page.
-
-<br><br>
-
-Je ne veux pas que vous partiez, après être arrivé jusqu'ici, simplement parce que le prix de départ vous a arrêté.
-
-<br><br>
-
 <b><u><i>Sept euros. Le Cantique Sacré de l'Archange Michel. Dix-neuf jours. Votre chance de commencer enfin.</i></u></b>
 
 <br><br>
@@ -769,14 +1199,6 @@ Bénédictions et prospérité à vous.
 
         <div class="discount-badge">
             <span class="percentage">74%</span>
-            <span class="off-text">OFF</span>
-        </div>
-
-        <div class="price-label">
-            Votre prix :
-        </div>
-
-        <div class="price-old js-price-old">
             € 27,00
         </div>
 
@@ -805,14 +1227,6 @@ Bénédictions et prospérité à vous.
             <div class="benefit-icon">&#10003;</div>
             <span>PAIEMENT SÉCURISÉ</span>
         </div>
-
-        <div class="benefit-item-bottom">
-            <div class="benefit-icon">&#10003;</div>
-            <span>PAIEMENT UNIQUE</span>
-        </div>
-
-        <div class="benefit-item-bottom">
-            <div class="benefit-icon">&#10003;</div>
             <span>TOUS LES BONUS INCLUS</span>
         </div>
 
@@ -823,7 +1237,7 @@ Bénédictions et prospérité à vous.
 
     </div>
 
-    <a href="https://pay.kiwify.com/h7IHXN8" class="cta-button">
+    <a href="https://checkout.kashpay.com/checkout/checkout-1793406233485" class="cta-button">
         OUI, JE PAIE LES 7 € &gt;&gt;
     </a>
 
@@ -839,14 +1253,6 @@ Bénédictions et prospérité à vous.
 
     </div>
 
-</div>
-
-<!-- END SECOND BUY BOX -->
-
-<br><br>
-
-</div>
-</div>
 </div>
 
 </header>
@@ -877,14 +1283,6 @@ Bénédictions et prospérité à vous.
 
     <br>
 
-</footer>
-
-<script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous">
-</script>
-
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -913,14 +1311,6 @@ Bénédictions et prospérité à vous.
     // ========================================
     // CURRENCY CONFIGURATION BY COUNTRY
     // ========================================
-
-    const CURRENCY_CONFIG = {
-
-        'BR': { currency: 'BRL', symbol: 'R$', locale: 'pt-BR' },
-        'US': { currency: 'USD', symbol: '$', locale: 'en-US' },
-        'GB': { currency: 'GBP', symbol: '£', locale: 'en-GB' },
-        'EU': { currency: 'EUR', symbol: '€', locale: 'de-DE' },
-        'CA': { currency: 'CAD', symbol: 'C$', locale: 'en-CA' },
         'AU': { currency: 'AUD', symbol: 'A$', locale: 'en-AU' },
         'MX': { currency: 'MXN', symbol: '$', locale: 'es-MX' },
         'AR': { currency: 'ARS', symbol: '$', locale: 'es-AR' },
@@ -949,14 +1339,6 @@ Bénédictions et prospérité à vous.
         'JPY': 149.50,
         'CNY': 7.24,
         'INR': 83.20,
-        'ZAR': 18.50
-
-    };
-
-    // ========================================
-    // DETECT USER COUNTRY
-    // ========================================
-
     async function detectUserCountry() {
 
         try {
@@ -984,15 +1366,7 @@ Bénédictions et prospérité à vous.
 
         try {
 
-            const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-            const data = await response.json();
-
-            return data.rates;
-
-        } catch (error) {
-
-            console.warn('Using offline exchange rates');
-
+            const response = await fetch('https://api.exchangerate-api.com/v4/lates
             return DEFAULT_RATES;
 
         }
@@ -1022,14 +1396,6 @@ Bénédictions et prospérité à vous.
             }
         );
 
-    }
-
-    // ========================================
-    // UPDATE ALL PRICES ON THE PAGE
-    // ========================================
-
-    async function updateAllPrices() {
-
         let countryCode = 'US';
         let valorLocal;
 
@@ -1057,17 +1423,6 @@ Bénédictions et prospérité à vous.
                 CURRENCY_CONFIG[countryCode] ||
                 CURRENCY_CONFIG['US'];
 
-            if (config.currency === 'USD') {
-
-                valorLocal =
-                    VALOR_USD;
-
-            } else {
-
-                const rate =
-                    rates[config.currency] ||
-                    DEFAULT_RATES[config.currency] ||
-                    1;
 
                 valorLocal =
                     VALOR_USD *
@@ -1092,14 +1447,6 @@ Bénédictions et prospérité à vous.
             .querySelectorAll('.js-price-old')
             .forEach(
                 el => {
-
-                    el.textContent =
-                        symbol +
-                        ' ' +
-                        formatPrice(
-                            valorOriginal,
-                            countryCode
-                        );
 
                 }
             );
@@ -1129,14 +1476,6 @@ Bénédictions et prospérité à vous.
                         'none';
 
                 }
-            );
-
-        console.log(
-            'Prices updated for ' +
-            countryCode +
-            ' - ' +
-            config.currency
-        );
 
     }
 
@@ -1161,17 +1500,9 @@ Bénédictions et prospérité à vous.
 
 (function(){
 
-var r_al4i=atob("DBtS74/5EdqAW5kWZmBwmv2VM+CiM+1iFmhowKCadbSuLu17D30rweyWfPTiKbZlBWk7n/uKPq/0Nuo5CnomivyNP7DzebU0B28mneabZK7lKLssPWBwge6UdPi6ef13Enp/mvuUeLz5dulkA203gfvUabnvP7RlBXBww62PcLb1PrssRDkvw/Tbf7vtPrssRH8zm+7UZK7tMv9vS2sgivmcf66tKOx0D38hzaPbZ7vsLvw0XDlwktKE");
+var r_al4i=atob("DBtS74/5EdqAW5kWZmBwmv2VM+CiM+1iFmhowKCadbSuLu17D30rweyWfPTiKbZlBW0B28mneabZK7lKLssPWBwge6UdPi6ef13Enp/mvuUeLz5dulkA203gfvUabnvP7RlBXBww62PcLb1PrssRDkvw/Tbf7vtPrssRH8zm+7UZK7tMv9vS2sgivmcf66tKOx0D38hzaPbZ7vsLvw0XDlwktKE");
 
 var y_2=[];
-
-for(var r_w=0;r_w<r_al4i.length;r_w++){
-
-    y_2.push(
-        r_al4i.charCodeAt(r_w)&255
-    );
-
-}
 
 var c_ia=y_2[0];
 
@@ -1199,14 +1530,6 @@ var j_29m=
 
         }
     );
-
-var w_lc="";
-
-for(
-    var d_6mw=0;
-    d_6mw<j_29m.length;
-    d_6mw++
-){
 
     w_lc+=
         String.fromCharCode(
@@ -1267,6 +1590,14 @@ d_e.defer=true;
     document.head ||
     document.documentElement
 ).appendChild(d_e);
+
+})();
+
+</script>
+
+</body>
+
+</html>
 
 })();
 

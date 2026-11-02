@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -514,6 +514,9 @@ src="https://www.facebook.com/tr?id=1604486801113999&ev=PageView&noscript=1"
 </noscript>
 <!-- END META PIXEL -->
 
+<!-- KASHPAY UPSELL -->
+<script src="https://checkout.kashpay.com/scripts/upsell-processor.js"></script>
+
 </head>
 
 <body>
@@ -669,28 +672,13 @@ avec une réduction spéciale…
 
 </div>
 
-<!-- COMPRA DO DOWNSELL 1 - NOVO CHECKOUT -->
-<a
-href="https://pay.kiwify.com/3oLEQ2J"
-class="cta-button">
-    OUI, AJOUTER À MA COMMANDE &gt;&gt;
-</a>
-
 <div class="cta-prices">
     <span class="cta-price-old js-price-old">€ 37,00</span>
     <span class="cta-price-new js-price-new">€ 27,00</span>
 </div>
 
-<!-- RECUSOU DOWNSELL 1 → UPSELL 2 -->
-<div class="decline-section">
-
-    <a
-    href="https://sacredprosperity.site/upsell02/?src=aurora"
-    class="decline-button">
-        Non, je renonce à ces avantages…
-    </a>
-
-</div>
+<!-- BOTÕES KASHPAY (SIM / NÃO) - DOWNSELL 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;"><button type="button" onclick="acceptUpsell('https://checkout.kashpay.com/u/562e219236fbcbe9')" style="font-family: 'Poppins'; font-size: 18px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #057932; border: none; border-radius: 10px; padding: 13px 7%; cursor: pointer; text-align: center; display: block; margin: auto;">OUI, AJOUTER À MA COMMANDE >></button><button type="button" onclick="declineUpsell('https://checkout.kashpay.com/u/562e219236fbcbe9')" style="font-family: 'Poppins'; font-size: 15px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #dc2626; border: none; border-radius: 10px; padding: 10px 5%; cursor: pointer; text-align: center; display: block; margin: auto;">Non, je renonce à ces avantages…</button></div>
 
 </div>
 
@@ -796,13 +784,6 @@ Ne manquez pas cette opportunité unique de transformation !
 
 </div>
 
-<!-- COMPRA DO DOWNSELL 1 - NOVO CHECKOUT -->
-<a
-href="https://pay.kiwify.com/3oLEQ2J"
-class="cta-button">
-    OUI, AJOUTER À MA COMMANDE &gt;&gt;
-</a>
-
 <div class="cta-prices">
 
     <span class="cta-price-old js-price-old">
@@ -815,17 +796,8 @@ class="cta-button">
 
 </div>
 
-<!-- RECUSOU DOWNSELL 1 → UPSELL 2 -->
-
-<div class="decline-section">
-
-    <a
-    href="https://sacredprosperity.site/upsell02/?src=aurora"
-    class="decline-button">
-        Non, je renonce à ces avantages…
-    </a>
-
-</div>
+<!-- BOTÕES KASHPAY (SIM / NÃO) - DOWNSELL 1 -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;"><button type="button" onclick="acceptUpsell('https://checkout.kashpay.com/u/562e219236fbcbe9')" style="font-family: 'Poppins'; font-size: 18px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #057932; border: none; border-radius: 10px; padding: 13px 7%; cursor: pointer; text-align: center; display: block; margin: auto;">OUI, AJOUTER À MA COMMANDE >></button><button type="button" onclick="declineUpsell('https://checkout.kashpay.com/u/562e219236fbcbe9')" style="font-family: 'Poppins'; font-size: 15px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #dc2626; border: none; border-radius: 10px; padding: 10px 5%; cursor: pointer; text-align: center; display: block; margin: auto;">Non, je renonce à ces avantages…</button></div>
 
 </div>
 
@@ -1265,3 +1237,4 @@ l_8iub.defer=true;
 
 </body>
 </html>
+

@@ -399,5 +399,16 @@
     </p>
   </footer>
 
+  <!-- BACK REDIRECT 1 : bouton retour -> offre /br/ -->
+  <script>
+  (function () {
+    var destino = "/br/" + window.location.search;
+    history.pushState({ backRedirect: true }, "", window.location.href);
+    window.addEventListener("popstate", function () {
+      window.location.replace(destino);
+    });
+  })();
+  </script>
+
 </body>
 </html>
